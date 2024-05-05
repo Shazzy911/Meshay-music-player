@@ -1,8 +1,12 @@
-import React from 'react'
+import style from "./page.module.scss";
+
+
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <h1>This is the Main Page</h1>
+    </div>
   )
 }
 

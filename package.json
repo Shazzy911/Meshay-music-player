@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "babel": "^6.23.0",
+    "next": "^14.2.3",
+    "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.0",

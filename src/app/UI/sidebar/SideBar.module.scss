@@ -1,0 +1,62 @@
+// Using Mixin
+@mixin display_Padding_width($padding) {
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+// Main Container of SideBar
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //   background-color: #16151a;
+  //   position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  width: 280px;
+  //   transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  border-right: 1px solid #222227;
+
+  // Logo Container
+  .logo_container {
+    @include display_Padding_width(2.5rem 0 2rem 3.2rem);
+    border-bottom: 1px solid #222227;
+    gap: 1rem;
+  }
+
+  // Link container for page routing.
+  .link_container {
+    padding: 3rem 0 3rem 3.2rem;
+    .link {
+      @include display_Padding_width(1rem 0 1.5rem 0);
+      text-decoration: none;
+      color: white;
+      //   padding: 1rem 0;
+      &:hover{
+        font-weight: 600;
+        svg { /* Target the SVG directly within the hover state */
+            fill: #25a56a; /* Change fill color on hover */
+            transition: fill 0.5s; /* Smooth transition effect */
+          }
+      }
+      
+      span {
+        svg {
+          fill: #c0c0c0;
+          width: 22px;
+          height: auto;
+          transition: fill 0.5s;
+          margin-right: 12px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}
