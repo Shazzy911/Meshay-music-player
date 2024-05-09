@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import 'normalize.css';
+import "normalize.css";
 import "./styles/globals.scss";
 import SideBar from "@/app/UI/sidebar/SideBar";
 import TopBar from "@/app/UI/topbar/TopBar";
@@ -20,17 +20,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="container">
-          <SideBar/>
-          <div className="rightcontainer">
-            <TopBar/>
-           {children}
+          <div className="left_container">
+            <SideBar />
           </div>
-
+          <div className="right_container">
+            <TopBar />
+            {children}
+          </div>
         </div>
-        
-        
-        
-        </body>
+      </body>
     </html>
   );
 }

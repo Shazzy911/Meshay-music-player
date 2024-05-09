@@ -1,11 +1,17 @@
+import MainSlider from "./UI/mainslider/MainSlider";
+import Slide from "./UI/slide/Slide";
 import style from "./page.module.scss";
 
 
 
 const page = () => {
   return (
-    <div>
-      <h1>This is the Main Page</h1>
+    <div className={style.container}>
+      <MainSlider>
+        <Slide/>
+      </MainSlider>
+      
+      
     </div>
   )
 }

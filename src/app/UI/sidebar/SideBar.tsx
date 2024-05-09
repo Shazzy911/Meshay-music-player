@@ -2,7 +2,7 @@ import { sidebar_route_links } from "@/json/route_links";
 import style from "./SideBar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import Hero from "@/app/images/Hero.png";
+import Hero from "@/images/Hero.png";
 const SideBar = () => {
   return (
     <div className={style.container}>

@@ -1,0 +1,73 @@
+// Transition Mixin
+@mixin display_padding_bg($padding, $bg-color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background-color: $bg-color;
+  padding: $padding;
+}
+@mixin transition_ease($color) {
+  &:hover {
+    cursor: pointer;
+    color: $color;
+    transition: all 0.6s ease-in-out;
+    border: .1px solid #25a56a;
+    svg {
+      font-weight: bolder;
+    }
+  }
+}
+
+// Main Container
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8.3rem;
+  padding: 2.2rem 3.5rem 2rem 3.2rem;
+  border-bottom: 1px solid #222227;
+}
+// Search container for input
+.search_container {
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  input {
+    background-color: #222227;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 4.6rem;
+    position: relative;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .search_icon {
+    transform: translatex(-250%);
+    font-size: larger;
+    @include transition_ease(#25a56a);
+  }
+}
+
+// Container for cart and notifications
+.cart_bell_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  .bell_cart {
+    padding: 1rem;
+    @include display_padding_bg(1rem, #222227);
+    @include transition_ease(#25a56a);
+  }
+  .explore {
+    margin-left: 2rem;
+    color: #222227;
+    @include display_padding_bg(1rem 1.5rem, white);
+    @include transition_ease(#222227);
+    p {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.container{
+  width: 1000px;
+  height: 500px;
+  // background-color: yellowgreen;
+  margin: 3rem 0 0 3.5rem;
+}
+
+
+.custom-prev-button {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .custom-next-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .custom-prev-button svg {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  
+  .custom-next-button svg {
+    stroke: #fff;
+    stroke-width: 2;
+  }

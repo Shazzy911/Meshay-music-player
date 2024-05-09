@@ -1,6 +1,6 @@
 # This is the Next js Application....
 
 
-
-Cheat-Sheet["https://react-typescript-cheatsheet.netlify.app/docs/basic/setup"]
+Deployement URL["https://meshay-music-player.vercel.app/"] <br>
+TypeScript Cheat-Sheet["https://react-typescript-cheatsheet.netlify.app/docs/basic/setup"]
 

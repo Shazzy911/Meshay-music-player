@@ -13,20 +13,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  //   background-color: #16151a;
-  //   position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 101;
   width: 280px;
-  //   transform: translateX(-100%);
   transition: transform 0.5s ease;
   border-right: 1px solid #222227;
 
   // Logo Container
   .logo_container {
-    @include display_Padding_width(2.5rem 0 2rem 3.2rem);
+    height: 8.3rem;
+    @include display_Padding_width(2.2rem 0 2rem 3.2rem);
     border-bottom: 1px solid #222227;
     gap: 1rem;
   }
@@ -38,7 +37,6 @@
       @include display_Padding_width(1rem 0 1.5rem 0);
       text-decoration: none;
       color: white;
-      //   padding: 1rem 0;
       &:hover{
         font-weight: 600;
         svg { /* Target the SVG directly within the hover state */
