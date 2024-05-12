@@ -1,35 +1,66 @@
-.container{
+
+  $swiper-theme-color: #007aff;
+  $swiper-navigation-size: 44px;
+
+
+.container {
   width: 1000px;
   height: 500px;
   // background-color: yellowgreen;
   margin: 3rem 0 0 3.5rem;
 }
 
+// .Swiper {
+//   // background-color: rgb(255, 0, 0);
+// }
+.pagination_navigation{
+    display: flex;
+    gap:  2.5rem;
+    position: relative;
+    bottom: 50px;
+    z-index: 101;
+    justify-content: flex-end;
+    padding-right: 6rem;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  // color: white;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
 
-.custom-prev-button {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .custom-next-button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .custom-prev-button svg {
-    stroke: #fff;
-    stroke-width: 2;
-  }
-  
-  .custom-next-button svg {
-    stroke: #fff;
-    stroke-width: 2;
-  }
+// .custom-prev-button {
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  // top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var($swiper-navigation-size) / 44* 27);
+  height: var($swiper-navigation-size);
+  // margin-top: calc(0px -(var($swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // color: var($swiper-navigation-color, var(--swiper-theme-color));
+  // color: var($swiper-navigation-color);
+  color: red;
+}
+// .custom-prev-button svg {
+//   stroke: #fff;
+//   stroke-width: 2;
+// }
+
+// .custom-next-button svg {
+//   stroke: #fff;
+//   stroke-width: 2;
+// }
+
+// .swiper-pagination-bullet {
+//   background-color: white;
+// }

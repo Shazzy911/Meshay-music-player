@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 4rem 35% 4rem 3.5rem;
   position: relative;
-
+  gap: 1.5rem;
   ::before {
     content: "";
     position: absolute;
@@ -18,17 +18,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-      4deg,
-      rgba(0, 0, 0, 0.7) 7%,
-      rgba(0, 0, 0, 0) 30%
-    );
+    // background: linear-gradient(
+    //   4deg,
+    //   rgba(0, 0, 0, 0.7) 7%,
+    //   rgba(0, 0, 0, 0) 30%
+    // );
     z-index: 1;
   }
+  h1{
+    font-size: 4.5rem ;
+  }
+
 }
 
 .buttoncontainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
