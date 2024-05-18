@@ -8,4 +8,12 @@ const page = () => {
   )
 }
 
+
 export default page
+
+export function generateMetadata () { 
+  return{
+    title: "Meshay Streaming - Artist",
+    description: "This is the galaxy blog, it contains information about the developer and owner of  website",
+  }
+}

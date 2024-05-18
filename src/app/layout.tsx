@@ -7,7 +7,7 @@ import TopBar from "@/app/UI/topbar/TopBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Meshay Music Player",
+  title: "Meshay Live Show & Music Streaming Platform",
   description: "This is the music application",
 };
 

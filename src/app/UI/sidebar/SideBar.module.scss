@@ -1,3 +1,5 @@
+@import "../../styles/colors.scss";
+
 // Using Mixin
 @mixin display_Padding_width($padding) {
   padding: $padding;
@@ -27,7 +29,7 @@
     height: 8.3rem;
     @include display_Padding_width(2.2rem 0 2rem 3.2rem);
     border-bottom: 1px solid #222227;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   // Link container for page routing.
@@ -40,7 +42,9 @@
       &:hover{
         font-weight: 600;
         svg { /* Target the SVG directly within the hover state */
-            fill: #25a56a; /* Change fill color on hover */
+            // fill: #25a56a;
+            fill: $main-color;
+             /* Change fill color on hover */
             transition: fill 0.5s; /* Smooth transition effect */
           }
       }

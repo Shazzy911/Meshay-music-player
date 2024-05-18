@@ -1,3 +1,4 @@
+@import "../../styles/colors.scss";
 // Transition Mixin
 @mixin display_padding_bg($padding, $bg-color) {
   display: flex;
@@ -7,12 +8,12 @@
   background-color: $bg-color;
   padding: $padding;
 }
-@mixin transition_ease($color) {
+@mixin transition_ease() {
   &:hover {
     cursor: pointer;
-    color: $color;
-    transition: all 0.6s ease-in-out;
-    border: .1px solid #25a56a;
+    color: $main-color;
+    transition: all 0.3s ease-in-out;
+    border: .1px solid $main-color;
     svg {
       font-weight: bolder;
     }
@@ -47,7 +48,7 @@
   .search_icon {
     transform: translatex(-250%);
     font-size: larger;
-    @include transition_ease(#25a56a);
+    @include transition_ease();
   }
 }
 
@@ -59,13 +60,15 @@
   .bell_cart {
     padding: 1rem;
     @include display_padding_bg(1rem, #222227);
-    @include transition_ease(#25a56a);
+    @include transition_ease();
   }
   .explore {
     margin-left: 2rem;
     color: #222227;
     @include display_padding_bg(1rem 1.5rem, white);
-    @include transition_ease(#222227);
+    // @include transition_ease(#222227);
+    @include transition_ease();
+
     p {
       font-weight: 600;
     }
