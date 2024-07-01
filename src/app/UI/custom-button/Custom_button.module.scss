@@ -1,3 +1,5 @@
+@import "../../../app/styles/colors.scss";
+
 .container {
   background-color: transparent;
 
@@ -7,7 +9,7 @@
       cursor: pointer;
       transition: all 0.6s ease-in-out;
 
-      color: #25a56a;
+      color: $main-color;
     }
   }
 }
