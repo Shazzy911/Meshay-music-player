@@ -20,6 +20,10 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'img.freepik.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'plus.unsplash.com',
+        },
         // You can add more patterns for additional domains if needed
       ],
     },
