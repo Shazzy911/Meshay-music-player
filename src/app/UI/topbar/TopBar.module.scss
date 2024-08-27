@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@import "../../styles/colors.module.scss";
 // Transition Mixin
 @mixin display_padding_bg($padding, $bg-color) {
   display: flex;
