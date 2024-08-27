@@ -1,7 +1,7 @@
 // @import 'normalize-css/normalize.css';
 @import 'normalize.css';
 // Variables for Color and size ;
-@import "./colors.scss";
+@import "./colors.module.scss";
 
 *, ::before, ::after{
   margin: 0;

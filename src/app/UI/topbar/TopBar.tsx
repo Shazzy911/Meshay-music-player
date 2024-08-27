@@ -1,3 +1,4 @@
+import ButtonSec from "../Secondary-button/ButtonSec";
 import style from "./TopBar.module.scss";
 import { FaSearch, FaBell, FaShoppingCart, FaUserAlt } from "react-icons/fa";
 
@@ -15,9 +16,10 @@ const TopBar = () => {
         <div className={style.bell_cart}>
           <FaShoppingCart />
         </div>
-        <div className={style.explore }>
+        <ButtonSec text="Explore Premium"/>
+        {/* <div className={style.explore }>
           <p>Explore Premium</p>
-        </div>
+        </div> */}
         <div className={style.bell_cart}>
           <FaUserAlt/>
         </div>

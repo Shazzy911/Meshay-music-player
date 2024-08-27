@@ -1,8 +1,14 @@
 import React from 'react'
+import style from "./ButtonSec.module.scss"
 
-const ButtonSec = () => {
+
+
+interface buttonType {
+  text?: string;
+}
+const ButtonSec = ({text}: buttonType) => {
   return (
-    <button>ButtonSec</button>
+    <button className={style.container}>{text}</button>
   )
 }
 
