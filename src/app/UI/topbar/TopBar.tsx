@@ -3,7 +3,7 @@ import { FaSearch, FaBell, FaShoppingCart, FaUserAlt } from "react-icons/fa";
 
 const TopBar = () => {
   return (
-    <div className={style.container}>
+    <header className={style.container}>
       <div className={style.search_container}>
         <input type="text" placeholder="What do you want to play?" />
         <FaSearch className={style.search_icon} />
@@ -22,7 +22,7 @@ const TopBar = () => {
           <FaUserAlt/>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

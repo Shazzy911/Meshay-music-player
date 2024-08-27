@@ -13,7 +13,7 @@
     cursor: pointer;
     color: $main-color;
     transition: all 0.3s ease-in-out;
-    border: .1px solid gray;
+    // border: .1px solid gray;
     svg {
       font-weight: bolder;
     }
@@ -70,7 +70,7 @@
     color: #222227;
     @include display_padding_bg(1rem 1.5rem, white);
     // @include transition_ease(#222227);
-    @include transition_ease();
+    // @include transition_ease();
 
     p {
       font-weight: 600;

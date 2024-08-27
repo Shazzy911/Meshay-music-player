@@ -1,15 +1,15 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-        <h1>This is the Artist page...</h1>
-    </div>
+    <main>
+        <h1>This is the Artist Page...</h1>
+    </main>
   )
 }
 
 
-export default page
+export default Page
 
 export function generateMetadata () { 
   return{

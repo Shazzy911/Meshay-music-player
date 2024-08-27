@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    future: {
-      webpack5: true,
-    },
-    css: {
-      globals: './globals.css',
-    },
-    images: {
+
+
+
+
+  images: {
       remotePatterns: [
         {
           protocol: 'https', // Or 'http' if necessary
@@ -27,7 +25,6 @@ const nextConfig = {
         // You can add more patterns for additional domains if needed
       ],
     },
-      
-  };
+};
 
-  export default nextConfig;
+export default nextConfig;

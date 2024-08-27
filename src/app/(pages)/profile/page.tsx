@@ -1,9 +1,18 @@
-import React from 'react'
 
-const Profile = () => {
-  return (
-    <div>Profile</div>
-  )
+
+
+import React from "react"
+
+const Page = ()=>{
+
+
+    return (
+        <main>
+        <h1>Inside the Notification Page...</h1>
+        
+        </main>
+    )
 }
 
-export default Profile
+
+export default Page;

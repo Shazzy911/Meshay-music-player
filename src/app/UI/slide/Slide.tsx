@@ -13,18 +13,20 @@ const Slide = () => {
 
           <div className={style.container} key={item.id} style={{
             background: `url(${item.image}) center center / cover no-repeat`,
-            // backgroundImage: `url(${item.image})`,
             width: '1000px',
             height: '500px',
 
           }}>
             <h1>{item.heading}</h1>
             <p>{item.description}</p>
-            <div className={style.buttoncontainer}>
+            <div className={style.button_box}>
               <Button text={item.btn1} />
-              <Button text={item.btn2} />
+              {
+                item.btn2 ? <Button text={item.btn2} /> : null
+              }
+
             </div>
-            {/* <ButtonContainer/> */}
+
           </div>
 
 

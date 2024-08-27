@@ -24,7 +24,7 @@ export const slide_dummy: slide_dummy_types[] = [
         image: "https://img.freepik.com/premium-photo/happy-young-girl-podcast-studio_74981-275.jpg?w=826",
         
         heading: "Upcoming Events You Won't Want to Miss!",
-        description: "Stay ahead of the curve with the latest music releases and upcoming events! Our 'New Releases' section is updated daily with fresh drops from top artists and emerging talent. Get ready to stream the hottest new tracks and albums as soon as they're available.",
+        description: "Stay ahead of the curve with the latest music releases and upcoming events! Our 'New Releases' section is updated daily with fresh drops from top artists and emerging talent.",
         btn1: "Explore Premium",
     },
     {
@@ -32,7 +32,7 @@ export const slide_dummy: slide_dummy_types[] = [
         image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fG11c2ljfGVufDB8fDB8fHww",
         
         heading: "Stay Ahead of the Beat: Unlock the Power of Music Discovery",
-        description: "Get ready to uncover new sounds and artists with our cutting-edge music discovery features! Our algorithm-driven recommendations learn your listening habits and serve up fresh tracks, playlists, and radio stations tailored just for you.",
+        description: "Get ready to uncover new sounds and artists with our cutting-edge music discovery features. Get ready to stream the hottest new tracks and albums as soon as they're available.",
         btn1: "Buy Now",
         btn2: "New Release",
     }
@@ -41,7 +41,7 @@ export const slide_dummy: slide_dummy_types[] = [
         id: 5,
         image: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fG11c2ljfGVufDB8fDB8fHww",
         heading: "Stay Ahead of the Beat: Unlock the Power of Music Discovery",
-        description: "Get ready to uncover new sounds and artists with our cutting-edge music discovery features! Our algorithm-driven recommendations learn your listening habits and serve up fresh tracks, playlists, and radio stations tailored just for you.",
+        description: "Our algorithm-driven recommendations learn your listening habits and serve up fresh tracks, playlists, and radio stations tailored just for you.",
         btn1: "Buy Now",
         btn2: "New Release",
     }
