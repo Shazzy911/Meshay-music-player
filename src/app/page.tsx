@@ -9,8 +9,7 @@ import style from "./page.module.scss";
 const page = () => {
   return (
     <main className={style.container}>
-      <Suspense  fallback={<p>Loading...</p>}>
-
+      <Suspense fallback={<p>Loading...</p>}>
         <MainSlider>
           <Slide />
         </MainSlider>
