@@ -1,12 +1,6 @@
-@import "../../styles/colors.module.scss";
+@import "../../styles/colors.module.scss", "../../styles/mixin.module.scss";
 
-// Using Mixin
-@mixin display_Padding_width($padding) {
-  padding: $padding;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
+
 
 // Main Container of SideBar
 .container {
@@ -25,12 +19,7 @@
   border-right: 1px solid $sec-color;
 
   // Logo Container
-  .logo_container {
-    height: 8.3rem;
-    @include display_Padding_width(2.2rem 0 2rem 3.2rem);
-    border-bottom: 1px solid $sec-color;
-    gap: 2rem;
-  }
+  
 
   // Link container for page routing.
   .link_container {

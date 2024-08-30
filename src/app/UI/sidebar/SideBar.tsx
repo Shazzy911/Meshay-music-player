@@ -1,17 +1,13 @@
 import { sidebar_route_links } from "@/json/route_links";
 import style from "./SideBar.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import Hero from "@/images/Hero3.ico";
+import Logo from "../logo/Logo";
+;
 const SideBar = () => {
   return (
     <div className={style.container}>
-      <div className={style.logo_container}>
-        <Image src={Hero} alt="Image not found" width={40} height={40} />
-        <h2>Meshay</h2>
-
-      </div>
-
+      
+      <Logo/>
 
       <div className={style.link_container}>
         {

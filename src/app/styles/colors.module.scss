@@ -2,8 +2,18 @@ $main-color: #D7AA0F;
 $main-color:#0A66C2 ;
 $sec-color: #121212;
 $btn-hover: #16437E;
+$other-color: #ff0062;
 
 
-
-
+// @mixin transition_ease() {
+//     &:hover {
+//       cursor: pointer;
+//       color: $main-color;
+//       transition: all 0.3s ease-in-out;
+//       // border: .1px solid gray;
+//       svg {
+//         font-weight: bolder;
+//       }
+//     }
+//   }
 // #007bff

@@ -1,3 +1,4 @@
+import Search from "../search/Search";
 import ButtonSec from "../Secondary-button/ButtonSec";
 import style from "./TopBar.module.scss";
 import { FaSearch, FaBell, FaShoppingCart, FaUserAlt } from "react-icons/fa";
@@ -5,10 +6,7 @@ import { FaSearch, FaBell, FaShoppingCart, FaUserAlt } from "react-icons/fa";
 const TopBar = () => {
   return (
     <header className={style.container}>
-      <div className={style.search_container}>
-        <input type="text" placeholder="What do you want to play?" />
-        <FaSearch className={style.search_icon} />
-      </div>
+      <Search/>
       <div className={style.cart_bell_container}>
         <div className={style.bell_cart}>
           <FaBell />
