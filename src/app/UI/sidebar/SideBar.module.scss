@@ -39,6 +39,8 @@
       @include display_Padding_width(1rem 0 1.5rem 0);
       text-decoration: none;
       color: white;
+      font-size: 1.8rem;
+
       &:hover{
         font-weight: 600;
         svg { /* Target the SVG directly within the hover state */
@@ -52,7 +54,7 @@
       span {
         svg {
           fill: #c0c0c0;
-          width: 22px;
+          width: 2.8rem;
           height: auto;
           transition: fill 0.5s;
           margin-right: 12px;

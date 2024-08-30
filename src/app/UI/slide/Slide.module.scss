@@ -9,6 +9,9 @@
   overflow: hidden;
   padding: 8rem 35% 4rem 3.5rem;
   position: relative;
+  &:hover{
+    cursor: grab;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -44,7 +47,7 @@
 
 .button_box button:hover {
   /* Add your button hover effect styles here */
-  background-color: $main-color;
+  background-color: $btn-hover;
   cursor: pointer;
 }
 
