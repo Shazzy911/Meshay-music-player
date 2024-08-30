@@ -39,7 +39,7 @@ export const slide_dummy: slide_dummy_types[] = [
     ,
     {
         id: 5,
-        image: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fG11c2ljfGVufDB8fDB8fHww",
+        image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         heading: "Stay Ahead of the Beat: Unlock the Power of Music Discovery",
         description: "Our algorithm-driven recommendations learn your listening habits and serve up fresh tracks, playlists, and radio stations tailored just for you.",
         btn1: "Buy Now",

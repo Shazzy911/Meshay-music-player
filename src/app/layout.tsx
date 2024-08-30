@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Lato, Sevillana, Nerko_One, Roboto, Ubuntu } from "next/font/google";
+import { Ubuntu, Inter, Roboto , Poppins} from "next/font/google";
 import "normalize.css";
 import "./styles/globals.scss";
 import SideBar from "@/app/UI/sidebar/SideBar";
 import TopBar from "@/app/UI/topbar/TopBar";
-const inter = Ubuntu({ subsets: ["latin"],  weight: "400"});
+const inter = Poppins({ subsets: ["latin"],  weight: "400"});
 
 export const metadata: Metadata = {
   title: "Meshay Live Show & Music Streaming Platform",

@@ -22,13 +22,13 @@
   z-index: 101;
   width: 280px;
   transition: transform 0.5s ease;
-  border-right: 1px solid #222227;
+  border-right: 1px solid $sec-color;
 
   // Logo Container
   .logo_container {
     height: 8.3rem;
     @include display_Padding_width(2.2rem 0 2rem 3.2rem);
-    border-bottom: 1px solid #222227;
+    border-bottom: 1px solid $sec-color;
     gap: 2rem;
   }
 
