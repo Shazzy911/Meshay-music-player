@@ -1,24 +1,5 @@
-@import "../../styles/colors.module.scss";
-// Transition Mixin
-@mixin display_padding_bg($padding, $bg-color) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
-  background-color: $bg-color;
-  padding: $padding;
-}
-@mixin transition_ease() {
-  &:hover {
-    cursor: pointer;
-    color: $main-color;
-    transition: all 0.3s ease-in-out;
-    // border: .1px solid gray;
-    svg {
-      font-weight: bolder;
-    }
-  }
-}
+// @import "../../styles/colors.module.scss";
+@import "../../styles/colors.module.scss", "../../styles/mixin.module.scss";
 
 // Main Container
 .container {
@@ -27,30 +8,9 @@
   justify-content: space-between;
   height: 8.3rem;
   padding: 2.2rem 3.5rem 2rem 3.2rem;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid $sec-color;
 }
-// Search container for input
-.search_container {
-  display: flex;
-  align-items: center;
-  width: 35rem;
-  input {
-    background-color: #222227;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    height: 4.6rem;
-    position: relative;
-    color: #fff;
-    outline: none;
-    width: 100%;
-    padding: 0 20px;
-  }
-  .search_icon {
-    transform: translatex(-250%);
-    font-size: larger;
-    @include transition_ease();
-  }
-}
+
 
 // Container for cart and notifications
 .cart_bell_container {
@@ -59,7 +19,7 @@
   gap: 2rem;
   .bell_cart {
     padding: 1rem;
-    @include display_padding_bg(1rem, #222227);
+    @include display_padding_bg(1rem, $sec-color);
     @include transition_ease();
     .bell_cart:hover{
       background-color: gray;
@@ -67,7 +27,7 @@
   }
   .explore {
     margin-left: 2rem;
-    color: #222227;
+    color: $sec-color;
     @include display_padding_bg(1rem 1.5rem, white);
     // @include transition_ease(#222227);
     // @include transition_ease();
