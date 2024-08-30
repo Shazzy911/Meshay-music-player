@@ -1,5 +1,10 @@
+
+@import "../../styles/colors.module.scss";
+
 .container {
-  background-color: #111827;
+  // background-color: #111827;
+  background-color: $main-color;
+
   border: 1px solid transparent;
   border-radius: .75rem;
   box-sizing: border-box;
