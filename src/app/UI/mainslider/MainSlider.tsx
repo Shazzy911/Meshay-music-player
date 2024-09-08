@@ -29,11 +29,11 @@ const MainSlider: React.FC<ComponentProps> = ({ children }) => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
         navigation={{
           prevEl: prevRef.current,

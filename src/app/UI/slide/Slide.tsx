@@ -14,7 +14,7 @@ const Slide = () => {
           <div className={style.container} key={item.id} style={{
             background: `url(${item.image}) center center / cover no-repeat`,
             width: '1000px',
-            height: '500px',
+            height: '490px',
 
           }}>
             <h1>{item.heading}</h1>
