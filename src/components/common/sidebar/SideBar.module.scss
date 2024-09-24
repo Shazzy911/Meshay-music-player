@@ -1,0 +1,54 @@
+@import "../../../app/styles/colors.module.scss", "../../../app/styles/mixin.module.scss";
+
+
+
+// Main Container of SideBar
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  width: 280px;
+  transition: transform 0.5s ease;
+  border-right: 1px solid $sec-color;
+
+  // Logo Container
+  
+
+  // Link container for page routing.
+  .link_container {
+    padding: 4rem 0 3rem 4rem;
+    .link {
+      @include display_Padding_width(1rem 0 1.5rem 0);
+      text-decoration: none;
+      color: white;
+      font-size: 1.8rem;
+      &:hover{
+        font-weight: 600;
+        svg { /* Target the SVG directly within the hover state */
+            // fill: #25a56a;
+            fill: $main-color;
+             /* Change fill color on hover */
+            transition: fill 0.5s; /* Smooth transition effect */
+          }
+      }
+      
+      span {
+        svg {
+          fill: #c0c0c0;
+          width: 2.7rem;
+          height: auto;
+          transition: fill 0.5s;
+          margin-right: 12px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}

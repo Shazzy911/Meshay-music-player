@@ -1,0 +1,39 @@
+// @import "../../styles/colors.module.scss";
+@import "../../../app/styles/colors.module.scss", "../../../app/styles/mixin.module.scss";
+
+// Main Container
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8.3rem;
+  padding: 2.2rem 3.5rem 2rem 3.2rem;
+  border-bottom: 1px solid $sec-color;
+}
+
+
+// Container for cart and notifications
+.cart_bell_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  .bell_cart {
+    padding: 1rem;
+    @include display_padding_bg(1rem, $sec-color);
+    @include transition_ease();
+    .bell_cart:hover{
+      background-color: gray;
+    }
+  }
+  .explore {
+    margin-left: 2rem;
+    color: $sec-color;
+    @include display_padding_bg(1rem 1.5rem, white);
+    // @include transition_ease(#222227);
+    // @include transition_ease();
+
+    p {
+      font-weight: 600;
+    }
+  }
+}
