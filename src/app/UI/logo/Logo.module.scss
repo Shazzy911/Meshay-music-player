@@ -1,8 +1,0 @@
-@import "../../styles/mixin.module.scss", "../../styles/colors.module.scss";
-
-.container {
-    height: 8.3rem;
-    @include display_Padding_width(2.2rem 0 2rem 3.2rem);
-    border-bottom: 1px solid $sec-color;
-    gap: 2rem;
-  }
