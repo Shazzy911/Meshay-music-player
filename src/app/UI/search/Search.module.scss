@@ -1,0 +1,24 @@
+// Search container for input
+@import "../../styles/colors.module.scss", "../../styles/mixin.module.scss";
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    input {
+      background-color: $sec-color;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      height: 4.6rem;
+      position: relative;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .search_icon {
+      transform: translatex(-250%);
+      font-size: larger;
+      @include transition_ease();
+    }
+  }
