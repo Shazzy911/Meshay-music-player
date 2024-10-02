@@ -4,8 +4,8 @@ import style from "./Search.module.scss"
 const Search = () => {
     return (
         <div className={style.container}>
-            <input type="text" placeholder="What do you want to play?" />
             <FaSearch className={style.search_icon} />
+            <input type="text" placeholder="What do you want to play?" />
         </div>
     )
 }
