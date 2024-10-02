@@ -1,7 +1,7 @@
 import { sidebar_route_links } from "@/json/route_links";
 import style from "./SideBar.module.scss";
 import Link from "next/link";
-import Logo from "@/components/ui/logo/Logo";
+// import Logo from "@/components/ui/logo/Logo";
 ;
 const SideBar = () => {
   return (
