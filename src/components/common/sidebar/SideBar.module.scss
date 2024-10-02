@@ -52,3 +52,53 @@
     }
   }
 }
+
+
+
+// ====================================
+// ============ Media Queries =========
+// ====================================
+// ==== Targeting Mobile ==> Desktop ==
+
+@media screen and (min-width: 475px) {
+
+  // .container {
+  //   background-color: rgb(255, 105, 97);
+  // }
+}
+
+@media screen and (min-width: 640px) {
+ 
+  // .container {
+  //   background-color: rgb(90, 155, 213);
+  // }
+}
+
+@media screen and (min-width: 768px) {
+  
+  // .container {
+    
+  // }
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .container {
+    display: none;
+   
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  
+  // .container {
+  //   background-color: rgb(90, 120, 155);
+  // }
+}
+
+@media screen and (min-width: 1536px) {
+  
+  // .container {
+  //   background-color: rgb(120, 90, 155);
+  // }
+}

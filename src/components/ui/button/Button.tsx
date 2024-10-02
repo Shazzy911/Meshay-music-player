@@ -1,15 +1,15 @@
-"use client";
+import React from 'react'
+import style from "./Button.module.scss"
 
-import style from "./Button.module.scss";
+
 
 interface buttonType {
-    text?: string;
+  text?: string;
 }
-
-const Button = ({text}:buttonType) => {
+const Button = ({text}: buttonType) => {
   return (
     <button className={style.container}>{text}</button>
   )
 }
 
-export default Button
+export default Button;

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Poppins} from "next/font/google";
+import { Poppins } from "next/font/google";
 import "normalize.css";
 // import "./styles/globals.scss";
 import "./styles/globals.scss";
 import SideBar from "@/components/common/sidebar/SideBar";
 import TopBar from "@/components/common/topbar/TopBar";
-const inter = Poppins({ subsets: ["latin"],  weight: "400"});
+const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,16 +32,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${inter.className} ${geistSans.variable} ${geistMono.variable}`}>
-
-      <div className="container">
-          <div className="left_container">
-            <SideBar />
-          </div>
-          <div className="right_container">
-            <TopBar />
-            {children}
+        <div className="app">
+          <TopBar />
+          <div className="container">
+            <div className="left_container">
+              <SideBar />
+            </div>
+            <div className="right_container">
+              {children}
+            </div>
           </div>
         </div>
+
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 import { slide_dummy } from '@/json/slide_dummy'
 import style from "./Slide.module.scss";
-import Button from '@/components/ui/button/Button';
+import SlideButton from '@/components/ui/slide_button/SlideButton';
 
 
 
@@ -13,16 +13,16 @@ const Slide = () => {
 
           <div className={style.container} key={item.id} style={{
             background: `url(${item.image}) center center / cover no-repeat`,
-            width: '1000px',
-            height: '490px',
+            width: '1200px',
+            height: '500px',
 
           }}>
             <h1>{item.heading}</h1>
             <p>{item.description}</p>
             <div className={style.button_box}>
-              <Button text={item.btn1} />
+              <SlideButton text={item.btn1} />
               {
-                item.btn2 ? <Button text={item.btn2} /> : null
+                item.btn2 ? <SlideButton text={item.btn2} /> : null
               }
 
             </div>

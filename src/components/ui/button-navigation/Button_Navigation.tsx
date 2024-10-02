@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef, } from 'react';
-import style from "./Slide_button.module.scss";
+import style from "./Button_Navigation.module.scss";
 
 
 type CustomButtonProps = {
@@ -9,7 +9,7 @@ type CustomButtonProps = {
   svg: React.ReactNode;
 };
 
- const Slide_Button = forwardRef<HTMLSpanElement, CustomButtonProps>(({  svg ,  ...props } , ref) => {
+ const Button_Navigation = forwardRef<HTMLSpanElement, CustomButtonProps>(({  svg ,  ...props } , ref) => {
 
  
   return (
@@ -20,7 +20,7 @@ type CustomButtonProps = {
   );
 });
 // Optional display name for debugging purposes
-Slide_Button.displayName = "Slide_Button";
+Button_Navigation.displayName = "Button_Navigation";
 
 
-export default Slide_Button;
+export default Button_Navigation;

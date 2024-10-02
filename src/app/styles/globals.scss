@@ -1,9 +1,11 @@
 // @import 'normalize-css/normalize.css';
-@import 'normalize.css';
+@import "normalize.css";
 // Variables for Color and size ;
 @import "./colors.module.scss";
 
-*, ::before, ::after{
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,101 +13,115 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 40%;
 }
 body {
   font-size: 1.6rem;
-  background-color: #010409;
+  // background-color: #010409;
+  background-color: whitesmoke;
   color: white;
 
-//   background-color: $primary-bg-1;
-//   h1,h2,h3,h4,h5,h6{
-//     color: white;
-//   }                        /////////////////   Use White color when using Dark & Light mode
-  p{
+  //   background-color: $primary-bg-1;
+  //   h1,h2,h3,h4,h5,h6{
+  //     color: white;
+  //   } /////////////////   Use White color when using Dark & Light mode
+  p {
     // color: white;
     line-height: 1.5;
   }
-  a{
+  a {
     // color: $color-white-black1;
-    color:  inherit;
+    color: inherit;
   }
-//   svg{
-//     color: white;
-//   }
-
-
+  //   svg{
+  //     color: white;
+  //   }
 }
-.theme{
+.theme {
   transition: 1s all ease;
 }
-.container {
-  display: flex;
-  .right_container{
-    width: 80vw;
+.app {
+  background-color: seagreen;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  .container {
 
+    display: flex;
+    .right_container {
+      width: 100%;
+    }
   }
 }
-// .main-container {
-//   width: 75vw;
-//   // background-color: $primary-background-color1;
-//   // p{
-//   //   color: $paragraph-text-color1;
-//   //   line-height: 1.5;
-//   // }
-//   // a{
-//   //   color: $color-white-black1;
-//   // }
-// }
-
 // ====================================
 // ============ Media Queries =========
 // ====================================
-@media screen and (max-width: 920px) {
-  html{
-    font-size: 59%;
+// ==== Targeting Mobile ==> Desktop ==
+
+@media screen and (min-width: 475px) {
+  html {
+    font-size: 42.5%;
   }
-  .main-container {
-    width: 100vw;
-    // background-color: $primary-color;
-  }
-}
-@media screen and (max-width: 501px) {
-  html{
-    font-size: 53%;
-  }
-  .main-container {
-    width: 100vw;
-    // background-color: $primary-color;
+  .app {
+    background-color: rgb(255, 105, 97);
   }
 }
-@media screen and (max-width: 460px) {
-  html{
-    font-size: 49%;
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 45%;
   }
-  .main-container {
-    width: 100vw;
-    // background-color: $primary-color;
-  }
-}
-@media screen and (max-width: 420px) {
-  html{
-    font-size: 47%;
-  }
-  .main-container {
-    width: 100vw;
-    // background-color: $primary-color;
+  .app {
+    background-color: rgb(90, 155, 213);
+    padding: 0 0;
   }
 }
-@media screen and (max-width: 380px) {
-  html{
-    font-size: 43%;
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 50%;
   }
-  .main-container {
-    width: 100vw;
-    // background-color: $primary-color;
+  .app {
+    background-color: rgb(150, 75, 0);
   }
 }
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+  .app {
+    background-color: rgb(214, 155, 90);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 60%;
+  }
+  .app {
+    background-color: rgb(90, 120, 155);
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  html {
+    font-size: 62.5%;
+  }
+  .app {
+    background-color: rgb(120, 90, 155);
+  }
+}
+
+// @media screen and (min-width: 2000px) {
+//   html {
+//     font-size: 70%;
+//   }
+//   .container {
+//     max-width: 2000px;
+//     background-color: rgb(155, 120, 90);
+//   }
+// }
+
 // ==== Error Messages in Line  212, 304   .......
 
 // ============ This is Normalize Css for All Browser Styles =================

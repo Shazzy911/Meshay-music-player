@@ -13,7 +13,7 @@ import style from './MainSlider.module.scss';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 // import SwiperCore from 'swiper/core'
 import { useEffect, useRef, useState } from 'react';
-import Slide_Button from '@/components/ui/custom-button/Slide_button';
+import Button_Navigation from '@/components/ui/button-navigation/Button_Navigation';
 // SwiperCore.use([Navigation]);
 
 const MainSlider: React.FC<ComponentProps> = ({ children }) => {
@@ -60,8 +60,8 @@ const MainSlider: React.FC<ComponentProps> = ({ children }) => {
 
 
         <div className={style.pagination_navigation}>
-          <Slide_Button ref={prevRef} svg={<FaArrowLeft/>} value="Previous" />
-        <Slide_Button ref={nextRef} svg={<FaArrowRight/>}  value="Next" />
+          <Button_Navigation ref={prevRef} svg={<FaArrowLeft/>} value="Previous" />
+        <Button_Navigation ref={nextRef} svg={<FaArrowRight/>}  value="Next" />
          
 
         </div>

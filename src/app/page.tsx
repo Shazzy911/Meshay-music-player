@@ -1,8 +1,8 @@
 // import MainSlider from "./UI/mainslider/MainSlider";
 import React , { Suspense } from "react";
+import Slide from "@/components/layout/slide/Slide";
 const MainSlider = React.lazy(() => import("@/components/layout/mainslider/MainSlider"));
 import style from "./page.module.scss";
-import Slide from "@/components/layout/slide/Slide";
 
 
 

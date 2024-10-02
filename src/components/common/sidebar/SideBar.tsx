@@ -7,7 +7,7 @@ const SideBar = () => {
   return (
     <div className={style.container}>
       
-      <Logo/>
+      {/* <Logo/> */}
 
       <div className={style.link_container}>
         {

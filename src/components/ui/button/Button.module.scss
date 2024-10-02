@@ -1,41 +1,48 @@
-
 @import "../../../app/styles/colors.module.scss";
 
+/* CSS */
 .container {
-  // background-color: #111827;
+  align-items: center;
   background-color: $main-color;
-
-  border: 1px solid transparent;
-  border-radius: .75rem;
+  border: 0;
+  border-radius: 100px;
   box-sizing: border-box;
-  color: #FFFFFF;
-  flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  // font-size: 1.125rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  // font-size: 16px;
   font-weight: 600;
-  line-height: 1.5rem;
-  padding: .75rem 1.2rem;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 48rem;
+  min-height: 4rem;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  
+  vertical-align: middle;
 }
 
-.container:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.container:hover,
+.container:focus { 
+  background-color: $btn-hover;
+  color: #ffffff;
 }
 
-@media (min-width: 768px) {
-  .container {
-    padding: 1.75rem 2.5rem;
-  }
+.container:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.container:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
 }
