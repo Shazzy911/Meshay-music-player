@@ -28,7 +28,7 @@
       @include display_Padding_width(1rem 0 1.5rem 0);
       text-decoration: none;
       color: white;
-      font-size: 1.8rem;
+      // font-size: 1.8rem;
       &:hover{
         font-weight: 600;
         svg { /* Target the SVG directly within the hover state */
