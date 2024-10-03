@@ -1,3 +1,4 @@
+@import "./colors.module.scss";
 // @import 'normalize-css/normalize.css';
 @import "normalize.css";
 // Variables for Color and size ;
@@ -17,7 +18,7 @@ html {
 }
 body {
   font-size: 1.6rem;
-  background-color: #010409;
+  background-color: $bg-color;
   color: white;
 
   //   background-color: $primary-bg-1;

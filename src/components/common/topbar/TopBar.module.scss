@@ -27,16 +27,16 @@
     display: none;
   }
   .icons {
-    padding: 1rem;
-    @include display_padding_bg(1rem, $sec-color);
+    // padding: 1.5rem;
+    @include display_padding_bg(1.5rem, $sec-color);
     @include transition_ease();
     svg{
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
   }
-  .user{
-    display: none;
-  }
+  // .user{
+  //   display: none;
+  // }
   .menu{
     display: flex;
     svg{
@@ -70,12 +70,10 @@
   }
 
 
-  .icons_container {
-    .top_button{
-      display: flex;
-    }
+  // .icons_container {
     
-  }
+    
+  // }
 }
 
 @media screen and (min-width: 1024px) {
@@ -84,6 +82,10 @@
     display: flex;
   }
   .icons_container {
+    .top_button{
+      display: flex;
+    }
+
     .user{
       display: flex;
     }

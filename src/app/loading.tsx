@@ -6,4 +6,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default loading;

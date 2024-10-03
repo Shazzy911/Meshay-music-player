@@ -6,6 +6,7 @@ import "normalize.css";
 import "./styles/globals.scss";
 import SideBar from "@/components/common/sidebar/SideBar";
 import TopBar from "@/components/common/topbar/TopBar";
+import Providers from "@/redux/Providers";
 const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
 const geistSans = localFont({
@@ -32,6 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${inter.className} ${geistSans.variable} ${geistMono.variable}`}>
+
+      <Providers>
+
         <div className="app">
           <TopBar />
           <div className="container">
@@ -43,6 +47,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+      </Providers>
 
       </body>
     </html>
