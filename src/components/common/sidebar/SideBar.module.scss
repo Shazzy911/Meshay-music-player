@@ -5,18 +5,29 @@
 // Main Container of SideBar
 .container {
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  position: sticky;
+  background-color: $bg-color;
+
+  position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 101;
+  // left: 0;
+  // bottom: 0;
+  z-index: 2;
   width: 280px;
   transition: transform 0.5s ease;
   border-right: 1px solid $sec-color;
+
+  //// When Active 
+  &.active{
+    left: 100;
+    // right: 0;
+    display: flex;
+    transition: all 6s ease;
+  }
+
 
   // Logo Container
   
@@ -51,6 +62,16 @@
       }
     }
   }
+
+
+  // Side Bar Premium Button--
+
+  .sidebar_button{
+    padding: 0 3rem;
+    margin: 1rem 0;
+  }
+
+
 }
 
 
@@ -77,15 +98,18 @@
 @media screen and (min-width: 768px) {
   
   // .container {
-    
+   
   // }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   
   .container {
-    display: none;
-   
+    display: flex;
+    position: sticky;
+    .premium_button{
+      display: none;
+    }
   }
 }
 

@@ -4,8 +4,12 @@ import Button from "@/components/ui/button/Button";
 import Logo from "@/components/ui/logo/Logo";
 import Search from "@/components/ui/search/Search";
 import {  FaBell,  FaUserAlt } from "react-icons/fa";
-import { RiMenu3Fill } from "react-icons/ri";
+import Menu from "../menu/Menu";
+
 const TopBar = () => {
+  
+
+
   return (
     <header className={style.container}>
       <Logo/>
@@ -24,7 +28,7 @@ const TopBar = () => {
           <FaUserAlt/>
         </div>
         <div className={`${style.icons} ${style.menu}`}>
-        <RiMenu3Fill />
+        <Menu/>
         </div>
       </section>
     </header>
