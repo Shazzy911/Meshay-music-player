@@ -5,14 +5,14 @@
 .swiper {
   width: 1230px;
   height: 500px;
-  background-color: yellowgreen;
-  margin: 5rem 4rem;
+  margin: 2rem 0;
   .swiper-wrapper {
     .swiper-slide-active {
       width: 1230px !important;
     }
     .swiper-slide {
       width: 1230px !important;
+      margin-right: 0px;
     }
   }
   .swiper-pagination {
@@ -44,4 +44,76 @@
     gap: 1rem;
 
   }
+}
+
+
+
+
+
+// ====================================
+// ============ Media Queries =========
+// ====================================
+// ==== Targeting Mobile ==> Desktop ==
+
+@media screen and (min-width: 475px) {
+  
+}
+
+@media screen and (min-width: 640px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 110rem;
+    height: 55rem;
+    
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 110rem !important;
+      }
+      .swiper-slide {
+       width: 110rem !important;
+        
+      }
+    }
+    .swiper-pagination {
+      left: 85rem;
+    }
+    .navigation{
+      left: 100rem
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper {
+    width: 1230px;
+    height: 500px;
+    margin: 5rem 4rem;
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 1230px !important;
+      }
+      .swiper-slide {
+        width: 1230px !important;
+      }
+    }
+    .swiper-pagination {
+      left: 95rem;
+      
+    }
+    .navigation{
+      left: 110rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  
+}
+
+@media screen and (min-width: 1536px) {
+  
+  
 }

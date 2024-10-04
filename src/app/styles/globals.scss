@@ -42,10 +42,11 @@ body {
 }
 .app {
   // background-color: seagreen;
+  width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   .container {
-
+    width: 100%;
     display: flex;
     .right_container {
       width: 100%;
