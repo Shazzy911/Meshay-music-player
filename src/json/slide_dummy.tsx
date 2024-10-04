@@ -61,7 +61,6 @@ export const slide_dummy: slide_dummy_types[] = [
         btn1: "Explore Now",
         btn2: "Start Listening",
     },
-    
     // {
     //     id: 2,
     //     image: "https://images.unsplash.com/photo-1502773860571-211a597d6e4b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fG11c2ljfGVufDB8fDB8fHww",

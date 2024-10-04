@@ -1,6 +1,5 @@
-@import "../../../app/styles/colors.module.scss", "../../../app/styles/mixin.module.scss";
-
-
+@import "../../../app/styles/colors.module.scss",
+  "../../../app/styles/mixin.module.scss";
 
 // Main Container of SideBar
 .container {
@@ -10,27 +9,30 @@
   justify-content: flex-start;
   align-items: flex-start;
   background-color: $bg-color;
-
+  padding: 2rem 0 0 1rem;
   position: fixed;
   top: 0;
   // left: 0;
   // bottom: 0;
-  z-index: 2;
+  z-index: 5;
   width: 280px;
   transition: transform 0.5s ease;
   border-right: 1px solid $sec-color;
 
-  //// When Active 
-  &.active{
+  //// When Active
+  &.active {
     left: 100;
     // right: 0;
     display: flex;
     transition: all 6s ease;
   }
 
+  // Logo container box
+  .logo_box {
+    margin: 2rem 0;    
+  }
 
-  // Logo Container
-  
+
 
   // Link container for page routing.
   .link_container {
@@ -40,16 +42,17 @@
       text-decoration: none;
       color: white;
       // font-size: 1.8rem;
-      &:hover{
+      &:hover {
         font-weight: 600;
-        svg { /* Target the SVG directly within the hover state */
-            // fill: #25a56a;
-            fill: $main-color;
-             /* Change fill color on hover */
-            transition: fill 0.5s; /* Smooth transition effect */
-          }
+        svg {
+          /* Target the SVG directly within the hover state */
+          // fill: #25a56a;
+          fill: $main-color;
+          /* Change fill color on hover */
+          transition: fill 0.5s; /* Smooth transition effect */
+        }
       }
-      
+
       span {
         svg {
           fill: #c0c0c0;
@@ -63,18 +66,13 @@
     }
   }
 
-
   // Side Bar Premium Button--
 
-  .sidebar_button{
+  .sidebar_button {
     padding: 0 3rem;
     margin: 1rem 0;
   }
-
-
 }
-
-
 
 // ====================================
 // ============ Media Queries =========
@@ -82,46 +80,45 @@
 // ==== Targeting Mobile ==> Desktop ==
 
 @media screen and (min-width: 475px) {
-
   // .container {
   //   background-color: rgb(255, 105, 97);
   // }
 }
 
 @media screen and (min-width: 640px) {
- 
   // .container {
   //   background-color: rgb(90, 155, 213);
   // }
 }
 
 @media screen and (min-width: 768px) {
-  
   // .container {
-   
+
   // }
 }
 
 @media screen and (min-width: 1024px) {
-  
   .container {
     display: flex;
     position: sticky;
-    .premium_button{
+    padding: 0 1rem;
+
+    .logo_box {
+      display: none;
+    }
+    .premium_button {
       display: none;
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  
   // .container {
   //   background-color: rgb(90, 120, 155);
   // }
 }
 
 @media screen and (min-width: 1536px) {
-  
   // .container {
   //   background-color: rgb(120, 90, 155);
   // }

@@ -1,14 +1,22 @@
+"use client";
 import React from 'react'
-import style from "./Button.module.scss"
+import styles from "./Button.module.scss"
 
 
+type ButtonProp = React.ComponentPropsWithoutRef<"button"> & {
+  variant? : "primary" | "secondary" ;
+}; // This will allow to have acceopt all the button Attribute..
+type ButtonType = ButtonProp &{
+style?: React.CSSProperties;
 
-interface buttonType {
-  text?: string;
-}
-const Button = ({text}: buttonType) => {
+// borderRadius?: Record<string, number>; // Key should be String ==> Value can be Number...
+text: string;
+// clickFunc: () => void;
+};
+
+const Button = ({text, style}: ButtonType) => {
   return (
-    <button className={style.container}>{text}</button>
+    <button className={styles.container} style={style}>{text}</button>
   )
 }
 

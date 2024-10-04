@@ -6,7 +6,7 @@
 .container {
   display: flex;
   align-items: center;
-  width: 42rem;
+  width: 45rem;
   input {
     background-color: $sec-color;
     border: 1px solid transparent;
@@ -19,7 +19,7 @@
     padding: 0 60px;
   }
   .search_icon {
-    z-index: 5;
+    z-index: 2;
     transform: translatex(200%);
     font-size: larger;
     @include transition_ease();

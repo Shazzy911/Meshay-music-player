@@ -7,7 +7,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import style from './MainSlider.module.scss';
+import style from './Swiper_Main.module.scss';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -16,7 +16,7 @@ import { useEffect, useRef, useState } from 'react';
 import Button_Navigation from '@/components/ui/button-navigation/Button_Navigation';
 // SwiperCore.use([Navigation]);
 
-const MainSlider: React.FC<ComponentProps> = ({ children }) => {
+const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
 
   const [isInitialized, setInit] = useState(false);
   // console.log(isInitialized);
@@ -30,7 +30,7 @@ const MainSlider: React.FC<ComponentProps> = ({ children }) => {
     setInit(true);
   }, [isInitialized]);
   return (
-    <div className={style.container}>
+    <>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -67,11 +67,11 @@ const MainSlider: React.FC<ComponentProps> = ({ children }) => {
         </div>
       </Swiper>
 
-    </div>
+    </>
   );
 }
 
-export default MainSlider;
+export default Swiper_Main;
 
 
 
