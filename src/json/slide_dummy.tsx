@@ -61,39 +61,39 @@ export const slide_dummy: slide_dummy_types[] = [
         btn1: "Explore Now",
         btn2: "Start Listening",
     },
-    // {
-    //     id: 2,
-    //     image: "https://images.unsplash.com/photo-1502773860571-211a597d6e4b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fG11c2ljfGVufDB8fDB8fHww",
+    {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1502773860571-211a597d6e4b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fG11c2ljfGVufDB8fDB8fHww",
         
-    //     heading: "Get Ready to Groove with Our Live Shows",
-    //     description: "Experience the energy of live music with our exclusive live shows and concerts. Get front-row access to your favorite artists and bands.",
-    //     btn1: "Watch Live",
-    //     btn2: "Upcoming Shows",
-    // },
-    // {
-    //     id: 3,
-    //     image: "https://img.freepik.com/premium-photo/happy-young-girl-podcast-studio_74981-275.jpg?w=1200",
+        heading: "Get Ready to Groove with Our Live Shows",
+        description: "Experience the energy of live music with our exclusive live shows and concerts. Get front-row access to your favorite artists and bands.",
+        btn1: "Watch Live",
+        btn2: "Upcoming Shows",
+    },
+    {
+        id: 3,
+        image: "https://img.freepik.com/premium-photo/happy-young-girl-podcast-studio_74981-275.jpg?w=1200",
         
-    //     heading: "Tune in to Our Exclusive Podcasts",
-    //     description: "Dive into the world of music with our expert-led podcasts. Get behind-the-scenes stories, interviews, and insights from the music industry.",
-    //     btn1: "Listen Now",
-    // },
-    // {
-    //     id: 4,
-    //     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fG11c2ljfGVufDB8fDB8fHww",
+        heading: "Tune in to Our Exclusive Podcasts",
+        description: "Dive into the world of music with our expert-led podcasts. Get behind-the-scenes stories, interviews, and insights from the music industry.",
+        btn1: "Listen Now",
+    },
+    {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fG11c2ljfGVufDB8fDB8fHww",
         
-    //     heading: "Unlock the Power of Music Discovery",
-    //     description: "Get personalized music recommendations based on your listening habits. Discover new artists, genres, and sounds with our cutting-edge music discovery features.",
-    //     btn1: "Start Discovering",
-    //     btn2: "New Releases",
-    // }
-    // ,
-    // {
-    //     id: 5,
-    //     image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //     heading: "Create Your Perfect Playlist",
-    //     description: "Build your dream playlist with our intuitive playlist builder. Add your favorite tracks, discover new ones, and share with friends.",
-    //     btn1: "Create Playlist",
-    //     btn2: "Explore Playlists",
-    // }
+        heading: "Unlock the Power of Music Discovery",
+        description: "Get personalized music recommendations based on your listening habits. Discover new artists, genres, and sounds with our cutting-edge music discovery features.",
+        btn1: "Start Discovering",
+        btn2: "New Releases",
+    }
+    ,
+    {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        heading: "Create Your Perfect Playlist",
+        description: "Build your dream playlist with our intuitive playlist builder. Add your favorite tracks, discover new ones, and share with friends.",
+        btn1: "Create Playlist",
+        btn2: "Explore Playlists",
+    }
 ]
