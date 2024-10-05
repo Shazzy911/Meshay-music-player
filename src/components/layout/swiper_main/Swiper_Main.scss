@@ -1,21 +1,23 @@
-// .container {
 
-// }
+
+// Using Mixinn 
+
+
 
 .swiper {
-  width: 1230px;
-  height: 500px;
+  width: 52rem;
+  height: 34rem;
   margin: 2rem 0;
   .swiper-wrapper {
     .swiper-slide-active {
-      width: 1230px !important;
+      width: 52rem !important;
     }
     .swiper-slide {
-      width: 1230px !important;
-      margin-right: 0px;
+      width: 52rem !important;
     }
   }
   .swiper-pagination {
+    display: none;
     position: relative;
     bottom: 60px;
     width: 15rem;
@@ -35,9 +37,9 @@
   }
   .navigation{
     margin: 0 1rem;
-    display: flex;
+    display: none;
     position: relative;
-    bottom: 77px;
+    bottom: 75px;
     width: 5rem;
     left: 110rem;
     z-index: 100;
@@ -45,28 +47,64 @@
 
   }
 }
-
-
-
-
-
 // ====================================
 // ============ Media Queries =========
 // ====================================
 // ==== Targeting Mobile ==> Desktop ==
 
 @media screen and (min-width: 475px) {
-  
+  .swiper {
+    width: 62rem;
+    height: 40rem;
+    
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 62rem !important;
+      }
+      .swiper-slide {
+       width: 62rem !important;
+      }
+    }
+    
+  }
 }
 
 @media screen and (min-width: 640px) {
-  
+  .swiper {
+    width: 82rem;
+    height: 46rem;
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 82rem !important;
+      }
+      .swiper-slide {
+       width: 82rem !important;
+      }
+    }
+
+  }
 }
 
 @media screen and (min-width: 768px) {
   .swiper {
+    width: 90rem;
+    height: 47rem;
+    
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 90rem !important;
+      }
+      .swiper-slide {
+       width: 90rem !important;
+        
+      }
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .swiper {
     width: 110rem;
-    height: 55rem;
+    height: 50rem;
     
     .swiper-wrapper {
       .swiper-slide-active {
@@ -78,25 +116,26 @@
       }
     }
     .swiper-pagination {
-      left: 85rem;
+      display: flex;
+      left: 80rem;
     }
     .navigation{
-      left: 100rem
+      display: flex;
+      left: 95rem
     }
   }
 }
-
 @media screen and (min-width: 1024px) {
   .swiper {
-    width: 1230px;
-    height: 500px;
+    width: 123rem;
+    height: 50rem;
     margin: 5rem 4rem;
     .swiper-wrapper {
       .swiper-slide-active {
-        width: 1230px !important;
+        width: 123rem !important;
       }
       .swiper-slide {
-        width: 1230px !important;
+        width: 123rem !important;
       }
     }
     .swiper-pagination {
