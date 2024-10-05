@@ -1,14 +1,16 @@
 @import "../../../app/styles/colors.module.scss";
 
-
-
 .container {
-  width: 1230px !important;
+  //  Size of a Slide
+  width: 52rem !important;
+  height: 34rem;
+
+  // Centering content of Slide... /// 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  ////////////////////////
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -25,22 +27,24 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .content{
+  //  Slide Content Scss
+  .content {
     z-index: 1;
-    width: 80rem;
-    padding: 0 3.5rem;
+    width: 48rem;
+    padding: 0 2.5rem;
     h1 {
-      font-size: 4rem;
+      font-size: 2.5rem;
       line-height: 1.3;
     }
     p {
+      font-size: 1.4rem;
       color: white;
-      min-height: 7.2rem;
+      min-height: 6.2rem;
       opacity: 0.8;
     }
   }
 }
-
+// ====== Css of Slide Button Container box ====== 
 .button_box {
   display: flex;
   align-items: center;
@@ -55,42 +59,58 @@
   cursor: pointer;
 }
 
-
 // ====================================
 // ============ Media Queries =========
 // ====================================
 // ==== Targeting Mobile ==> Desktop ==
 
 @media screen and (min-width: 475px) {
-  
+  .container {
+    width: 62rem !important;
+    height: 40rem;
+  }
 }
 
 @media screen and (min-width: 640px) {
-  
+  .container {
+    width: 82rem !important;
+    height: 46rem;
+    .content {
+      width: 80rem;
+      padding: 0 3.5rem;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+      font-size: 1.6rem;
+      }
+    }
+
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
+    width: 90rem !important;
+    height: 47rem;
+
+  }
+}
+@media screen and (min-width: 900px) { /// Adding Width 900px for Swiper resize
+  .container {
     width: 110rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-   
-    
-    
+    height: 50rem;
+
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 123rem !important;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  
-}
-
 @media screen and (min-width: 1280px) {
-  
 }
 
 @media screen and (min-width: 1536px) {
-  
-  
 }
