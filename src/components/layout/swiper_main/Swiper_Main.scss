@@ -1,9 +1,5 @@
 
 
-// Using Mixinn 
-
-
-
 .swiper {
   width: 52rem;
   height: 34rem;
@@ -39,7 +35,7 @@
     margin: 0 1rem;
     display: none;
     position: relative;
-    bottom: 75px;
+    bottom: 73px;
     width: 5rem;
     left: 110rem;
     z-index: 100;
@@ -127,6 +123,53 @@
 }
 @media screen and (min-width: 1024px) {
   .swiper {
+    width: 90rem;
+    height: 50rem;
+    margin: 5rem 3rem;
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 90rem !important;
+      }
+      .swiper-slide {
+        width: 90rem !important;
+      }
+    }
+    .swiper-pagination {
+      left: 67rem;
+      
+    }
+    .navigation{
+      left: 80rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .swiper {
+    width: 95rem;
+    height: 50rem;
+  
+    .swiper-wrapper {
+      .swiper-slide-active {
+        width: 95rem !important;
+      }
+      .swiper-slide {
+        width: 95rem !important;
+      }
+    }
+    .swiper-pagination {
+      left: 70rem;
+      
+    }
+    .navigation{
+      left: 82rem;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 1536px) {
+  .swiper {
     width: 123rem;
     height: 50rem;
     margin: 5rem 4rem;
@@ -146,13 +189,5 @@
       left: 110rem;
     }
   }
-}
-
-@media screen and (min-width: 1280px) {
-  
-}
-
-@media screen and (min-width: 1536px) {
-  
   
 }
