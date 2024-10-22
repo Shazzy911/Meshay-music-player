@@ -1,9 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import style from "@/app/styles/loading.module.scss";
 const loading = () => {
-  return (
-    <div>loading</div>
-  )
-}
+  return <p className={style.loader}></p>;
+};
 
 export default loading;

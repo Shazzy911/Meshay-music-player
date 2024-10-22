@@ -1,6 +1,6 @@
 import { route_links_types } from "@/types/route_links_types";
 import { FaHome } from "react-icons/fa";
-import { FaNewspaper, FaStore, FaUserGroup , FaMusic, FaCalendarDays, FaMicrophone} from "react-icons/fa6";
+import { FaNewspaper, FaStore, FaCalendarDays } from "react-icons/fa6";
 export const sidebar_route_links: route_links_types[] = [
   {
     id: 1,
@@ -10,36 +10,19 @@ export const sidebar_route_links: route_links_types[] = [
   },
   {
     id: 2,
-    link: "Artists",
-    route: "/artists",
-    icon: <FaUserGroup />,
-  },
-  {
-    id: 3,
-    link: "Release",
-    route: "/release",
-    icon: <FaMusic />,
-  },
-  {
-    id: 4,
     link: "Events",
     route: "/events",
     icon: <FaCalendarDays />,
   },
+
   {
-    id: 5,
-    link: "Podcasts",
-    route: "/podcasts",
-    icon: <FaMicrophone />,
-  },
-  {
-    id: 6,
+    id: 3,
     link: "Store",
     route: "/store",
     icon: <FaStore />,
   },
   {
-    id: 7,
+    id: 4,
     link: "News",
     route: "/news",
     icon: <FaNewspaper />,

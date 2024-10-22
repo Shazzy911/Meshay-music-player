@@ -5,6 +5,7 @@ import SlideButton from "@/components/ui/slide_button/SlideButton";
 
 const Slide = () => {
   return (
+    // <>
     <>
       {slide_dummy.map((item) => (
         <div
