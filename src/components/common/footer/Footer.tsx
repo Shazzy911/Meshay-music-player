@@ -22,11 +22,11 @@ const Footer = () => {
             Offering an immersive and User friendly experience for music
             enthusiasts
           </p>
-          <span>
+          <span className={style.userInfo}>
             <IoMail />
             <p>Shazzy.mern@gmail.com</p>
           </span>
-          <span>
+          <span className={style.userInfo}>
             <FaPhone />
             <p>+92 3028862387</p>
           </span>

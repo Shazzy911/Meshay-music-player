@@ -1,4 +1,16 @@
+@import "../../../app/styles/colors.module.scss";
+
 .container {
   display: flex;
   flex-direction: column;
+  span {
+    a {
+      &:hover {
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.6s ease-in-out;
+        color: $main-color;
+      }
+    }
+  }
 }

@@ -11,7 +11,7 @@
   padding: 2.2rem 2.5rem 2rem 2rem;
   border-bottom: 1px solid $sec-color;
   position: sticky;
-  background-color: $main-color;
+  background-color: $bg-color;
   top: 0;
   z-index: 300;
 }
@@ -31,7 +31,7 @@
   }
   .icons {
     // padding: 1.5rem;
-    @include display_padding_bg(1.5rem, $sec-color);
+    @include display_padding_bg(1.2rem, $sec-color);
     @include transition_ease();
     svg {
       font-size: 1.8rem;
