@@ -1,8 +1,6 @@
 @import "./colors.module.scss";
 // @import 'normalize-css/normalize.css';
 @import "normalize.css";
-// Variables for Color and size ;
-@import "./colors.module.scss";
 
 *,
 ::before,
@@ -15,6 +13,11 @@
 
 html {
   font-size: 40%;
+}
+html,
+body {
+  height: 100dvh;
+  // overflow-x: hidden; /* Prevent horizontal scrollbars */
 }
 body {
   font-size: 1.6rem;
@@ -41,15 +44,18 @@ body {
   transition: 1s all ease;
 }
 .app {
-  // background-color: seagreen;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
   width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  .container {
+  .main-container {
     width: 100%;
     display: flex;
-    .right_container {
-      width: 100%;
+    flex: 1;
+    .page {
+      flex: 1;
     }
   }
 }

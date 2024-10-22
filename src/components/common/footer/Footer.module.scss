@@ -1,0 +1,68 @@
+@import "../../../app/styles/colors.module.scss";
+
+.container {
+  background-color: $sec-color;
+  padding: 2rem 3rem;
+  // font-size: 1.5rem;
+  .container_info {
+    margin: 3rem 2rem;
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 0;
+    div {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .app_info {
+      flex: 2;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .userInfo {
+        &:hover {
+          font-weight: 500;
+          cursor: pointer;
+          svg {
+            font-size: 1.8rem;
+            fill: $main-color;
+            transition: fill 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .copy_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $bg-color;
+    padding: 3rem;
+    div {
+      display: flex;
+      gap: 1rem;
+      a {
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 150px;
+          padding: 1.2rem;
+          background-color: $bg-color;
+          transition: fill 0.5s; /* Smooth transition effect */
+
+          svg {
+            font-size: 1.8rem;
+            &:hover {
+              color: $main-color;
+              transition: fill 0.5s; /* Smooth transition effect */
+            }
+          }
+        }
+      }
+    }
+  }
+}

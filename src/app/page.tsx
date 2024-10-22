@@ -5,20 +5,19 @@ const Swiper_Main = React.lazy(
 );
 import style from "./page.module.scss";
 import Search from "@/components/ui/search/Search";
+import Loader from "@/components/ui/loader/Loader";
 
 const page = () => {
   return (
     <main className={style.container}>
-      
-        <div className={style.page_search}>
-          <Search />
-        </div>
-        <Suspense fallback={<p>Loading...</p>}>
-          <Swiper_Main>
-            <Slide />
-          </Swiper_Main>
-        </Suspense>
-      
+      <div className={style.page_search}>
+        <Search />
+      </div>
+      <Suspense fallback={<Loader />}>
+        <Swiper_Main>
+          <Slide />
+        </Swiper_Main>
+      </Suspense>
     </main>
   );
 };

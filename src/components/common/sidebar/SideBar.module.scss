@@ -3,18 +3,14 @@
 
 // Main Container of SideBar
 .container {
-  height: 100vh;
+  height: calc(100dvh - 7rem);
   display: none;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   background-color: $bg-color;
   padding: 2rem 0 0 1rem;
-  position: fixed;
-  top: 0;
-  // left: 0;
-  // bottom: 0;
-  z-index: 5;
+  position: sticky;
+  top: 7rem;
+  z-index: 2;
   width: 280px;
   transition: transform 0.5s ease;
   border-right: 1px solid $sec-color;
@@ -29,10 +25,8 @@
 
   // Logo container box
   .logo_box {
-    margin: 2rem 0;    
+    margin: 2rem 0;
   }
-
-
 
   // Link container for page routing.
   .link_container {
@@ -100,7 +94,7 @@
 @media screen and (min-width: 1024px) {
   .container {
     display: flex;
-    position: sticky;
+    // position: sticky;
     padding: 0 1rem;
 
     .logo_box {

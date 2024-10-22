@@ -16,7 +16,10 @@ interface ApiResponse {
 const fetchingData = async (): Promise<User[] | undefined> => {
   try {
     const response = await fetch(
-      "https://meshay-music-backend-production.up.railway.app/user"
+      "https://meshay-music-backend-production.up.railway.app/user",
+      {
+        cache: "no-store",
+      }
     );
 
     if (!response.ok) {
@@ -24,7 +27,6 @@ const fetchingData = async (): Promise<User[] | undefined> => {
     }
 
     const data: ApiResponse = await response.json(); // Ensure we are getting the right structure
-    console.log("Fetched data:", data); // Log the data to check its structure
     return data.response;
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -34,8 +36,6 @@ const fetchingData = async (): Promise<User[] | undefined> => {
 
 const Page = async () => {
   const data = await fetchingData();
-
-  console.log("Data before mapping:", data); // Log data before mapping
 
   return (
     <main>

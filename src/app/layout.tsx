@@ -1,12 +1,16 @@
+import React, { Suspense } from "react";
+import Providers from "@/redux/Providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "normalize.css";
-// import "./styles/globals.scss";
 import "./styles/globals.scss";
-import SideBar from "@/components/common/sidebar/SideBar";
-import TopBar from "@/components/common/topbar/TopBar";
-import Providers from "@/redux/Providers";
+import Loader from "@/components/ui/loader/Loader";
+
+const TopBar = React.lazy(() => import("@/components/common/topbar/TopBar"));
+const Footer = React.lazy(() => import("@/components/common/footer/Footer"));
+const SideBar = React.lazy(() => import("@/components/common/sidebar/SideBar"));
+
 const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
 const geistSans = localFont({
@@ -24,7 +28,6 @@ export const metadata: Metadata = {
   description: "This is the music application",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,23 +35,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.className} ${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={` ${inter.className} ${geistSans.variable} ${geistMono.variable}`}
+      >
+        <Providers>
+          <Suspense fallback={<Loader />}>
+            <div className="app">
+              <TopBar />
+              <div className="main-container">
+                <SideBar />
 
-      <Providers>
-
-        <div className="app">
-          <TopBar />
-          <div className="container">
-            <div className="left_container">
-              <SideBar />
+                <div className="page">
+                  {children}
+                  <Footer />
+                </div>
+              </div>
             </div>
-            <div className="right_container">
-              {children}
-            </div>
-          </div>
-        </div>
-      </Providers>
-
+          </Suspense>
+        </Providers>
       </body>
     </html>
   );

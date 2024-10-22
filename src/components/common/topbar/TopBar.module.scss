@@ -1,53 +1,52 @@
 // @import "../../styles/colors.module.scss";
-@import "../../../app/styles/colors.module.scss", "../../../app/styles/mixin.module.scss";
+@import "../../../app/styles/colors.module.scss",
+  "../../../app/styles/mixin.module.scss";
 
-// Main Container
+// Main Container TopBar
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8.3rem;
+  height: 7rem;
   padding: 2.2rem 2.5rem 2rem 2rem;
   border-bottom: 1px solid $sec-color;
+  position: sticky;
+  background-color: $bg-color;
+  top: 0;
+  z-index: 300;
 }
-// Top Bar Search 
+// Top Bar Search
 
-.top_search{
+.top_search {
   display: none;
 }
-
-
 
 // Container for cart and notifications
 .icons_container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  .top_button{
+  .top_button {
     display: none;
   }
   .icons {
     // padding: 1.5rem;
-    @include display_padding_bg(1.5rem, $sec-color);
+    @include display_padding_bg(1.2rem, $sec-color);
     @include transition_ease();
-    svg{
+    svg {
       font-size: 1.8rem;
     }
   }
   // .user{
   //   display: none;
   // }
-  .menu{
+  .menu {
     display: flex;
-    svg{
+    svg {
       font-size: 2.5rem;
     }
   }
-  
 }
-
-
-
 
 // ====================================
 // ============ Media Queries =========
@@ -55,13 +54,9 @@
 // ==== Targeting Mobile ==> Desktop ==
 
 @media screen and (min-width: 475px) {
-  
-  
 }
 
 @media screen and (min-width: 640px) {
-  
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -69,41 +64,31 @@
     padding: 2.2rem 3.5rem 2rem 3.2rem;
   }
 
-
   // .icons_container {
-    
-    
+
   // }
 }
 
 @media screen and (min-width: 1024px) {
-  
-  .top_search{
+  .top_search {
     display: flex;
   }
   .icons_container {
-    .top_button{
+    .top_button {
       display: flex;
     }
 
-    .user{
+    .user {
       display: flex;
     }
-    .menu{
+    .menu {
       display: none;
     }
-    
   }
-
-
 }
 
 @media screen and (min-width: 1280px) {
-  
-  
 }
 
 @media screen and (min-width: 1536px) {
-  
-  
 }

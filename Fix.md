@@ -16,6 +16,8 @@ A modern, server-rendered blog application built using Next.js, SCSS, and TypeSc
 - SCSS Styling
 - CRUD Operations
 
+
+
 ## Tech Stack
 
 - Next.js
@@ -29,6 +31,9 @@ A modern, server-rendered blog application built using Next.js, SCSS, and TypeSc
 Enjoy building your blog with Next.js and SCSS!;
 
 # Fix the Issues
+- Using Animation library like framer-motion..
+
+
 
 - Use Responsive layout for the Website...
 - Review all the code and see if there's any problem... <br>

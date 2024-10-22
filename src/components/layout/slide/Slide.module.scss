@@ -5,7 +5,7 @@
   width: 52rem !important;
   height: 34rem;
 
-  // Centering content of Slide... /// 
+  // Centering content of Slide... ///
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,7 @@
     }
   }
 }
-// ====== Css of Slide Button Container box ====== 
+// ====== Css of Slide Button Container box ======
 .button_box {
   display: flex;
   align-items: center;
@@ -82,10 +82,9 @@
         font-size: 4rem;
       }
       p {
-      font-size: 1.4rem;
+        font-size: 1.4rem;
       }
     }
-
   }
 }
 
@@ -93,14 +92,13 @@
   .container {
     width: 90rem !important;
     height: 47rem;
-
   }
 }
-@media screen and (min-width: 900px) { /// Adding Width 900px for Swiper resize
+@media screen and (min-width: 900px) {
+  /// Adding Width 900px for Swiper resize
   .container {
     width: 110rem !important;
     height: 50rem;
-
   }
 }
 @media screen and (min-width: 1024px) {
@@ -120,6 +118,5 @@
   .container {
     width: 123rem !important;
     height: 50rem;
-
   }
 }
