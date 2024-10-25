@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/not-found.scss";
+import "../styles/not-found.scss";
 
 const page = () => {
   return (
