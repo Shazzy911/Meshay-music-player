@@ -12,7 +12,7 @@ const RegisterSchema = z.object({
 type RegisterSchemaType = z.infer<typeof RegisterSchema>;
 
 const RegisterForm = () => {
-  const [successMessage, setSuccessMessage] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<boolean | null>(null);
   const router = useRouter(); // Initialize useRouter
   const {
     register,
@@ -35,9 +35,14 @@ const RegisterForm = () => {
         setSuccessMessage(true);
         reset(); // Reset form fields
         setTimeout(() => {
-          setSuccessMessage(false);
           router.push("/login");
-        }, 3500); // Hide success message after 3.5 seconds
+          setTimeout(() => {
+            setSuccessMessage(null);
+          }, 3000);
+        }, 1500); // Hide success message after 3.5 seconds
+      } else {
+        reset();
+        setSuccessMessage(false);
       }
     } catch (error) {
       console.error("Error Posting Contact:", error);
@@ -64,11 +69,15 @@ const RegisterForm = () => {
       <input type="password" placeholder="Password" {...register("password")} />
       {errors.password && <span className="error">Required</span>}
       <button>Register</button>
-      {successMessage && (
+      {successMessage === true ? (
         <p className="success" style={{ color: "green" }}>
-          Submitted successfully!
+          Register Successfully!
         </p>
-      )}
+      ) : successMessage === false ? (
+        <p className="success" style={{ color: "red" }}>
+          User Already exist
+        </p>
+      ) : null}
     </form>
   );
 };
