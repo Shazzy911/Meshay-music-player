@@ -23,11 +23,14 @@ const TopBar = () => {
           {4 > 22 ? (
             <FaUserAlt />
           ) : (
-            <span
-              style={{ display: "flex", gap: "2rem", alignItems: "center" }}
-            >
-              <p>Sing In</p> <FaSignInAlt />
-            </span>
+            <div>
+              <p>Register</p>
+              <span
+                style={{ display: "flex", gap: "2rem", alignItems: "center" }}
+              >
+                <FaSignInAlt />
+              </span>
+            </div>
           )}
         </div>
         <div className={`${style.icons} ${style.menu}`}>

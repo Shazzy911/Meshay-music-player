@@ -1,16 +1,13 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../../context/authContext";
 import Link from "next/link";
-
+import React from "react";
 import "./page.scss";
-import LogInForm from "@/components/layout/login-form/LogInForm";
-
+const LogInForm = React.lazy(
+  () => import("@/components/layout/login-form/LogInForm")
+);
 const page = () => {
-  // const { login } = useContext(AuthContext);
-
-  // const handleLogin = () => {
-  //   login();
-  // };
+  
 
   return (
     <main className="login">
