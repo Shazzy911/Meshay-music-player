@@ -70,6 +70,11 @@ const LogInForm = () => {
         ) : (
           <span className="error">Invalid email format</span>
         ))}
+
+
+
+
+        
       <input type="password" placeholder="Password" {...register("password")} />
       {errors.password && <span className="error">Must not be empty</span>}
       <button>Log In</button>
