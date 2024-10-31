@@ -19,15 +19,15 @@ const TopBar = () => {
         <div className={style.icons}>
           <FaBell />
         </div>
-        <div className={`${style.icons} ${style.user}`}>
-          {4 > 22 ? (
-            <FaUserAlt />
+        <div>
+          {4 > 2 ? (
+            <div className={`${style.icons} ${style.user}`}>
+              <FaUserAlt />
+            </div>
           ) : (
-            <div>
-              <p>Register</p>
-              <span
-                style={{ display: "flex", gap: "2rem", alignItems: "center" }}
-              >
+            <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
+              <p>Sign In</p>
+              <span className={`${style.icons} ${style.user}`}>
                 <FaSignInAlt />
               </span>
             </div>
