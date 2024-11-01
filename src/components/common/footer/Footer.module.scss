@@ -1,4 +1,4 @@
-@import "../../../app/styles/colors.module.scss";
+@use "../../../app/styles/colors.module.scss" as *;
 
 .container {
   background-color: $sec-color;
