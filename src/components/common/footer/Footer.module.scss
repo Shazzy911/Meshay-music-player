@@ -2,34 +2,42 @@
 
 .container {
   background-color: $sec-color;
-  padding: 2rem 3rem;
+  padding: 5rem 3rem 0 3rem;
   // font-size: 1.5rem;
-  .container_info {
+  .footer {
     margin: 3rem 2rem;
-    display: flex;
-    gap: 3rem;
-    padding: 4rem 0;
-    div {
+    span {
       display: flex;
-      flex: 1;
-      flex-direction: column;
-      gap: 2rem;
+      align-items: center;
+      gap: 1rem;
     }
-    .app_info {
-      flex: 2;
-      span {
+    .container_info {
+      display: flex;
+      gap: 3rem;
+      padding: 2rem 0 3rem 0;
+      flex-wrap: wrap;
+      div {
         display: flex;
-        align-items: center;
-        gap: 1rem;
+        flex: 1;
+        flex-direction: column;
+        gap: 2rem;
       }
-      .userInfo {
-        &:hover {
-          font-weight: 500;
-          cursor: pointer;
-          svg {
-            font-size: 1.8rem;
-            fill: $main-color;
-            transition: fill 0.5s;
+      .app_info {
+        flex: 2;
+        // span {
+        //   display: flex;
+        //   align-items: center;
+        //   gap: 1rem;
+        // }
+        .userInfo {
+          &:hover {
+            font-weight: 500;
+            cursor: pointer;
+            svg {
+              font-size: 1.8rem;
+              fill: $main-color;
+              transition: fill 0.5s;
+            }
           }
         }
       }

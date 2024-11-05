@@ -1,10 +1,10 @@
 "use client";
-import { sidebar_route_links } from "@/json/route_links";
 import style from "./SideBar.module.scss";
+import { sidebar_route_links } from "@/json/route_links";
 import Link from "next/link";
-import Button from "@/components/ui/button/Button";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { setMenuOpen } from "@/redux/slices/menuSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import Favorite from "@/components/layout/favorite/Favorite";
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -24,9 +24,7 @@ const SideBar = () => {
           </Link>
         ))}
       </div>
-      <div className={`${style.premium_button} ${style.sidebar_button}`}>
-        <Button text="Explore Premium" />
-      </div>
+      <Favorite />
     </section>
   );
 };

@@ -19,6 +19,10 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'plus.unsplash.com',
           },
+          {
+            protocol: 'https',
+            hostname: 'www.alamy.com',
+          },
           // You can add more patterns for additional domains if needed
         ],
       },
