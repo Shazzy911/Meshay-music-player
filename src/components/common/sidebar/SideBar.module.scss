@@ -30,9 +30,9 @@
 
   // Link container for page routing.
   .link_container {
-    padding: 3rem 0 3rem 3rem;
+    padding: 3rem 0 3rem 2.5rem;
     .link {
-      @include display_Padding_width(1rem 0 1.5rem 0);
+      @include flex-align-center(1rem 0 1.5rem 0);
       text-decoration: none;
       color: white;
       // font-size: 1.8rem;
