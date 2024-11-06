@@ -16,7 +16,7 @@ interface ApiResponse {
 const fetchingData = async (): Promise<User[] | undefined> => {
   try {
     const response = await fetch(
-      "https://meshay-music-backend-production.up.railway.app/user",
+      "https://meshay-music-backend-production-c57e.up.railway.app/user",
       {
         cache: "no-store",
       }

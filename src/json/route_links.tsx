@@ -56,7 +56,7 @@ export const favourite_route_links: favorite_links_types[] = [
     title: "Lana del Rey",
     subtitle: "Artist",
     image: Hero,
-    route: "/artist",
+    route: "/artist/123",
   },
   {
     id: 2,
