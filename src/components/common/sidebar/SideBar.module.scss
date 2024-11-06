@@ -3,18 +3,22 @@
 
 // Main Container of SideBar
 .container {
-  height: calc(100dvh - 7rem);
+  height: calc(100dvh - 9rem);
+  margin: 1rem;
+  border-radius: 0.8rem;
   display: none;
   flex-direction: column;
-  background-color: $bg-color;
+  background-color: $sec-color;
   padding: 2rem 0 0 1rem;
   position: sticky;
   top: 7rem;
   z-index: 2;
-  width: 270px;
+  width: 300px;
   transition: transform 0.5s ease;
   border-right: 1px solid $sec-color;
-
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
   //// When Active
   &.active {
     left: 100;
