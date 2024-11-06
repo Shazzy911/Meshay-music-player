@@ -36,6 +36,9 @@
   }
   .favorite_intro {
     @include flex-align-center();
+    h2 {
+      font-size: 2.2rem;
+    }
     svg {
       fill: #c0c0c0;
       font-size: 2.2rem;

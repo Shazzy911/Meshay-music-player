@@ -21,7 +21,8 @@ const Favorite = () => {
             padding: "5px",
             fontSize: "1.2rem",
             minHeight: "3rem",
-            minWidth: "6.4rem",
+            minWidth: "6rem",
+            fontWeight: 400,
           }}
         />
         <Button
@@ -30,7 +31,8 @@ const Favorite = () => {
             padding: "5px",
             fontSize: "1.2rem",
             minHeight: "3rem",
-            minWidth: "6.4rem",
+            minWidth: "6rem",
+            fontWeight: 400,
           }}
         />
         <Button
@@ -39,7 +41,8 @@ const Favorite = () => {
             padding: "5px",
             fontSize: "1.2rem",
             minHeight: "3rem",
-            minWidth: "6.4rem",
+            minWidth: "6rem",
+            fontWeight: 400,
           }}
         />
       </div>
