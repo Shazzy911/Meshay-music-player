@@ -49,9 +49,9 @@
 
 // ]
 
-import { slide_dummy_types } from "@/types/slide_dummy_types";
+import { main_slide_types } from "@/types/main_slide_types";
 
-export const slide_dummy: slide_dummy_types[] = [
+export const main_slide: main_slide_types[] = [
   {
     id: 1,
     image:
