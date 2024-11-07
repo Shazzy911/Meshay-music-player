@@ -1,9 +1,8 @@
 import { StaticImageData } from "next/image";
 
-
-export interface slide_dummy_types {
+export interface main_slide_types {
   id: number;
-  image:  StaticImageData | string ;
+  image: StaticImageData | string;
   heading: string;
   description: string;
   btn1: string;

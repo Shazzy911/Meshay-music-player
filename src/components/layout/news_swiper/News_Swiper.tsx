@@ -1,22 +1,19 @@
 "use client";
+import "./News_swiper.scss";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ComponentProps } from "@/types/function_types";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "./Swiper_Main.scss";
+import { ComponentProps } from "@/types/function_types";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import SwiperCore from 'swiper/core'
-import { useEffect, useRef, useState } from "react";
 import Button_Navigation from "@/components/ui/button-navigation/Button_Navigation";
-// SwiperCore.use([Navigation]);
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 
-const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
+const News_Swiper: React.FC<ComponentProps> = ({ children }) => {
   const [isInitialized, setInit] = useState(false);
   // console.log(isInitialized);
 
@@ -31,8 +28,8 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
   return (
     <>
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
+        slidesPerView={1}
+        spaceBetween={5}
         autoplay={{
           delay: 50000,
           disableOnInteraction: false,
@@ -44,6 +41,21 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+        // className="mySwiper"
         modules={[Autoplay, Pagination, Navigation]}
         className="swiper"
         onInit={() => setInit(true)}
@@ -56,7 +68,6 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
         ) : (
           <SwiperSlide>{children}</SwiperSlide>
         )}
-
         <div className="navigation">
           <Button_Navigation
             ref={prevRef}
@@ -74,4 +85,4 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
   );
 };
 
-export default Swiper_Main;
+export default News_Swiper;

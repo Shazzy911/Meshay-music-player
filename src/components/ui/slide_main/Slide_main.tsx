@@ -1,13 +1,13 @@
 import React from "react";
-import { slide_dummy } from "@/json/slide_dummy";
-import style from "./Slide.module.scss";
+import { main_slide } from "@/json/slide_dummy";
+import style from "./Slide_main.module.scss";
 import SlideButton from "@/components/ui/slide_button/SlideButton";
 
 const Slide = () => {
   return (
     // <>
     <>
-      {slide_dummy.map((item) => (
+      {main_slide.map((item) => (
         <div
           className={style.container}
           key={item.id}
