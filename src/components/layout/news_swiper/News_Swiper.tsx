@@ -1,5 +1,5 @@
 "use client";
-import "./News_swiper.scss";
+import style from "./News_Swiper.module.scss";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,7 +31,7 @@ const News_Swiper: React.FC<ComponentProps> = ({ children }) => {
         slidesPerView={1}
         spaceBetween={5}
         autoplay={{
-          delay: 50000,
+          delay: 500000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -51,13 +51,19 @@ const News_Swiper: React.FC<ComponentProps> = ({ children }) => {
             spaceBetween: 10,
           },
           1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1400: {
             slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
         // className="mySwiper"
         modules={[Autoplay, Pagination, Navigation]}
-        className="swiper"
+        className={style.swiper}
+        wrapperClass={style.swiperWrapper}
+        slideClass={style.swiperSlide}
         onInit={() => setInit(true)}
       >
         {/* Ensure children is an array before mapping */}
@@ -68,7 +74,7 @@ const News_Swiper: React.FC<ComponentProps> = ({ children }) => {
         ) : (
           <SwiperSlide>{children}</SwiperSlide>
         )}
-        <div className="navigation">
+        <div className={style.navigation}>
           <Button_Navigation
             ref={prevRef}
             svg={<FaArrowLeft />}

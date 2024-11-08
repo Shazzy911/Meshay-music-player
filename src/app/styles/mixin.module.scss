@@ -17,7 +17,7 @@
   // width: 100%;
 }
 
-@mixin transition_ease() {
+@mixin transition_ease($main-color) {
   &:hover {
     cursor: pointer;
     color: $main-color;

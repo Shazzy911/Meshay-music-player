@@ -1,10 +1,11 @@
-import NewsImg from "@/images/Lana del Rey wallpaper.jpg";
+// import NewsImg from "@/images/Lana del Rey wallpaper.jpg";
 import { NewsType } from "@/types/news_slide.types";
 
 export const news_slide_json: NewsType[] = [
   {
     id: 1,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "Taylor Swift's Spectacular Eras Tour: A Night to Remember",
     time: "2 hours ago",
@@ -12,7 +13,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 2,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Feature",
     heading: "Beyoncé Celebrates Birthday with Fans on Renaissance World Tour",
     time: "5 hours ago",
@@ -20,7 +22,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 3,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "Lana Del Rey Opens Up About Her New Album and Personal Growth",
     time: "1 day ago",
@@ -28,7 +31,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 4,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Feature",
     heading: "Ed Sheeran Announces Surprise Album Drop Amidst World Tour",
     time: "3 hours ago",
@@ -36,7 +40,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 5,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "Adele Talks About Balancing Motherhood and Music Career",
     time: "2 days ago",
@@ -44,7 +49,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 6,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "Drake Reflects on Success and Future Plans in the Music Industry",
     time: "12 hours ago",
@@ -52,7 +58,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 7,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Feature",
     heading: "Billie Eilish to Release New Song After a Year-Long Hiatus",
     time: "6 hours ago",
@@ -60,7 +67,8 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 8,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "The Weeknd Transitions to Acting: New TV Series Confirmed",
     time: "3 days ago",
@@ -68,34 +76,11 @@ export const news_slide_json: NewsType[] = [
   },
   {
     id: 9,
-    image: NewsImg,
+    image:
+      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
     button: "Music",
     heading: "Harry Styles Seen Recording New Album in Studio Amidst Break",
     time: "7 hours ago",
     comment: 280,
-  },
-  {
-    id: 10,
-    image: NewsImg,
-    button: "Music",
-    heading: "Katy Perry Shares Her Journey of Self-Discovery Through Music",
-    time: "4 days ago",
-    comment: 220,
-  },
-  {
-    id: 11,
-    image: NewsImg,
-    button: "Music",
-    heading: "Rihanna Returns to the Stage: Headlining a Major Music Festival",
-    time: "8 hours ago",
-    comment: 330,
-  },
-  {
-    id: 12,
-    image: NewsImg,
-    button: "Feature",
-    heading: "Dua Lipa Speaks on Music Industry Pressures and Mental Health",
-    time: "5 days ago",
-    comment: 310,
   },
 ];
