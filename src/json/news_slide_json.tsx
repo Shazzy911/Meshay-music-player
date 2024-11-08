@@ -14,7 +14,7 @@ export const news_slide_json: NewsType[] = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://i.pinimg.com/446x/89/e8/06/89e806ba33deb34dd878a449658d39c1.jpg",
     button: "Feature",
     heading: "Beyoncé Celebrates Birthday with Fans on Renaissance World Tour",
     time: "5 hours ago",
@@ -23,7 +23,7 @@ export const news_slide_json: NewsType[] = [
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://i.pinimg.com/236x/46/62/67/4662670a97d612603944be04b934b262.jpg",
     button: "Music",
     heading: "Lana Del Rey Opens Up About Her New Album and Personal Growth",
     time: "1 day ago",
