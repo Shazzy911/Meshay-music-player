@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 
 export type NewsType = {
   id: number;
-  image: StaticImageData;
+  image: StaticImageData | string;
   button: string;
   heading: string;
   time: string;

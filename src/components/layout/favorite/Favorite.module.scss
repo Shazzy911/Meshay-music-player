@@ -59,7 +59,7 @@
     a {
       width: 100%;
       &:hover {
-        background-color: $sec-color;
+        background-color: $bg-color;
       }
       .dynamic_wrapper {
         @include flex-align-center();

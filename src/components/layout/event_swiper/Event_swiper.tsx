@@ -1,5 +1,5 @@
 "use client";
-import "./Event_swiper.scss";
+import style from "./Event_swiper.module.scss";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,7 +57,7 @@ const Event_Swiper: React.FC<ComponentProps> = ({ children }) => {
         }}
         // className="mySwiper"
         modules={[Autoplay, Pagination, Navigation]}
-        className="swiper"
+        className={style.swiper}
         onInit={() => setInit(true)}
       >
         {/* Ensure children is an array before mapping */}
@@ -68,7 +68,7 @@ const Event_Swiper: React.FC<ComponentProps> = ({ children }) => {
         ) : (
           <SwiperSlide>{children}</SwiperSlide>
         )}
-        <div className="navigation">
+        <div className={style.navigation}>
           <Button_Navigation
             ref={prevRef}
             svg={<FaArrowLeft />}

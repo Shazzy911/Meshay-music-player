@@ -1,0 +1,39 @@
+@use "../../../app/styles/colors.module.scss" as *;
+@use "../../../app/styles/mixin.module.scss" as *;
+.container {
+  background-color: $sec-color;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  .imgContainer {
+    height: 26.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    border-radius: inherit;
+  }
+  .slideInfo {
+    height: 18rem;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    h2 {
+      min-height: 8.2rem;
+      @include transition_ease($main-color);
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.5rem;
+      span {
+        font-size: 1.3rem;
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

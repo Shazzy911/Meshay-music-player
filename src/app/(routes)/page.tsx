@@ -9,10 +9,10 @@ import React, { Suspense } from "react";
 const News_Swiper = React.lazy(
   () => import("@/components/layout/news_swiper/News_Swiper")
 );
+import News_Slide from "@/components/ui/news_slide/News_Slide";
 import style from "./page.module.scss";
 import Search from "@/components/ui/search/Search";
 import Loader from "@/components/ui/loader/Loader";
-import News_Slide from "@/components/ui/news_slide/News_Slide";
 
 const page = () => {
   return (

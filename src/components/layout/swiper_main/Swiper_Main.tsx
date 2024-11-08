@@ -7,7 +7,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./Swiper_Main.scss";
+import style from "./Swiper_Main.module.scss";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -34,7 +34,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 50000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -45,7 +45,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           nextEl: nextRef.current,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="swiper"
+        className={style.swiper}
         onInit={() => setInit(true)}
       >
         {/* Ensure children is an array before mapping */}
@@ -57,7 +57,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           <SwiperSlide>{children}</SwiperSlide>
         )}
 
-        <div className="navigation">
+        <div className={style.navigation}>
           <Button_Navigation
             ref={prevRef}
             svg={<FaArrowLeft />}
