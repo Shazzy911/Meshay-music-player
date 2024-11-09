@@ -44,6 +44,23 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
+        breakpoints={{
+          340: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 1,
+          },
+          1400: {
+            slidesPerView: 1,
+          },
+        }}
         modules={[Autoplay, Pagination, Navigation]}
         className={style.swiper}
         onInit={() => setInit(true)}

@@ -28,3 +28,10 @@
     }
   }
 }
+@mixin background_transition($color) {
+  &:hover {
+    cursor: pointer;
+    background-color: $color;
+    transition: all 0.1s ease-in;
+  }
+}

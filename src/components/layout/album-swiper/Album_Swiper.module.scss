@@ -173,26 +173,10 @@
       //   width: 123rem !important;
       // }
       :global(.swiper-slide) {
-        height: 35rem !important;
+        height: 30rem !important;
+        width: 21rem !important;
+        // margin-right: 10px !important;
       }
     }
-    :global(.swiper-pagination) {
-      text-align: end !important;
-      padding-right: 12rem;
-
-      :global(.swiper-pagination-bullet) {
-        background-color: white;
-        border-radius: 2px;
-        height: 4px;
-        width: 1.3rem;
-        cursor: pointer;
-      }
-      :global(.swiper-pagination-bullet-active) {
-        width: 2rem;
-      }
-    }
-  }
-  .navigation {
-    left: 110rem;
   }
 }
