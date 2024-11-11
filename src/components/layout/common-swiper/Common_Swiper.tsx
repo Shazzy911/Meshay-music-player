@@ -9,14 +9,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { ComponentProps } from "@/types/function_types";
 
-const Common_Swiper: React.FC<ComponentProps> = ({ children }) => {
+interface Common_Swiper_Type extends ComponentProps {
+  delay: number;
+}
+
+const Common_Swiper: React.FC<Common_Swiper_Type> = ({ children, delay }) => {
   return (
     <>
       <Swiper
         slidesPerView={3}
         spaceBetween={5}
         autoplay={{
-          delay: 500000,
+          delay: delay,
           disableOnInteraction: false,
         }}
         breakpoints={{

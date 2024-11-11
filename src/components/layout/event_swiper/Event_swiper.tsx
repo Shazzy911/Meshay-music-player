@@ -16,7 +16,7 @@ const Event_Swiper: React.FC<ComponentProps> = ({ children }) => {
         slidesPerView={1}
         spaceBetween={5}
         autoplay={{
-          delay: 500000,
+          delay: 20000,
           disableOnInteraction: false,
         }}
         breakpoints={{
