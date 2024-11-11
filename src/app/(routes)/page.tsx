@@ -12,6 +12,8 @@ import TopChart_Slide from "@/components/ui/top-chart_slide/TopChart_Slide";
 import SectionInformation from "@/components/ui/section-info/SectionInformation";
 
 /// Lazy loading for better performance.
+
+// Swiper Files Imports
 const Swiper_Main = React.lazy(
   () => import("@/components/layout/swiper_main/Swiper_Main")
 );
@@ -23,6 +25,11 @@ const News_Swiper = React.lazy(
 );
 const Common_Swiper = React.lazy(
   () => import("@/components/layout/common-swiper/Common_Swiper")
+);
+
+// Other imports
+const Main_Content = React.lazy(
+  () => import("@/components/layout/main-content/Main_Content")
 );
 
 const page = () => {
@@ -39,19 +46,24 @@ const page = () => {
         </Suspense>
       </section>
       <section>
-        <SectionInformation heading="Artists" url="/artist" />
-
+        <SectionInformation heading="Featured Artists" url="/artist" />
         <Suspense fallback={<Loader />}>
-          <Common_Swiper>
+          <Common_Swiper delay={6000}>
             <Artist_Slide />
           </Common_Swiper>
         </Suspense>
       </section>
       <section>
-        <SectionInformation heading="Albums" url="/album" />
+        {/* <SectionInformation heading="Featured Artists" url="/artist" /> */}
+        <Suspense fallback={<Loader />}>
+          <Main_Content />
+        </Suspense>
+      </section>
+      <section>
+        <SectionInformation heading="Top Albums" url="/album" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper>
+          <Common_Swiper delay={10000}>
             <Album_Slide />
           </Common_Swiper>
         </Suspense>
@@ -60,8 +72,17 @@ const page = () => {
         <SectionInformation heading="Top Charts" url="/section" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper>
+          <Common_Swiper delay={15000}>
             <TopChart_Slide />
+          </Common_Swiper>
+        </Suspense>
+      </section>
+      <section>
+        <SectionInformation heading="New Release" url="/release" />
+
+        <Suspense fallback={<Loader />}>
+          <Common_Swiper delay={30000}>
+            <Album_Slide />
           </Common_Swiper>
         </Suspense>
       </section>

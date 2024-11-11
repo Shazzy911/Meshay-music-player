@@ -1,0 +1,31 @@
+@use "../../../app/styles/colors.module.scss" as *;
+@use "../../../app/styles/mixin.module.scss" as *;
+// Using media queries for mobile device and browser full display..
+@media screen and (min-width: 475px) {
+}
+
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 900px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1536px) {
+  .container {
+    display: flex;
+    width: 130rem;
+    margin: 5rem 0;
+    background-color: $sec-color;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    border-radius: 15px;
+  }
+}
