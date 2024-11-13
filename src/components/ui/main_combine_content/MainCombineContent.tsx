@@ -1,7 +1,8 @@
 import style from "./MainCombineContent.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-
+import { FaPlay } from "react-icons/fa6";
 type SongDataType = {
   id: number;
   title: string;
@@ -31,15 +32,26 @@ const MainCombineContent: React.FC<CombineType> = ({
       {data.map(({ id, title, featuring, time, image }) => (
         <div key={id} className={style.info}>
           <div className={style.content}>
-            <Image
-              src={image || "Image not found"}
-              height={55}
-              width={55}
-              alt="Image not found"
-            />
+            <div className={style.img_box}>
+              <Image
+                src={image || "Image not found"}
+                height={55}
+                width={55}
+                alt="Image not found"
+                className={style.image}
+              />
+              <div className={style.overlay}>
+                <Link href={"#"} className={style.icon}>
+                  <FaPlay />
+                </Link>
+                {/* <a href="#" className="icon" title="User Profile">
+                  <i className="fa fa-user"></i>
+                </a> */}
+              </div>
+            </div>
             <div className={style.details}>
-              <h5>{title}</h5>
-              <p>{featuring}</p>
+              <p>{title}</p>
+              <small>{featuring}</small>
             </div>
           </div>
           <span>{time}</span>

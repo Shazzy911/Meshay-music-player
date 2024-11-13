@@ -40,6 +40,24 @@ body {
   //     color: white;
   //   }
 }
+::-webkit-scrollbar {
+  width: 2rem;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $sec-color;
+  // opacity: 0.7;
+  border: 0.5rem solid $bg-color;
+  background-clip: content-box;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
 
 .theme {
   transition: 1s all ease;
