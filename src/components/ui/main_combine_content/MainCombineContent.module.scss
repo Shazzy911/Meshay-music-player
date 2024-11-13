@@ -42,12 +42,13 @@
       justify-content: space-between;
       &:hover {
         @include background_transition($bg-color);
-        p {
-          // font-size: 1.6rem;
-          &:hover {
-            font-weight: 600;
-            transition: all 0.1s ease-in;
-          }
+        .overlay {
+          opacity: 0.7;
+        }
+
+        .title {
+          font-weight: 600;
+          // transition: all 0.1s ease-in;
         }
       }
 
@@ -78,7 +79,7 @@
           background-color: $bg-color;
         }
 
-        .img_box:hover .overlay {
+        &:hover .overlay {
           opacity: 0.7;
         }
 

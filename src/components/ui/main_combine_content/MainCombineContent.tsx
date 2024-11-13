@@ -50,7 +50,7 @@ const MainCombineContent: React.FC<CombineType> = ({
               </div>
             </div>
             <div className={style.details}>
-              <p>{title}</p>
+              <p className={style.title}>{title}</p>
               <small>{featuring}</small>
             </div>
           </div>
