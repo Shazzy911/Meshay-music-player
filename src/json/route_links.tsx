@@ -1,7 +1,7 @@
 import { route_links_types } from "@/types/route_links_types";
 import { FaHome } from "react-icons/fa";
 import { FaNewspaper } from "react-icons/fa6";
-import Hero from "@/images/lana4m.png";
+import Hero from "@/images/lana1-modified.png";
 
 import { favorite_links_types } from "@/types/favortie.types";
 export const sidebar_route_links: route_links_types[] = [
