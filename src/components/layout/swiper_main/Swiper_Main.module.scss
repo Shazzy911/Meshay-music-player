@@ -164,8 +164,21 @@
     height: 50rem;
     margin: 5rem 4rem;
     :global(.swiper-wrapper) {
-      .swiper-slide-active {
+      :global(.swiper-slide-active) {
         width: 123rem !important;
+        .content {
+          animation: moveDown 0.8s ease-in forwards;
+        }
+        @keyframes moveDown {
+          0% {
+            transform: translateY(-20px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
       .swiper-slide {
         width: 123rem !important;

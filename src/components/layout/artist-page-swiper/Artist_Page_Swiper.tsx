@@ -1,21 +1,22 @@
 "use client";
-import style from "./Artist_Swiper.module.scss";
-import { Autoplay, Mousewheel } from "swiper/modules";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
 import { ComponentProps } from "@/types/function_types";
 
-const Artist_Swiper: React.FC<ComponentProps> = ({ children }) => {
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import style from "./Artist_Page_Swiper.module.scss";
+
+// import required modules
+import { Autoplay } from "swiper/modules";
+
+const Artist_Page_Swiper: React.FC<ComponentProps> = ({ children }) => {
   return (
     <>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={5}
-        loop={true}
+        direction={"vertical"}
+        spaceBetween={30}
+        slidesPerView={1} // One slide visible at a time
+        centeredSlides={true}
         autoplay={{
           delay: 500000,
           disableOnInteraction: false,
@@ -25,28 +26,24 @@ const Artist_Swiper: React.FC<ComponentProps> = ({ children }) => {
           sensitivity: 1,
         }}
         breakpoints={{
+          340: {
+            slidesPerView: 1,
+          },
           640: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 1,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
+            slidesPerView: 1,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 1,
           },
           1400: {
-            slidesPerView: 6,
-            spaceBetween: 8,
+            slidesPerView: 1,
           },
         }}
-        // className="mySwiper"
-        modules={[Autoplay, Mousewheel]}
+        modules={[Autoplay]}
         className={style.swiper}
-        wrapperClass={style.swiperWrapper}
-        slideClass={style.swiperSlide}
       >
         {/* Ensure children is an array before mapping */}
         {Array.isArray(children) ? (
@@ -61,4 +58,4 @@ const Artist_Swiper: React.FC<ComponentProps> = ({ children }) => {
   );
 };
 
-export default Artist_Swiper;
+export default Artist_Page_Swiper;

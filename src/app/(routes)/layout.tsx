@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import Providers from "@/redux/Providers";
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "normalize.css";
 import "./globals.scss";
 import Loader from "@/components/ui/loader/Loader";
@@ -11,7 +11,7 @@ const TopBar = React.lazy(() => import("@/components/common/topbar/TopBar"));
 const Footer = React.lazy(() => import("@/components/common/footer/Footer"));
 const SideBar = React.lazy(() => import("@/components/common/sidebar/SideBar"));
 
-const inter = Poppins({ subsets: ["latin"], weight: "400" });
+const inter = Fredoka({ subsets: ["latin"], weight: "400" });
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",

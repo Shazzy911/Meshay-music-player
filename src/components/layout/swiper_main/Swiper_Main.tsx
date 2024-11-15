@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import style from "./Swiper_Main.module.scss";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, Mousewheel } from "swiper/modules";
 // import SwiperCore from 'swiper/core'
 import { useEffect, useRef, useState } from "react";
 import Button_Navigation from "@/components/ui/button-navigation/Button_Navigation";
@@ -33,8 +33,10 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 500000,
+          reverseDirection: true,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -43,6 +45,10 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
+        }}
+        mousewheel={{
+          thresholdDelta: 50,
+          sensitivity: 1,
         }}
         breakpoints={{
           340: {
@@ -61,7 +67,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
             slidesPerView: 1,
           },
         }}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation, Mousewheel]}
         className={style.swiper}
         onInit={() => setInit(true)}
       >
