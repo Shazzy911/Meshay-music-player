@@ -72,7 +72,7 @@ const page = () => {
         <SectionInformation heading="Top Charts" url="/section" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={15000}>
+          <Common_Swiper delay={2000}>
             <TopChart_Slide />
           </Common_Swiper>
         </Suspense>
