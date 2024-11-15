@@ -4,6 +4,7 @@ import Logo from "@/components/ui/logo/Logo";
 import Search from "@/components/ui/search/Search";
 import { FaBell, FaUserAlt, FaSignInAlt } from "react-icons/fa";
 import Menu from "../menu/Menu";
+import Link from "next/link";
 
 const TopBar = () => {
   return (
@@ -21,15 +22,18 @@ const TopBar = () => {
         </div>
         <div>
           {4 > 22 ? (
-            <div className={`${style.icons} ${style.user}`}>
+            <Link href={"/user"} className={`${style.icons} ${style.user}`}>
               <FaUserAlt />
-            </div>
+            </Link>
           ) : (
             <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-              <span className={`${style.icons} ${style.user}`}>
-              <p>Sign In</p>
+              <Link
+                href={"/register"}
+                className={`${style.icons} ${style.user}`}
+              >
+                <p>Sign In</p>
                 <FaSignInAlt />
-              </span>
+              </Link>
             </div>
           )}
         </div>
