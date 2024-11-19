@@ -1,5 +1,5 @@
 import style from "./Favorite.module.scss";
-import Button from "@/components/ui/button/Button";
+// import Button from "@/components/ui/button/Button";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { VscLibrary } from "react-icons/vsc";
@@ -14,7 +14,7 @@ const Favorite = () => {
         <VscLibrary />
         <h2>Your Favorite</h2>
       </div>
-      <div className={style.buttons}>
+      {/* <div className={style.buttons}>
         <Button
           text="Playlist"
           style={{
@@ -45,7 +45,7 @@ const Favorite = () => {
             fontWeight: 400,
           }}
         />
-      </div>
+      </div> */}
 
       <div>
         <div>

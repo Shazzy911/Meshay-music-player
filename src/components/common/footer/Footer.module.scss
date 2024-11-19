@@ -1,7 +1,7 @@
 @use "../../../app/styles/colors.module.scss" as *;
 
 .container {
-  margin: 1rem 1rem 1rem 0;
+  // margin: 1rem 1rem 1rem 0;
   border-radius: 0.8rem;
   background-color: $sec-color;
   padding: 5rem 3rem 0 3rem;
@@ -28,11 +28,6 @@
       }
       .app_info {
         flex: 2;
-        // span {
-        //   display: flex;
-        //   align-items: center;
-        //   gap: 1rem;
-        // }
         .userInfo {
           &:hover {
             font-weight: 500;

@@ -10,7 +10,12 @@ import "swiper/css/navigation";
 import style from "./Swiper_Main.module.scss";
 
 // import required modules
-import { Autoplay, Pagination, Navigation, Mousewheel } from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectCoverflow,
+} from "swiper/modules";
 // import SwiperCore from 'swiper/core'
 import { useEffect, useRef, useState } from "react";
 import Button_Navigation from "@/components/ui/button-navigation/Button_Navigation";
@@ -46,9 +51,13 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
-        mousewheel={{
-          thresholdDelta: 50,
-          sensitivity: 1,
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 30,
+          stretch: 10,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
         }}
         breakpoints={{
           340: {
@@ -67,7 +76,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
             slidesPerView: 1,
           },
         }}
-        modules={[Autoplay, Pagination, Navigation, Mousewheel]}
+        modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
         className={style.swiper}
         onInit={() => setInit(true)}
       >
