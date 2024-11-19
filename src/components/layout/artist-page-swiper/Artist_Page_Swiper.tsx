@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import style from "./Artist_Page_Swiper.module.scss";
 
 // import required modules
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Mousewheel } from "swiper/modules";
 
 const Artist_Page_Swiper: React.FC<ComponentProps> = ({ children }) => {
   return (
@@ -42,7 +42,7 @@ const Artist_Page_Swiper: React.FC<ComponentProps> = ({ children }) => {
             slidesPerView: 1,
           },
         }}
-        modules={[Autoplay]}
+        modules={[Autoplay, Mousewheel]}
         className={style.swiper}
       >
         {/* Ensure children is an array before mapping */}

@@ -24,6 +24,10 @@ const Common_Swiper: React.FC<Common_Swiper_Type> = ({ children, delay }) => {
           delay: delay,
           disableOnInteraction: false,
         }}
+        mousewheel={{
+          thresholdDelta: 50,
+          sensitivity: 1,
+        }}
         breakpoints={{
           640: {
             slidesPerView: 2,

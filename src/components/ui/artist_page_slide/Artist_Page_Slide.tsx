@@ -1,13 +1,31 @@
 import React from "react";
-import { main_slide } from "@/json/slide_dummy";
 import style from "./Artist_Page_Slide.module.scss";
-import SlideButton from "@/components/ui/slide_button/SlideButton";
+
+const artist_page_slides = [
+  {
+    id: 1,
+    image: "https://wallpaperaccess.com/full/6686051.png",
+  },
+  {
+    id: 2,
+    image: "https://wallpaperaccess.com/full/6686059.jpg",
+  },
+
+  {
+    id: 3,
+    image: "https://wallpaperaccess.com/full/6686080.jpg",
+  },
+  {
+    id: 4,
+    image: "https://wallpaperaccess.com/full/6686294.png",
+  },
+];
 
 const Artist_Page_Slide = () => {
   return (
     // <>
     <>
-      {main_slide.map((item) => (
+      {artist_page_slides.map((item) => (
         <div
           className={style.container}
           key={item.id}
@@ -17,16 +35,7 @@ const Artist_Page_Slide = () => {
             width: "100%",
             height: "100%",
           }}
-        >
-          <div className={style.content}>
-            <h1>{item.heading}</h1>
-            <p>{item.description}</p>
-            <div className={style.button_box}>
-              <SlideButton text={item.btn1} />
-              {item.btn2 ? <SlideButton text={item.btn2} /> : null}
-            </div>
-          </div>
-        </div>
+        ></div>
       ))}
     </>
   );

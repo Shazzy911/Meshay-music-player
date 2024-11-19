@@ -52,7 +52,7 @@
   }
   .dynamic_container {
     @include flex-align-center();
-    height: 55dvh;
+    height: 60rem;
     flex-direction: column;
     margin-top: 2rem;
     gap: 1.3rem;
