@@ -4,7 +4,8 @@ import style from "./Artist_Page_Slide.module.scss";
 const artist_page_slides = [
   {
     id: 1,
-    image: "https://wallpaperaccess.com/full/6686051.png",
+    image:
+      "https://wallpapercat.com/w/full/9/d/1/195709-3840x2160-desktop-4k-lana-del-rey-background.jpg",
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const artist_page_slides = [
 
   {
     id: 3,
-    image: "https://wallpaperaccess.com/full/6686080.jpg",
+    image:
+      "https://c4.wallpaperflare.com/wallpaper/758/1002/535/lana-del-rey-wallpaper-preview.jpg",
   },
   {
     id: 4,

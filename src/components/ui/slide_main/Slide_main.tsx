@@ -12,9 +12,7 @@ const Slide = () => {
           className={style.container}
           key={item.id}
           style={{
-            background: `url(${item.image}) center center / 1230px no-repeat`,
-            // width: "1230px",
-            // height: "500px",
+            background: `url(${item.image}) center center / cover no-repeat`,
           }}
         >
           <div className={style.content}>
