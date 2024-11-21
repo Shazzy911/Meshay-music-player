@@ -10,6 +10,7 @@ import Artist_Slide from "@/components/ui/artist-slide/Artist_Slide";
 import Album_Slide from "@/components/ui/album_slide/Album_Slide";
 import TopChart_Slide from "@/components/ui/top-chart_slide/TopChart_Slide";
 import SectionInformation from "@/components/ui/section-info/SectionInformation";
+import Release_Slide from "@/components/ui/release_slide/Release_Slide";
 
 /// Lazy loading for better performance.
 
@@ -31,6 +32,9 @@ const Common_Swiper = React.lazy(
 const Main_Content = React.lazy(
   () => import("@/components/layout/main-content/Main_Content")
 );
+const Release_Swiper = React.lazy(
+  () => import("@/components/layout/release-swiper/Release_Swiper")
+);
 
 const page = () => {
   return (
@@ -51,6 +55,14 @@ const page = () => {
           <Common_Swiper delay={6000}>
             <Artist_Slide />
           </Common_Swiper>
+        </Suspense>
+      </section>
+      <section>
+        <SectionInformation heading="Top Singer" url="/artist" />
+        <Suspense fallback={<Loader />}>
+          <Release_Swiper>
+            <Release_Slide />
+          </Release_Swiper>
         </Suspense>
       </section>
       <section>

@@ -1,0 +1,83 @@
+@use "../../../app/styles/colors.module.scss" as *;
+@use "../../../app/styles/mixin.module.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1.5;
+}
+
+.info {
+  @include flex-align-center(0 1.5rem 0 0);
+  justify-content: space-between;
+  &:hover {
+    @include background_transition($sec-color);
+    .overlay {
+      opacity: 0.7;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+  }
+
+  .content {
+    @include flex-align-center();
+    gap: 1.5rem;
+    width: 26.5rem;
+    .img_box {
+      position: relative;
+      height: 55px;
+      width: 55px;
+    }
+
+    .img_box .image {
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s ease;
+      background-color: $bg-color;
+    }
+
+    &:hover .overlay {
+      opacity: 0.7;
+    }
+
+    .icon {
+      color: white;
+      font-size: 1.6rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .icon:hover {
+      color: #eee;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      small {
+        font-size: 75%;
+      }
+    }
+  }
+  span {
+    font-size: 1.3rem;
+  }
+}
