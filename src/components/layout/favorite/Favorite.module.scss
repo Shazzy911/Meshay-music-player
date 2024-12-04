@@ -58,14 +58,18 @@
     gap: 1.3rem;
     a {
       width: 100%;
-      &:hover {
-        background-color: $bg-color;
-      }
+
       .dynamic_wrapper {
         @include flex-align-center();
         gap: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 5px;
         p {
           font-size: 1.3rem;
+        }
+        &:hover {
+          background-color: $bg-color;
         }
       }
     }

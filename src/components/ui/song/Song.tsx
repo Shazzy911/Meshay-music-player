@@ -19,6 +19,13 @@ type songType = {
 const Song: React.FC<songType> = ({ item }) => {
   return (
     <div className={style.container}>
+      {/* Add Header Row */}
+      <div className={style.headerRow}>
+        <span className={style.header}>Track</span>
+        <span className={style.header}>Album</span>
+        <span className={style.header}>Duration</span>
+      </div>
+
       {item.map(({ id, title, featuring, time, image, album }) => (
         <div key={id} className={style.info}>
           <div className={style.content}>
