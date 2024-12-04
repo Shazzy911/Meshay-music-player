@@ -28,10 +28,10 @@ export const release: TopSingersType[] = [
       },
       {
         id: 3,
-        title: "All Too Well (10 Minute Version)",
+        title: "All Too Well",
         featuring: "Taylor Swift",
         time: "10:13",
-        album: "Red (Taylor's Version)",
+        album: "Red",
         image:
           "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
       },

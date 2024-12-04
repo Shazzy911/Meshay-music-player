@@ -29,9 +29,9 @@ const Common_Swiper = React.lazy(
 );
 
 // Other imports
-const Main_Content = React.lazy(
-  () => import("@/components/layout/main-content/Main_Content")
-);
+// const Main_Content = React.lazy(
+//   () => import("@/components/layout/main-content/Main_Content")
+// );
 const Release_Swiper = React.lazy(
   () => import("@/components/layout/release-swiper/Release_Swiper")
 );
@@ -58,19 +58,19 @@ const page = () => {
         </Suspense>
       </section>
       <section>
-        <SectionInformation heading="Top Singer" url="/artist" />
+        <SectionInformation heading="Featured Top Singers" url="/artist" />
         <Suspense fallback={<Loader />}>
           <Release_Swiper>
             <Release_Slide />
           </Release_Swiper>
         </Suspense>
       </section>
-      <section>
-        {/* <SectionInformation heading="Featured Artists" url="/artist" /> */}
-        <Suspense fallback={<Loader />}>
+      {/* <section> */}
+      {/* <SectionInformation heading="Featured Artists" url="/artist" /> */}
+      {/* <Suspense fallback={<Loader />}> // Feature not looking good. so it's off.... 
           <Main_Content />
-        </Suspense>
-      </section>
+        </Suspense> */}
+      {/* </section> */}
       <section>
         <SectionInformation heading="Top Albums" url="/album" />
 

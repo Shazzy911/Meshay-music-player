@@ -7,12 +7,32 @@
   gap: 1.5rem;
   flex: 1.5;
 }
+.headerRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 0;
+  font-weight: bold;
+  gap: 12rem;
+  text-align: left;
+}
 
+.header {
+  color: white; /* Adjust to match your design */
+}
+.header:nth-child(1) {
+  width: 26.5rem;
+}
 .info {
-  @include flex-align-center(0 1.5rem 0 0);
-  justify-content: space-between;
+  // @include flex-align-center(0 1.5rem 0 0);
+  // justify-content: space-between; // this code is not in use now. Currently uisng Grid...
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Match the header layout */
+  text-align: left;
+  align-items: center;
+  gap: 12rem;
+
   &:hover {
-    @include background_transition($sec-color);
+    @include background_transition($bg-color);
     .overlay {
       opacity: 0.7;
     }

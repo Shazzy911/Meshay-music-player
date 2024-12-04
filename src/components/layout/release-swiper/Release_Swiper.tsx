@@ -23,13 +23,12 @@ const Release_Swiper: React.FC<ComponentProps> = ({ children }) => {
           reverseDirection: true,
           disableOnInteraction: false,
         }}
-        effect="coverflow"
-        coverflowEffect={{
-          rotate: 30,
-          stretch: 10,
-          depth: 100,
-          modifier: 2,
-          slideShadows: true,
+        parallax={true}
+        effect="cube"
+        cubeEffect={{
+          shadow: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
         }}
         breakpoints={{
           340: {
