@@ -1,6 +1,6 @@
 "use client";
 import style from "./Common_Swiper.module.scss";
-import { Autoplay, Mousewheel } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,10 +24,6 @@ const Common_Swiper: React.FC<Common_Swiper_Type> = ({ children, delay }) => {
           delay: delay,
           disableOnInteraction: false,
         }}
-        mousewheel={{
-          thresholdDelta: 50,
-          sensitivity: 1,
-        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -47,7 +43,7 @@ const Common_Swiper: React.FC<Common_Swiper_Type> = ({ children, delay }) => {
           },
         }}
         // className="mySwiper"
-        modules={[Autoplay, Mousewheel]}
+        modules={[Autoplay]}
         className={style.swiper}
         wrapperClass={style.swiperWrapper}
         slideClass={style.swiperSlide}

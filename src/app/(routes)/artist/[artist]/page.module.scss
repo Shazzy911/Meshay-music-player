@@ -1,0 +1,13 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.songContainer {
+  display: flex;
+  justify-content: center;
+  background-color: $sec-color;
+}
+
+.songs {
+  width: 90%;
+  background-color: blue;
+}

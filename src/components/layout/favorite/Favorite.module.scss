@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  padding: 0 1rem;
+  padding-left: 0.5rem;
   .buttons {
     @include flex-align-center();
     gap: 0.7rem;
