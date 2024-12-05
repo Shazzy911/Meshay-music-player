@@ -14,38 +14,6 @@ const Favorite = () => {
         <VscLibrary />
         <h2>Your Favorite</h2>
       </div>
-      {/* <div className={style.buttons}>
-        <Button
-          text="Playlist"
-          style={{
-            padding: "5px",
-            fontSize: "1.2rem",
-            minHeight: "3rem",
-            minWidth: "6rem",
-            fontWeight: 400,
-          }}
-        />
-        <Button
-          text="Artist"
-          style={{
-            padding: "5px",
-            fontSize: "1.2rem",
-            minHeight: "3rem",
-            minWidth: "6rem",
-            fontWeight: 400,
-          }}
-        />
-        <Button
-          text="Album"
-          style={{
-            padding: "5px",
-            fontSize: "1.2rem",
-            minHeight: "3rem",
-            minWidth: "6rem",
-            fontWeight: 400,
-          }}
-        />
-      </div> */}
 
       <div>
         <div>

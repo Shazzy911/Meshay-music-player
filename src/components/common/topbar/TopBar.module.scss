@@ -32,6 +32,9 @@
   .top_button {
     display: none;
   }
+  .user {
+    gap: 0.5rem;
+  }
   .icons {
     // padding: 1.5rem;b
     @include display_padding_bg(1.2rem, $bg-color);

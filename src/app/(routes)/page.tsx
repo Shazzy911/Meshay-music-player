@@ -52,7 +52,7 @@ const page = () => {
       <section>
         <SectionInformation heading="Featured Artists" url="/artist" />
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={6000}>
+          <Common_Swiper delay={3000}>
             <Artist_Slide />
           </Common_Swiper>
         </Suspense>
@@ -75,7 +75,7 @@ const page = () => {
         <SectionInformation heading="Top Albums" url="/album" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={10000}>
+          <Common_Swiper delay={5000}>
             <Album_Slide />
           </Common_Swiper>
         </Suspense>
@@ -84,7 +84,7 @@ const page = () => {
         <SectionInformation heading="Top Charts" url="/section" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={2000}>
+          <Common_Swiper delay={4000}>
             <TopChart_Slide />
           </Common_Swiper>
         </Suspense>
@@ -93,9 +93,17 @@ const page = () => {
         <SectionInformation heading="New Release" url="/release" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={30000}>
+          <Common_Swiper delay={7000}>
             <Album_Slide />
           </Common_Swiper>
+        </Suspense>
+      </section>
+      <section>
+        <SectionInformation heading="Upcoming Events" url="/events" />
+        <Suspense fallback={<Loader />}>
+          <Event_Swiper>
+            <Event_Slide />
+          </Event_Swiper>
         </Suspense>
       </section>
       <section>

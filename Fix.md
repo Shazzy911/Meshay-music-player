@@ -1,40 +1,14 @@
 
-<!-- <<<<<<< HEAD -->
-# Meshay Music Application
+
+#Quick Problems Issue Fix it...
 
 
-## Next.js, SCSS, and TypeScript
+- Issue in design of upcoming event slide on home page.
+- 
 
-A modern, server-rendered blog application built using Next.js, SCSS, and TypeScript. Create, read, update, and delete blog posts in a responsive and stylish interface.
-
-## Features
-
-- Server-Side Rendering
-- TypeScript Support
-- Responsive Design
-- User Authentication
-- SCSS Styling
-- CRUD Operations
-
-
-
-## Tech Stack
-
-- Next.js
-- TypeScript
-- SCSS
-- Node.js
-- Express.js (or your chosen backend)
-- MongoDB (or your chosen database)
-- Authentication System
-
-Enjoy building your blog with Next.js and SCSS!;
 
 # Fix the Issues
 - Using Animation library like framer-motion..
-
-
-
 - Use Responsive layout for the Website...
 - Review all the code and see if there's any problem... <br>
 - Fix the Problem on the Fetching data... <br>
@@ -61,13 +35,9 @@ Enjoy building your blog with Next.js and SCSS!;
 1. Make a Component which include the Fetching data of blog and featured, then use map for simplify the code....
 1. Fix the Any type error in Details Component. and also in the whole application....
 
+
+
 # Task in Progress....
-
 ### Make it deployment ready.
-#### http://localhost:3000/api/blog remove localhost:3000 from cebter-layout & featured-layout
-
- ### 1. Add React-hook-form with the Zod... clean the previous code of Contact form
- ### 1. See the code of useReducer hook and learn from gemini documentation...
  ### ["https://react-hook-form.com/get-started#Applyvalidation"];
 
-# Task Completed...
