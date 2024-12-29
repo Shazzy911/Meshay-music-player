@@ -19,7 +19,7 @@ const page = () => {
 
   return (
     <main>
-      <section>
+      <section className={style.imageSection}>
         <Suspense fallback={<Loader />}>
           <Artist_Page_Swiper>
             <Artist_Page_Slide />
