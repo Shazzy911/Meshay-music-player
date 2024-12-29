@@ -8,9 +8,10 @@ import Event_Slide from "@/components/ui/event_slide/Event_Slide";
 import News_Slide from "@/components/ui/news_slide/News_Slide";
 import Artist_Slide from "@/components/ui/artist-slide/Artist_Slide";
 import Album_Slide from "@/components/ui/album_slide/Album_Slide";
-import TopChart_Slide from "@/components/ui/top-chart_slide/TopChart_Slide";
+// import TopChart_Slide from "@/components/ui/top-chart_slide/TopChart_Slide"; /// Delete this slide if not needed....
 import SectionInformation from "@/components/ui/section-info/SectionInformation";
 import Release_Slide from "@/components/ui/release_slide/Release_Slide";
+import { topchart_slide_json, album_slide_json } from "@/json/testing_slides";
 
 /// Lazy loading for better performance.
 
@@ -76,7 +77,7 @@ const page = () => {
 
         <Suspense fallback={<Loader />}>
           <Common_Swiper delay={5000}>
-            <Album_Slide />
+            <Album_Slide props={album_slide_json} />
           </Common_Swiper>
         </Suspense>
       </section>
@@ -85,7 +86,7 @@ const page = () => {
 
         <Suspense fallback={<Loader />}>
           <Common_Swiper delay={4000}>
-            <TopChart_Slide />
+            <Album_Slide props={topchart_slide_json} />
           </Common_Swiper>
         </Suspense>
       </section>
@@ -94,7 +95,7 @@ const page = () => {
 
         <Suspense fallback={<Loader />}>
           <Common_Swiper delay={7000}>
-            <Album_Slide />
+            <Album_Slide props={album_slide_json} />
           </Common_Swiper>
         </Suspense>
       </section>

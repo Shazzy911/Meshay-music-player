@@ -3,11 +3,16 @@ import style from "./Album_Slide.module.scss";
 
 import Link from "next/link";
 import Image from "next/image";
-import { album_slide_json } from "@/json/album_slide.json";
-const Album_Slide = () => {
+import { album_slide_types } from "@/types/album_slide.type";
+
+interface AlbumSlideProps {
+  props: album_slide_types[]; // The entire array as a prop
+}
+
+const Album_Slide: React.FC<AlbumSlideProps> = ({ props }) => {
   return (
     <>
-      {album_slide_json.map(({ id, image, artist_name, album_name }) => (
+      {props.map(({ id, image, title, sub_title }) => (
         <Link href={`/artist/${id}`} key={id}>
           <div className={style.container}>
             <div className={style.imgContainer}>
@@ -19,8 +24,8 @@ const Album_Slide = () => {
               />
             </div>
             <div className={style.slideInfo}>
-              <h3>{album_name}</h3>
-              <p>{artist_name}</p>
+              <h3>{title}</h3>
+              <p>{sub_title}</p>
             </div>
           </div>
         </Link>
