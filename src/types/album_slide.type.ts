@@ -4,6 +4,6 @@ import { StaticImageData } from "next/image";
 export interface album_slide_types {
   id: number;
   image?: StaticImageData | HTMLImageElement | string | StaticImport;
-  album_name: string;
-  artist_name: string;
+  title: string;
+  sub_title: string;
 }
