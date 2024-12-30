@@ -16,6 +16,8 @@ const Artist_Slide = () => {
                 alt="Image not found"
                 height={200}
                 width={200}
+                layout="responsive" // Automatically adjusts to the image's original dimensions
+                objectFit="cover" // Fills the container without stretching
               />
             </div>
             <div className={style.slideInfo}>
