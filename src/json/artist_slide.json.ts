@@ -10,7 +10,8 @@ export const artist_slide_json: artist_slide_types[] = [
   },
   {
     id: 2,
-    image: Hero,
+    image:
+      "https://i.pinimg.com/474x/d6/6d/e6/d66de6666fc43a8c6aff0c8d105a28c2.jpg",
     artist_name: "Lana Del Rey",
     feature: "Artist",
   },

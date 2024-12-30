@@ -66,6 +66,15 @@ const page = () => {
           </Release_Swiper>
         </Suspense>
       </section>
+      <section>
+        <SectionInformation heading="Upcoming Events" url="/events" />
+        <Suspense fallback={<Loader />}>
+          <Event_Swiper>
+            <Event_Slide />
+          </Event_Swiper>
+        </Suspense>
+      </section>
+
       {/* <section> */}
       {/* <SectionInformation heading="Featured Artists" url="/artist" /> */}
       {/* <Suspense fallback={<Loader />}> // Feature not looking good. so it's off.... 
@@ -76,7 +85,7 @@ const page = () => {
         <SectionInformation heading="Top Albums" url="/album" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={5000}>
+          <Common_Swiper delay={500000}>
             <Album_Slide props={album_slide_json} />
           </Common_Swiper>
         </Suspense>
@@ -100,21 +109,14 @@ const page = () => {
         </Suspense>
       </section>
       <section>
-        <SectionInformation heading="Upcoming Events" url="/events" />
+        <SectionInformation heading="Podcast" url="/events" />
         <Suspense fallback={<Loader />}>
           <Event_Swiper>
             <Event_Slide />
           </Event_Swiper>
         </Suspense>
       </section>
-      <section>
-        <SectionInformation heading="Upcoming Events" url="/events" />
-        <Suspense fallback={<Loader />}>
-          <Event_Swiper>
-            <Event_Slide />
-          </Event_Swiper>
-        </Suspense>
-      </section>
+
       <section>
         <SectionInformation heading="News Blog" url="/news" />
 

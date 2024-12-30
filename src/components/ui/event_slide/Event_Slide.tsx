@@ -3,6 +3,7 @@ import Button from "../button/Button";
 import style from "./Event_Slide.module.scss";
 import Link from "next/link";
 import { upcoming_event } from "@/json/upcoming-event";
+
 const Event_Slide = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Event_Slide = () => {
             <div
               className={style.container}
               style={{
-                background: `url(${image}) center center  no-repeat`,
+                backgroundImage: `url(${image})`, // Use backgroundImage here
               }}
             >
               <Button

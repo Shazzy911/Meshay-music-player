@@ -14,6 +14,9 @@
   .imgContainer {
     @include flex-align-center();
     justify-content: center;
+    max-width: 210px; // Limit the width of the image
+    aspect-ratio: 1; // Maintains a 1:1 square aspect ratio
+    overflow: hidden; // Ensures the image doesn't overflow the container
   }
   .slideInfo {
     padding: 0 1rem;
