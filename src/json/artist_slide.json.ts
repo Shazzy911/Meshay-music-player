@@ -1,6 +1,6 @@
 // import NewsImg from "@/images/Lana del Rey wallpaper.jpg";
 import { artist_slide_types } from "@/types/artist_slide.types";
-import Hero from "@/images/lana3-modified.png";
+import Hero from "@/assets/images/lana3-modified.png";
 export const artist_slide_json: artist_slide_types[] = [
   {
     id: 1,
