@@ -30,6 +30,16 @@ const nextConfig = {
       // You can add more patterns for additional domains if needed
     ],
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.mp3$/, // Match .mp3 files
+      use: {
+        loader: "file-loader",
+      },
+      type: "asset/resource", // Use asset/resource for mp3 files
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

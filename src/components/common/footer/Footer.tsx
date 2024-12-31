@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Hero from "@/images/Hero4.png";
+import Hero from "@/assets/images/Hero4.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import style from "./Footer.module.scss";
