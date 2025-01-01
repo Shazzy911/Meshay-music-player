@@ -6,6 +6,7 @@ import { Fredoka } from "next/font/google";
 import "normalize.css";
 import "./globals.scss";
 import Loader from "@/components/ui/loader/Loader";
+import Player from "@/components/common/player/Player";
 
 const TopBar = React.lazy(() => import("@/components/common/topbar/TopBar"));
 const Footer = React.lazy(() => import("@/components/common/footer/Footer"));
@@ -49,6 +50,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
+            <Player />
           </Suspense>
         </Providers>
       </body>
