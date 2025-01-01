@@ -1,0 +1,67 @@
+@use "../../../app/styles/colors.module.scss" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above other content */
+  background-color: $sec-color; /* Adjust background to match your design */
+  color: #fff; /* Adjust text color */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow above the player */
+  padding: 2rem 2rem; /* Adjust padding for a comfortable layout */
+  border-top: 1px solid #010409;
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .controller {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .small {
+        font-size: 2rem;
+      }
+      .medium {
+        font-size: 3.5rem;
+      }
+      .play {
+        font-size: 4rem;
+      }
+
+      svg {
+        transition: fill 0.3s ease;
+        cursor: pointer;
+      }
+    }
+    .time_range {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      p {
+        font-size: 1.3rem;
+      }
+      .fullRange {
+        width: 60rem;
+        height: 0.5rem;
+        border-radius: 15px;
+        background-color: white;
+        .range {
+          width: 30%;
+          height: 100%;
+          background-color: $main-color;
+          transition: width 0.3s ease;
+        }
+      }
+    }
+  }
+}
