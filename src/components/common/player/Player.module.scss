@@ -14,6 +14,20 @@
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow above the player */
   padding: 2rem 2rem; /* Adjust padding for a comfortable layout */
   border-top: 1px solid #010409;
+  .subTitle {
+    margin-top: -1em;
+    color: #4f4f4f;
+  }
+
+  .time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+    font-size: smaller;
+  }
+
   .detail {
     display: flex;
     align-items: center;
@@ -28,6 +42,13 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      .playButton {
+        background: none;
+        border: none;
+        align-items: center;
+        justify-content: center;
+      }
+
       .small {
         font-size: 2rem;
       }
@@ -47,20 +68,175 @@
       display: flex;
       align-items: center;
       gap: 3rem;
+      .timeline {
+        width: 60rem;
+        height: 0.3rem;
+        background-color: #ccc; /* Background color for the track */
+        // appearance: none; /* Remove default styling */
+        border-radius: 5px; /* Optional: Smooth edges */
+        // overflow: hidden; /* Ensures no extra content spills out */
+      }
+      .timeline::-webkit-slider-thumb {
+        appearance: none; /* Hide the thumb */
+        width: 0; /* Ensures the thumb isn't visible */
+        height: 0;
+      }
+      .timeline::-moz-range-thumb {
+        appearance: none; /* Hide the thumb */
+        width: 0;
+        height: 0;
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 60rem;
+        background-color: transparent;
+
+        &:focus {
+          outline-color: #f8b195;
+        }
+      }
+      input[type="range"]::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 3px;
+        background: rgb(246, 114, 128);
+        background: -webkit-linear-gradient(
+          left,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#f67280",
+          endColorstr="#355c7d",
+          GradientType=1
+        );
+      }
+      input[type="range"]::-moz-range-track {
+        -moz-appearance: none;
+        appearance: none;
+        height: 3px;
+        background: rgb(246, 114, 128);
+        background: -moz-linear-gradient(
+          left,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#f67280",
+          endColorstr="#355c7d",
+          GradientType=1
+        );
+      }
+      input[type="range"]::-ms-track {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 3px;
+        background: rgb(246, 114, 128);
+        background: -moz-linear-gradient(
+          left,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          left,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(246, 114, 128, 1) 0%,
+          rgba(192, 108, 132, 1) 50%,
+          rgba(53, 92, 125, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#f67280",
+          endColorstr="#355c7d",
+          GradientType=1
+        );
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        border: 2px solid #f8b195;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        bottom: 8px;
+        background: #222
+          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+          center no-repeat;
+        background-size: 50%;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+      input[type="range"]::-moz-range-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #f8b195;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        bottom: 8px;
+        background: #222
+          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+          center no-repeat;
+        background-size: 50%;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+      input[type="range"]::-ms-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #f8b195;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        bottom: 8px;
+        background: #222
+          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+          center no-repeat;
+        background-size: 50%;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
       p {
         font-size: 1.3rem;
-      }
-      .fullRange {
-        width: 60rem;
-        height: 0.5rem;
-        border-radius: 15px;
-        background-color: white;
-        .range {
-          width: 30%;
-          height: 100%;
-          background-color: $main-color;
-          transition: width 0.3s ease;
-        }
       }
     }
   }
