@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Hero from "@/assets/images/Hero4.png";
+import Hero from "@/assets/images/New2.png";
 import style from "./Logo.module.scss";
 const Logo = () => {
   return (

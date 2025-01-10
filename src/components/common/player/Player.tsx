@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { songs } from "@/json/songs.json";
 import style from "./Player.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useSound from "use-sound";
 // import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"// for handling the sound
 
@@ -18,7 +18,7 @@ import {
 
 const Player = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Current song index
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [play, { pause, duration, sound }] = useSound(songs[currentIndex].file);
   const [currTime, setCurrTime] = useState({ min: "0", sec: "0" });
   const [seconds, setSeconds] = useState(0);
@@ -90,8 +90,6 @@ const Player = () => {
           height={60}
           width={60}
           alt="Image not found"
-          // layout="responsive" // Automatically adjusts to the image's original dimensions
-          // objectFit="cover" // Fills the container without stretching
         />
         <div>
           <h4>{songs[currentIndex].title}</h4>
