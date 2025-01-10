@@ -1,5 +1,4 @@
-@use "../../../app/styles/colors.module.scss" as *;
-@use "../../../app/styles/mixin.module.scss" as *;
+@use "../../../app/styles/colors.module.scss";
 .container {
   display: flex;
   flex-direction: column;
