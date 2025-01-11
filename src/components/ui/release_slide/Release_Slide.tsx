@@ -8,7 +8,7 @@ import { release } from "@/json/top_singers";
 const Release_Slide = () => {
   return (
     <>
-      {release.map(({ id, newImage, mainTitle, subTitle, songs }) => (
+      {release.map(({ id, newImage, mainTitle, songs }) => (
         <div className={style.content} key={id}>
           <div className={style.artist_info}>
             <Link href={`artist/${id}`}>
@@ -22,7 +22,7 @@ const Release_Slide = () => {
                 {/* Overlay Info */}
                 <div className={style.slideInfo}>
                   <h1>{mainTitle}</h1>
-                  <p>{subTitle}</p>
+                  {/* <p>{subTitle}</p> */}
                 </div>
               </div>
             </Link>

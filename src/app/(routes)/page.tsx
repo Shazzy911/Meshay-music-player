@@ -12,6 +12,7 @@ import Album_Slide from "@/components/ui/album_slide/Album_Slide";
 import SectionInformation from "@/components/ui/section-info/SectionInformation";
 import Release_Slide from "@/components/ui/release_slide/Release_Slide";
 import { topchart_slide_json, album_slide_json } from "@/json/testing_slides";
+import Podcast_Slide from "@/components/ui/podcast_slide/Podcast_Slide";
 
 /// Lazy loading for better performance.
 
@@ -112,7 +113,7 @@ const page = () => {
         <SectionInformation heading="Podcast" url="/events" />
         <Suspense fallback={<Loader />}>
           <Event_Swiper>
-            <Event_Slide />
+            <Podcast_Slide />
           </Event_Swiper>
         </Suspense>
       </section>

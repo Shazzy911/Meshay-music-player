@@ -1,11 +1,18 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { songs } from "@/json/songs.json";
+// import { songs } from "@/json/songs.json";
 import style from "./Player.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useSound from "use-sound";
-// import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"// for handling the sound
+
+import { useDispatch, useSelector } from "react-redux";
+import {
+  pauseSong,
+  resumeSong,
+  nextSong,
+  previousSong,
+} from "@/redux/slices/playerSlice";
 
 import {
   MdSkipPrevious,
@@ -17,9 +24,45 @@ import {
 } from "react-icons/md";
 
 const Player = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Current song index
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [play, { pause, duration, sound }] = useSound(songs[currentIndex].file);
+  const dispatch = useDispatch();
+
+  const { currentSongIndex, isPlaying, songList } = useSelector(
+    (state: {
+      player: {
+        currentSongIndex: number;
+        isPlaying: boolean;
+        songList: {
+          file: string;
+          image: string;
+          title: string;
+          featuring: string;
+        }[];
+      };
+    }) => state.player
+  );
+
+  // const [play, { pause, sound, duration }] = useSound(
+  //   songList[currentSongIndex]?.file || "",
+  //   { interrupt: true }
+  // );
+
+  const currentSong = songList[currentSongIndex] || {
+    file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+    image:
+      "https://i.pinimg.com/236x/59/f6/3a/59f63a8e006156c86a7cc8116351d93c.jpg",
+    title: "Meshay Music",
+    featuring: "--",
+  };
+
+  const [play, { pause, sound, duration }] = useSound(currentSong.file, {
+    interrupt: true,
+  });
+
+  // const shuffleSongs = () => {
+  //   const shuffledSongs = [...songList].sort(() => Math.random() - 0.5);
+  //   dispatch(setSongList(shuffledSongs));
+  // };
+
   const [currTime, setCurrTime] = useState({ min: "0", sec: "0" });
   const [seconds, setSeconds] = useState(0);
   const durationInSeconds = duration ? duration / 1000 : 0;
@@ -49,74 +92,50 @@ const Player = () => {
     return () => clearInterval(interval);
   }, [sound]);
 
-  const playingButton = () => {
+  const togglePlayPause = () => {
     if (isPlaying) {
       pause();
-      setIsPlaying(false);
+      dispatch(pauseSong());
     } else {
       play();
-      setIsPlaying(true);
+      dispatch(resumeSong());
     }
   };
 
-  // Handle skip to next song
   const skipNext = () => {
-    pause(); // Stop the current song
-    setIsPlaying(false);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % songs.length); // Go to the next song or loop to the first song
+    dispatch(nextSong());
   };
 
-  // Handle skip to previous song
   const skipPrevious = () => {
-    pause(); // Stop the current song
-    setIsPlaying(false);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? songs.length - 1 : prevIndex - 1
-    ); // Go to the previous song or loop to the last song
+    dispatch(previousSong());
   };
-
-  // Play new song when index changes
-  useEffect(() => {
-    if (isPlaying) {
-      play();
-    }
-  }, [currentIndex, play, isPlaying]);
 
   return (
     <div className={style.container}>
       <div className={style.detail}>
         <Image
-          src={songs[currentIndex].image}
+          src={currentSong.image}
           height={60}
           width={60}
           alt="Image not found"
         />
         <div>
-          <h4>{songs[currentIndex].title}</h4>
-          <small>{songs[currentIndex].featuring}</small>
+          <h4>{currentSong.title}</h4>
+          <small>{currentSong.featuring}</small>
         </div>
       </div>
       <div className={style.controller}>
         <div className={style.icons}>
           <MdOutlineShuffle className={style.small} />
           <MdSkipPrevious className={style.medium} onClick={skipPrevious} />
-          {/* {!isPlaying ? (
-            <button className="playButton" onClick={playingButton}>
-              <MdPlayCircle />
-            </button>
-          ) : (
-            <button className="playButton" onClick={playingButton}>
-              <MdPauseCircle />
-            </button>
-          )} */}
           {!isPlaying ? (
-            <MdPlayCircle className={style.play} onClick={playingButton} />
+            <MdPlayCircle className={style.play} onClick={togglePlayPause} />
           ) : (
-            <MdPauseCircle className={style.play} onClick={playingButton} />
+            <MdPauseCircle className={style.play} onClick={togglePlayPause} />
           )}
           <MdSkipNext className={style.medium} onClick={skipNext} />
           <MdRepeat className={style.small} />
-        </div>
+        </div>{" "}
         <div className={style.time_range}>
           <p>
             {currTime.min}:{currTime.sec}

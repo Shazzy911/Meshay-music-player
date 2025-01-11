@@ -29,7 +29,7 @@
         bottom: 0; /* Align to the bottom of the container */
         left: 0;
         width: 100%; /* Full width of the image */
-        height: 40%; /* Adjust height for the overlay area */
+        height: 30%; /* Adjust height for the overlay area */
         display: flex;
         flex-direction: column;
         justify-content: center; /* Center content vertically */
@@ -38,6 +38,10 @@
         color: white; /* Text color */
         text-align: center;
         transition: opacity 0.3s ease; /* Smooth fade effect */
+        &:hover {
+          display: flex;
+          z-index: 1;
+        }
       }
     }
   }

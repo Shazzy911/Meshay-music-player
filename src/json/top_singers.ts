@@ -4,162 +4,177 @@ export const release: TopSingersType[] = [
   {
     id: 1,
     newImage:
-      "https://i.pinimg.com/236x/ae/f1/62/aef162270cda91d4c546b531dbf9a589.jpg", // Add your image URL
+      "https://i.pinimg.com/736x/d1/a4/a1/d1a4a14ef0b0be7242fe1532ee56dcd3.jpg", // Add your image URL
     mainTitle: "Taylor Swift",
     subTitle: "Artist",
     songs: [
       {
         id: 1,
-        title: "Anti-Hero",
-        featuring: "Taylor Swift",
-        time: "3:20",
-        album: "Midnights",
+        title: "Fingertips",
+        featuring: "Lana Del Rey",
         image:
-          "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2025-01-02T12%3A00%3A54.249Z",
+        time: "3:45",
+        album: "Divide",
       },
       {
         id: 2,
-        title: "Blank Space",
-        featuring: "None",
-        time: "3:51",
-        album: "1989",
+        title: "Paris Texas",
+        featuring: "Lana del rey feat (SYML)",
         image:
-          "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f8/b9/14/f8b914d17ec1154b51458ef6c0cd9822.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+        time: "3:20",
+        album: "After Hours",
       },
       {
         id: 3,
-        title: "All Too Well",
-        featuring: "Taylor Swift",
-        time: "10:13",
-        album: "Red",
+        title: "Someone Like You",
+        featuring: "Adele",
         image:
-          "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:45",
+        album: "21",
       },
       {
         id: 4,
-        title: "Lover",
-        featuring: "Taylor Swift",
-        time: "3:41",
-        album: "Lover",
+        title: "Uptown Funk",
+        featuring: "Mark Ronson ft. Bruno Mars",
         image:
-          "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:30",
+        album: "Uptown Special",
       },
       {
         id: 5,
-        title: "You Belong with Me",
-        featuring: "Taylor Swift",
-        time: "3:52",
-        album: "Fearless",
+        title: "Stay",
+        featuring: "Justin Bieber & The Kid LAROI",
         image:
-          "https://i.pinimg.com/236x/c0/95/f3/c095f3ecad6eedb2eae670475e0a1b92.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "2:50",
+        album: "Stay (Single)",
       },
     ],
   },
   {
     id: 2,
     newImage:
-      "https://i.pinimg.com/236x/4b/7b/c9/4b7bc96c63cb960f1ae5eaac08cec28f.jpg", // Add your image URL
+      "https://i.pinimg.com/736x/2e/47/ad/2e47ada44741dd6ae9acb8bca8b9c89e.jpg", // Add your image URL
     mainTitle: "Ed Sheeran",
     subTitle: "Artist",
     songs: [
       {
         id: 1,
-        title: "Shape of You",
-        featuring: "Ed Sheeran",
-        time: "4:24",
-        album: "Divide",
+        title: "Fingertips",
+        featuring: "Lana Del Rey",
         image:
-          "https://i.pinimg.com/236x/d0/41/74/d04174156447963eb85b76a9e1684a98.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2025-01-02T12%3A00%3A54.249Z",
+        time: "3:45",
+        album: "Divide",
       },
       {
         id: 2,
-        title: "Perfect",
-        featuring: "Ed Sheeran",
-        time: "4:23",
-        album: "Divide",
+        title: "Paris Texas",
+        featuring: "Lana del rey feat (SYML)",
         image:
-          "https://i.pinimg.com/236x/d0/41/74/d04174156447963eb85b76a9e1684a98.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f8/b9/14/f8b914d17ec1154b51458ef6c0cd9822.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+        time: "3:20",
+        album: "After Hours",
       },
       {
         id: 3,
-        title: "Bad Habits",
-        featuring: "Ed Sheeran",
-        time: "3:50",
-        album: "Equals",
+        title: "Someone Like You",
+        featuring: "Adele",
         image:
-          "https://i.pinimg.com/236x/d0/41/74/d04174156447963eb85b76a9e1684a98.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:45",
+        album: "21",
       },
       {
         id: 4,
-        title: "Thinking Out Loud",
-        featuring: "Ed Sheeran",
-        time: "4:41",
-        album: "Multiply",
+        title: "Uptown Funk",
+        featuring: "Mark Ronson ft. Bruno Mars",
         image:
-          "https://i.pinimg.com/236x/d0/41/74/d04174156447963eb85b76a9e1684a98.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:30",
+        album: "Uptown Special",
       },
       {
         id: 5,
-        title: "I Don't Care",
-        featuring: "Ed Sheeran, Justin Bieber",
-        time: "3:39",
-        album: "No.6 Collaborations Project",
+        title: "Stay",
+        featuring: "Justin Bieber & The Kid LAROI",
         image:
-          "https://i.pinimg.com/236x/d0/41/74/d04174156447963eb85b76a9e1684a98.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "2:50",
+        album: "Stay (Single)",
       },
     ],
   },
   {
     id: 3,
     newImage:
-      "https://i.pinimg.com/236x/b9/7d/bb/b97dbb0c48f4580202cb02b2d75b3127.jpg", // Add your image URL
+      "https://i.pinimg.com/736x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
     mainTitle: "Adele",
     subTitle: "Artist",
     songs: [
       {
         id: 1,
-        title: "Hello",
-        featuring: "Adele",
-        time: "4:55",
-        album: "25",
+        title: "Fingertips",
+        featuring: "Lana Del Rey",
         image:
-          "https://i.pinimg.com/236x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2025-01-02T12%3A00%3A54.249Z",
+        time: "3:45",
+        album: "Divide",
       },
       {
         id: 2,
-        title: "Someone Like You",
-        featuring: "Adele",
-        time: "4:45",
-        album: "21",
+        title: "Paris Texas",
+        featuring: "Lana del rey feat (SYML)",
         image:
-          "https://i.pinimg.com/236x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f8/b9/14/f8b914d17ec1154b51458ef6c0cd9822.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+        time: "3:20",
+        album: "After Hours",
       },
       {
         id: 3,
-        title: "Easy On Me",
+        title: "Someone Like You",
         featuring: "Adele",
-        time: "3:44",
-        album: "30",
         image:
-          "https://i.pinimg.com/236x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:45",
+        album: "21",
       },
       {
         id: 4,
-        title: "Rolling in the Deep",
-        featuring: "Adele",
-        time: "3:48",
-        album: "21",
+        title: "Uptown Funk",
+        featuring: "Mark Ronson ft. Bruno Mars",
         image:
-          "https://i.pinimg.com/236x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:30",
+        album: "Uptown Special",
       },
       {
         id: 5,
-        title: "Set Fire to the Rain",
-        featuring: "Adele",
-        time: "4:02",
-        album: "21",
+        title: "Stay",
+        featuring: "Justin Bieber & The Kid LAROI",
         image:
-          "https://i.pinimg.com/236x/5e/65/ae/5e65ae0d654d5768b213cab634ea327c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "2:50",
+        album: "Stay (Single)",
       },
     ],
   },
@@ -172,102 +187,112 @@ export const release: TopSingersType[] = [
     songs: [
       {
         id: 1,
-        title: "Young and Beautiful",
+        title: "Fingertips",
         featuring: "Lana Del Rey",
-        time: "3:56",
-        album: "The Great Gatsby Soundtrack",
         image:
-          "https://i.pinimg.com/236x/6f/e6/aa/6fe6aa6a443c3cb09037f46e8d86615c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2025-01-02T12%3A00%3A54.249Z",
+        time: "3:45",
+        album: "Divide",
       },
       {
         id: 2,
-        title: "Summertime Sadness",
-        featuring: "Lana Del Rey",
-        time: "4:25",
-        album: "Born to Die",
+        title: "Paris Texas",
+        featuring: "Lana del rey feat (SYML)",
         image:
-          "https://i.pinimg.com/236x/6f/e6/aa/6fe6aa6a443c3cb09037f46e8d86615c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f8/b9/14/f8b914d17ec1154b51458ef6c0cd9822.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+        time: "3:20",
+        album: "After Hours",
       },
       {
         id: 3,
-        title: "West Coast",
-        featuring: "Lana Del Rey",
-        time: "4:16",
-        album: "Ultraviolence",
+        title: "Someone Like You",
+        featuring: "Adele",
         image:
-          "https://i.pinimg.com/236x/6f/e6/aa/6fe6aa6a443c3cb09037f46e8d86615c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:45",
+        album: "21",
       },
       {
         id: 4,
-        title: "Don't Call Me Angel",
-        featuring: "Lana Del Rey, Ariana Grande, Miley Cyrus",
-        time: "3:10",
-        album: "Charlie's Angels Soundtrack",
+        title: "Uptown Funk",
+        featuring: "Mark Ronson ft. Bruno Mars",
         image:
-          "https://i.pinimg.com/236x/6f/e6/aa/6fe6aa6a443c3cb09037f46e8d86615c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:30",
+        album: "Uptown Special",
       },
       {
         id: 5,
-        title: "Video Games",
-        featuring: "Lana Del Rey",
-        time: "4:42",
-        album: "Born to Die",
+        title: "Stay",
+        featuring: "Justin Bieber & The Kid LAROI",
         image:
-          "https://i.pinimg.com/236x/6f/e6/aa/6fe6aa6a443c3cb09037f46e8d86615c.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "2:50",
+        album: "Stay (Single)",
       },
     ],
   },
   {
     id: 5,
     newImage:
-      "https://i.pinimg.com/474x/6c/e9/5e/6ce95ed6612dca88aa318b87ce3c0eb0.jpg", // Add your image URL
+      "https://i.pinimg.com/736x/6c/3e/48/6c3e4838aef21977dde82bb2a64eed7f.jpg", // Add your image URL
     mainTitle: "Billie Eilish",
     subTitle: "Artist",
     songs: [
       {
         id: 1,
-        title: "Bad Guy",
-        featuring: "Billie Eilish",
-        time: "3:14",
-        album: "When We All Fall Asleep, Where Do We Go?",
+        title: "Fingertips",
+        featuring: "Lana Del Rey",
         image:
-          "https://i.pinimg.com/236x/49/66/3d/49663d8696a9e09213f4d5384d28bfab.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2025-01-02T12%3A00%3A54.249Z",
+        time: "3:45",
+        album: "Divide",
       },
       {
         id: 2,
-        title: "Ocean Eyes",
-        featuring: "Billie Eilish",
-        time: "3:20",
-        album: "Don't Smile at Me",
+        title: "Paris Texas",
+        featuring: "Lana del rey feat (SYML)",
         image:
-          "https://i.pinimg.com/236x/49/66/3d/49663d8696a9e09213f4d5384d28bfab.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f8/b9/14/f8b914d17ec1154b51458ef6c0cd9822.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
+        time: "3:20",
+        album: "After Hours",
       },
       {
         id: 3,
-        title: "Everything I Wanted",
-        featuring: "Billie Eilish",
-        time: "4:05",
-        album: "Single",
+        title: "Someone Like You",
+        featuring: "Adele",
         image:
-          "https://i.pinimg.com/236x/49/66/3d/49663d8696a9e09213f4d5384d28bfab.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:45",
+        album: "21",
       },
       {
         id: 4,
-        title: "Lovely",
-        featuring: "Billie Eilish, Khalid",
-        time: "3:20",
-        album: "Single",
+        title: "Uptown Funk",
+        featuring: "Mark Ronson ft. Bruno Mars",
         image:
-          "https://i.pinimg.com/236x/49/66/3d/49663d8696a9e09213f4d5384d28bfab.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "4:30",
+        album: "Uptown Special",
       },
       {
         id: 5,
-        title: "Happier Than Ever",
-        featuring: "Billie Eilish",
-        time: "4:58",
-        album: "Happier Than Ever",
+        title: "Stay",
+        featuring: "Justin Bieber & The Kid LAROI",
         image:
-          "https://i.pinimg.com/236x/49/66/3d/49663d8696a9e09213f4d5384d28bfab.jpg", // Add your image URL
+          "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
+        file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+        time: "2:50",
+        album: "Stay (Single)",
       },
     ],
   },

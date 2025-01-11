@@ -5,6 +5,7 @@ export type SongDataType = {
   image: string;
   album: string;
   time: string;
+  file: string;
 };
 
 export type TopSingersType = {
