@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import { useDispatch } from "react-redux";
+import { playSong, setSongList } from "@/redux/slices/playerSlice";
+
+import React, { useEffect } from "react";
 import style from "./Song.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 import { FaPlay } from "react-icons/fa";
 
 type SongDataType = {
@@ -17,6 +21,15 @@ type songType = {
 };
 
 const Song: React.FC<songType> = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const handlePlay = (index: number) => {
+    dispatch(playSong(index));
+  };
+  useEffect(() => {
+    dispatch(setSongList(item)); // Set the song list in Redux
+  }, [dispatch, item]);
+
   return (
     <div className={style.container}>
       {/* Add Header Row */}
@@ -28,7 +41,7 @@ const Song: React.FC<songType> = ({ item }) => {
 
       {item.map(({ id, title, featuring, time, image, album }) => (
         <div key={id} className={style.info}>
-          <div className={style.content}>
+          <div className={style.content} onClick={() => handlePlay(id)}>
             <div className={style.img_box}>
               <Image
                 src={image || "Image not found"}
@@ -38,9 +51,9 @@ const Song: React.FC<songType> = ({ item }) => {
                 className={style.image}
               />
               <div className={style.overlay}>
-                <Link href={"#"} className={style.icon}>
+                <span className={style.icon}>
                   <FaPlay />
-                </Link>
+                </span>
               </div>
             </div>
             <div className={style.details}>
