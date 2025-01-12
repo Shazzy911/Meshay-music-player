@@ -41,11 +41,6 @@ const Player = () => {
     }) => state.player
   );
 
-  // const [play, { pause, sound, duration }] = useSound(
-  //   songList[currentSongIndex]?.file || "",
-  //   { interrupt: true }
-  // );
-
   const currentSong = songList[currentSongIndex] || {
     file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Paris,%20Texas%20(feat.%20SYML).mp3?t=2025-01-02T12%3A01%3A39.900Z",
     image:
@@ -54,14 +49,10 @@ const Player = () => {
     featuring: "--",
   };
 
-  const [play, { pause, sound, duration }] = useSound(currentSong.file, {
+  const [, { sound, duration }] = useSound(currentSong.file, {
     interrupt: true,
   });
-
-  // const shuffleSongs = () => {
-  //   const shuffledSongs = [...songList].sort(() => Math.random() - 0.5);
-  //   dispatch(setSongList(shuffledSongs));
-  // };
+  const [playbackPosition, setPlaybackPosition] = useState(0);
 
   const [currTime, setCurrTime] = useState({ min: "0", sec: "0" });
   const [seconds, setSeconds] = useState(0);
@@ -92,12 +83,24 @@ const Player = () => {
     return () => clearInterval(interval);
   }, [sound]);
 
+  // useEffect(() => {
+  //   if (isPlaying && sound) {
+  //     sound.play();
+  //   }
+  // }, [currentSongIndex]);
+
   const togglePlayPause = () => {
     if (isPlaying) {
-      pause();
+      if (sound) {
+        setPlaybackPosition(sound.seek([])); // Save the current position
+        sound.pause();
+      }
       dispatch(pauseSong());
     } else {
-      play();
+      if (sound) {
+        sound.seek(playbackPosition); // Resume from the saved position
+        sound.play();
+      }
       dispatch(resumeSong());
     }
   };

@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import "./page.module.scss";
-import Loader from "@/components/ui/loader/Loader";
-import Artist_Page_Slide from "@/components/ui/artist_page_slide/Artist_Page_Slide";
+import Loader from "@/components/ui/small/loader/Loader";
+import Artist_Page_Slide from "@/components/layout/swiper-slides/artist_page_slide/Artist_Page_Slide";
 import Artist_Page_Swiper from "@/components/layout/artist-page-swiper/Artist_Page_Swiper";
-import Song from "@/components/ui/song/Song";
+import Song from "@/components/ui/large/song/Song";
 import { release } from "@/json/top_singers";
 import style from "./page.module.scss";
 

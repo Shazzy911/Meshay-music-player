@@ -1,7 +1,7 @@
 import style from "./TopBar.module.scss";
-import Button from "@/components/ui/button/Button";
-import Logo from "@/components/ui/logo/Logo";
-import Search from "@/components/ui/search/Search";
+import Button from "@/components/ui/small/button/Button";
+import Logo from "@/components/ui/small/logo/Logo";
+import Search from "@/components/ui/small/search/Search";
 import { FaBell, FaUserAlt, FaSignInAlt } from "react-icons/fa";
 import Menu from "../menu/Menu";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const TopBar = () => {
       </div>
       <section className={style.icons_container}>
         <div className={style.top_button}>
-          <Button text="Explore Premium" />
+          <Button text="Explore Premium" navigateTo="/premium" />
         </div>
         <div className={style.icons}>
           <FaBell />

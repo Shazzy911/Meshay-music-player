@@ -1,0 +1,15 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.container {
+  @include flex-align-center();
+  background-color: khaki;
+  height: 50rem;
+  width: 100vw;
+  justify-content: center;
+
+  .intro {
+    @include flex-align-center();
+    flex-direction: column;
+  }
+}
