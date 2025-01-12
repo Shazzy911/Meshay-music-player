@@ -1,0 +1,76 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+// Main Container TopBar
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem;
+  padding: 2.2rem 2.5rem 2rem 2rem;
+  border-bottom: 1px solid $sec-color;
+  position: sticky;
+  background-color: $sec-color;
+  top: 0;
+  z-index: 30;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  color: white;
+}
+
+// Container for cart and notifications
+.icons_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  .top_button {
+    display: none;
+  }
+  .user {
+    gap: 0.5rem;
+  }
+  .icons {
+    // padding: 1.5rem;b
+    @include display_padding_bg(1.4rem 1.6rem, $bg-color);
+    align-items: self-end;
+    svg {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// ====================================
+// ============ Media Queries =========
+// ====================================
+// ==== Targeting Mobile ==> Desktop ==
+
+@media screen and (min-width: 475px) {
+}
+
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 3.8rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .icons_container {
+    .top_button {
+      display: flex;
+    }
+
+    .user {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1536px) {
+}

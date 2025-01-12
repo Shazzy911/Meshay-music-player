@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Fredoka } from "next/font/google";
 import "normalize.css";
 import "./globals.scss";
-import Loader from "@/components/ui/loader/Loader";
+import Loader from "@/components/ui/small/loader/Loader";
 import Player from "@/components/common/player/Player";
 
 const TopBar = React.lazy(() => import("@/components/common/topbar/TopBar"));

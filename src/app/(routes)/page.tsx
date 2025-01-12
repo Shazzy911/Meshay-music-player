@@ -1,41 +1,37 @@
 import React, { Suspense } from "react";
 import style from "./page.module.scss";
-import Search from "@/components/ui/search/Search";
-import Loader from "@/components/ui/loader/Loader";
+import Search from "@/components/ui/small/search/Search";
+import Loader from "@/components/ui/small/loader/Loader";
 // Slides
-import Main_Slide from "@/components/ui/slide_main/Slide_main";
-import Event_Slide from "@/components/ui/event_slide/Event_Slide";
-import News_Slide from "@/components/ui/news_slide/News_Slide";
-import Artist_Slide from "@/components/ui/artist-slide/Artist_Slide";
-import Album_Slide from "@/components/ui/album_slide/Album_Slide";
+import Main_Slide from "@/components/layout/swiper-slides/slide_main/Slide_main";
+import Event_Slide from "@/components/layout/swiper-slides/event_slide/Event_Slide";
+import News_Slide from "@/components/layout/swiper-slides/news_slide/News_Slide";
+import Artist_Slide from "@/components/layout/swiper-slides/artist-slide/Artist_Slide";
+import Album_Slide from "@/components/layout/swiper-slides/album_slide/Album_Slide";
 // import TopChart_Slide from "@/components/ui/top-chart_slide/TopChart_Slide"; /// Delete this slide if not needed....
-import SectionInformation from "@/components/ui/section-info/SectionInformation";
-import Release_Slide from "@/components/ui/release_slide/Release_Slide";
+import SectionInformation from "@/components/ui/small/section-info/SectionInformation";
+import Release_Slide from "@/components/layout/swiper-slides/release_slide/Release_Slide";
 import { topchart_slide_json, album_slide_json } from "@/json/testing_slides";
-import Podcast_Slide from "@/components/ui/podcast_slide/Podcast_Slide";
+import Podcast_Slide from "@/components/layout/swiper-slides/podcast_slide/Podcast_Slide";
 
 /// Lazy loading for better performance.
 
 // Swiper Files Imports
 const Swiper_Main = React.lazy(
-  () => import("@/components/layout/swiper_main/Swiper_Main")
+  () => import("@/components/layout/swiper/swiper_main/Swiper_Main")
 );
 const Event_Swiper = React.lazy(
-  () => import("@/components/layout/event_swiper/Event_swiper")
+  () => import("@/components/layout/swiper/event_swiper/Event_swiper")
 );
 const News_Swiper = React.lazy(
-  () => import("@/components/layout/news_swiper/News_Swiper")
+  () => import("@/components/layout//swiper/news_swiper/News_Swiper")
 );
 const Common_Swiper = React.lazy(
-  () => import("@/components/layout/common-swiper/Common_Swiper")
+  () => import("@/components/layout/swiper/common-swiper/Common_Swiper")
 );
 
-// Other imports
-// const Main_Content = React.lazy(
-//   () => import("@/components/layout/main-content/Main_Content")
-// );
 const Release_Swiper = React.lazy(
-  () => import("@/components/layout/release-swiper/Release_Swiper")
+  () => import("@/components/layout/swiper/release-swiper/Release_Swiper")
 );
 
 const page = () => {

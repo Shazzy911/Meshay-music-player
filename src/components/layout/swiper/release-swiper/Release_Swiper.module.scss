@@ -1,0 +1,69 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.swiper {
+  width: 130rem !important;
+  height: 50rem !important;
+
+  :global(.swiper-wrapper) {
+    :global(.swiper-slide) {
+      height: 50rem !important;
+      // background-color: $sec-color;
+      display: flex;
+      align-items: center;
+    }
+  }
+  :global(.swiper-pagination) {
+    text-align: end !important;
+    padding-right: 12rem;
+
+    :global(.swiper-pagination-bullet) {
+      background-color: white;
+      border-radius: 2px;
+      height: 4px;
+      width: 1.3rem;
+      cursor: pointer;
+    }
+    :global(.swiper-pagination-bullet-active) {
+      width: 2rem;
+    }
+  }
+}
+.navigation {
+  left: 110rem;
+}
+
+@media screen and (min-width: 1536px) {
+  .swiper {
+    width: 130rem !important;
+    height: 50rem !important;
+
+    :global(.swiper-wrapper) {
+      :global(.swiper-slide) {
+        height: 50rem !important;
+        border-radius: 15px;
+        // background-color: $sec-color;
+        display: flex;
+        align-items: center;
+      }
+    }
+    :global(.swiper-pagination) {
+      text-align: end !important;
+      padding-right: 12rem;
+
+      :global(.swiper-pagination-bullet) {
+        background-color: white;
+        border-radius: 2px;
+        height: 4px;
+        width: 1.3rem;
+        cursor: pointer;
+      }
+      :global(.swiper-pagination-bullet-active) {
+        width: 2rem;
+      }
+    }
+  }
+  .navigation {
+    left: 110rem;
+  }
+}

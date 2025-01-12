@@ -4,7 +4,7 @@ import { MdOutlineAudiotrack } from "react-icons/md";
 import { FaMicrophone } from "react-icons/fa6";
 import { MdAudiotrack } from "react-icons/md";
 
-import MainCombineContent from "@/components/ui/main_combine_content/MainCombineContent";
+import MainCombineContent from "@/components/ui/large/main_combine_content/MainCombineContent";
 
 type songType = {
   id: number;

@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import style from "./Footer.module.scss";
 import { companyMenu, communitiesMenu, helpMenu } from "@/json/footer.object";
-import Footer_links from "@/components/ui/footer-links/Footer_links";
+import Footer_links from "@/components/ui/large/footer-links/Footer_links";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {

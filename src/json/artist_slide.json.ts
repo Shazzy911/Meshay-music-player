@@ -5,7 +5,10 @@ import Hero2 from "@/assets/images/Zain.png";
 import Hero3 from "@/assets/images/Rexha.png";
 import Hero4 from "@/assets/images/dua1.png";
 import Hero5 from "@/assets/images/dua2.png";
-
+import Hero6 from "@/assets/images/Selena.png";
+import Hero7 from "@/assets/images/Harry.png";
+import Hero8 from "@/assets/images/Dhillion.png";
+import Hero9 from "@/assets/images/Coldplay.png";
 export const artist_slide_json: artist_slide_types[] = [
   {
     id: 1,
@@ -39,26 +42,26 @@ export const artist_slide_json: artist_slide_types[] = [
   },
   {
     id: 6,
-    image: Hero,
-    artist_name: "Lana Del Rey",
+    image: Hero6,
+    artist_name: "Selena Gomez",
     feature: "Artist",
   },
   {
     id: 7,
-    image: Hero,
-    artist_name: "Lana Del Rey",
+    image: Hero7,
+    artist_name: "Harry Styles",
     feature: "Artist",
   },
   {
     id: 8,
-    image: Hero,
-    artist_name: "Lana Del Rey",
+    image: Hero8,
+    artist_name: "Ap Dhillon",
     feature: "Artist",
   },
   {
     id: 9,
-    image: Hero,
-    artist_name: "Lana Del Rey",
+    image: Hero9,
+    artist_name: "Coldplay",
     feature: "Artist",
   },
 ];

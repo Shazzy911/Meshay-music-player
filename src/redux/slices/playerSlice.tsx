@@ -27,6 +27,7 @@ const playerSlice = createSlice({
       state.currentSongIndex = action.payload;
       state.isPlaying = true;
     },
+
     pauseSong: (state) => {
       state.isPlaying = false;
     },
