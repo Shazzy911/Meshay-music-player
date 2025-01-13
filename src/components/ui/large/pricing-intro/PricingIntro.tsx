@@ -13,13 +13,23 @@ const PricingIntro = () => {
         <p className={style.text}>
           Choose the best plan for your business. Change plans as you grow.
         </p>
-        <div>
-          <input type="text" placeholder="Enter Your Email Address" />
-          <Button text="Start Free Trial" />
+        <div className={style.searchbar}>
+          <div className={style.inputWrapper}>
+            <input type="text" placeholder="Enter your email address" />
+            <Button
+              text="Start Free Trial"
+              style={{
+                transform: "translateX(0)",
+                zIndex: "2",
+                width: "25%",
+                padding: "2rem",
+              }}
+            />
+          </div>
         </div>
-        <p>
-          Try Shopify free, no credit card required. By entering your email, you
-          agree to receive marketing emails from Shopify.
+        <p className={style.text2}>
+          Try Meshay Music free, no credit card required. By entering your
+          email, you agree to receive updates emails from Meshay Music.
         </p>
       </div>
     </section>

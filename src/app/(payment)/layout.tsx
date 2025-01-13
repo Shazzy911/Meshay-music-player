@@ -20,7 +20,7 @@ export default function SignupLayout({
       <body className={` ${inter.className} ${style.layout}`}>
         <div className="app">
           <SecTopBar />
-          <div className="main-container">
+          <div className={style.main_container}>
             <div className="page">{children}</div>
           </div>
         </div>

@@ -1,0 +1,22 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+@mixin same_display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  @include same_display();
+  background-color: $sec-color;
+  height: 35rem;
+
+  //   margin-bottom: 5rem;
+
+  color: white;
+
+  .content {
+    @include same_display();
+    flex-direction: column;
+  }
+}
