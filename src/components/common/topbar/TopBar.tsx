@@ -31,7 +31,7 @@ const TopBar = () => {
                 href={"/register"}
                 className={`${style.icons} ${style.user}`}
               >
-                <p>Sign In</p>
+                <h4>Sign In</h4>
                 <FaSignInAlt />
               </Link>
             </div>

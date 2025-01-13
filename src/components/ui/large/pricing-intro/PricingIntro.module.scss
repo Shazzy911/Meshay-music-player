@@ -2,14 +2,77 @@
 @use "../../../../app/styles/mixin.module.scss" as *;
 
 .container {
-  @include flex-align-center();
-  background-color: khaki;
-  height: 50rem;
-  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 7rem;
+  position: relative;
+  height: 65rem;
   justify-content: center;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1518972559570-7cc1309f3229?w=1500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDM4fHxtdXNpYyUyMGNvdmVyJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww")
+      no-repeat center center/cover;
 
+  //   background-size: cover; // Ensures the image covers the container
+  //   background-position: center; // Centers the image
+  //   background-repeat: no-repeat; // Avoids repeating the image
   .intro {
     @include flex-align-center();
     flex-direction: column;
+    width: 80rem;
+
+    h1 {
+      padding: 0 5rem;
+      text-align: center;
+      font-size: 4.5rem;
+    }
+    h4 {
+      text-transform: uppercase;
+    }
+
+    .searchbar {
+      display: flex;
+      align-items: center;
+      width: 75rem;
+      margin: 1rem 0;
+      .inputWrapper {
+        display: flex; /* Align input and button horizontally */
+        align-items: center; /* Vertically center input and button */
+        position: relative; /* Ensure button stays inside */
+        width: 100%; /* Full-width wrapper */
+
+        background-color: $bg-color;
+        background-color: white;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        height: 6.5rem;
+      }
+      input {
+        // background-color: $bg-color;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        height: 5.6rem;
+        position: relative;
+        color: $bg-color;
+        outline: none;
+        width: 100%;
+        padding: 0 60px;
+        font-weight: bold;
+      }
+    }
+  }
+  .text {
+    font-size: large;
+    color: #d4d4d4; /* Light gray */
+    line-height: 1.6; /* Improves readability */
+  }
+
+  .text2 {
+    text-align: center;
+    padding: 0 10rem;
+    font-size: small;
+    margin: 1rem 3rem;
+    color: #d4d4d4; /* Light gray */
+    line-height: 1.6; /* Improves readability */
   }
 }
