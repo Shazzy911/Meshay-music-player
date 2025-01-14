@@ -11,7 +11,7 @@ const PricingIntro = () => {
           Start for free, then enjoy your first month for $1
         </h1>
         <p className={style.text}>
-          Choose the best plan for your business. Change plans as you grow.
+          Choose the best plan for yourself. Change plans as you listen more.
         </p>
         <div className={style.searchbar}>
           <div className={style.inputWrapper}>

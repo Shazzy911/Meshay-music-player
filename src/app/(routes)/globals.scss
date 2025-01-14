@@ -40,6 +40,11 @@ body {
   //     color: white;
   //   }
 }
+ul {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style-position: inside; /* Move dots inside the container */
+}
 ::-webkit-scrollbar {
   width: 2rem;
 }

@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import "../(routes)/globals.scss";
 import style from "./payment.layout.module.scss";
 import SecTopBar from "@/components/ui/large/sec_topbar/SecTopBar";
+import Footer from "@/components/common/footer/Footer";
 const inter = Poppins({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
   title: "Meshay Music Premium Membership",
@@ -22,6 +23,9 @@ export default function SignupLayout({
           <SecTopBar />
           <div className={style.main_container}>
             <div className="page">{children}</div>
+            <div className={style.footer}>
+              <Footer />
+            </div>
           </div>
         </div>
       </body>
