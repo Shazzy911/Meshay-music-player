@@ -31,7 +31,7 @@ const News_Swiper: React.FC<ComponentProps> = ({ children }) => {
         slidesPerView={1}
         spaceBetween={5}
         autoplay={{
-          delay: 3000,
+          delay: 13000,
           disableOnInteraction: false,
         }}
         pagination={{

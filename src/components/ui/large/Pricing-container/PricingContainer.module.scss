@@ -1,0 +1,55 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  //   height: 60rem;
+  // background-color: white;
+  padding: 10rem 2rem;
+  gap: 2rem;
+  // flex-wrap: wrap;
+}
+
+.card {
+  height: 50rem;
+  color: white;
+  background-color: $sec-color;
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 3rem 0 3rem;
+  border-radius: 12px;
+  gap: 2rem;
+
+  .header {
+    height: 15.2rem;
+    .subTitle {
+      font-size: 1.4rem;
+      margin: 0.3rem 0;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  ul {
+    height: 9.6rem;
+    li {
+      line-height: 1.6;
+      font-size: 1.5rem;
+    }
+  }
+
+  .small {
+    font-size: 1.2rem;
+    text-align: center;
+
+    color: #d4d4d4;
+  }
+}
