@@ -2,7 +2,8 @@ import style from "./TopBar.module.scss";
 import Button from "@/components/ui/small/button/Button";
 import Logo from "@/components/ui/small/logo/Logo";
 import Search from "@/components/ui/small/search/Search";
-import { FaBell, FaUserAlt, FaSignInAlt } from "react-icons/fa";
+import { FaBell, FaUserAlt } from "react-icons/fa";
+import { MdOutlineLogin } from "react-icons/md";
 import Menu from "../menu/Menu";
 import Link from "next/link";
 
@@ -31,8 +32,8 @@ const TopBar = () => {
                 href={"/register"}
                 className={`${style.icons} ${style.user}`}
               >
-                <h4>Sign In</h4>
-                <FaSignInAlt />
+                <h4>LogIn</h4>
+                <MdOutlineLogin />
               </Link>
             </div>
           )}

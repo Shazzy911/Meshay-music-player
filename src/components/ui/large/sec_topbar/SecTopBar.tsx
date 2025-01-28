@@ -1,9 +1,9 @@
 import style from "./SecTopBar.module.scss";
 // import Button from "@/components/ui/button/Button";
 import Logo from "@/components/ui/small/logo/Logo";
-// import { FaHome } from "react-icons/fa";
+import { MdOutlineLogin } from "react-icons/md";
 
-// import Link from "next/link";
+import Link from "next/link";
 
 const SecTopBar = () => {
   return (
@@ -11,12 +11,12 @@ const SecTopBar = () => {
       <Logo />
 
       <div className={style.icons_container}>
-        {/* <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          <Link href={"/"} className={`${style.icons} ${style.user}`}>
-            <FaHome />
-            <h4>Home</h4>
+        <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
+          <Link href={"/login"} className={`${style.icons} ${style.user}`}>
+            <h4>LogIn</h4>
+            <MdOutlineLogin />
           </Link>
-        </div> */}
+        </div>
       </div>
     </header>
   );

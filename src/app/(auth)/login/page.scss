@@ -1,4 +1,5 @@
-// @import "../../style.scss";
+@use "../../styles/colors.module.scss" as *;
+
 .login {
   height: 100dvh;
   // background-color: rgb(193, 190, 255);
@@ -17,9 +18,13 @@
 
     .left {
       flex: 1;
-      background: //linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)),
-        url("https://images.unsplash.com/photo-1683667308899-34381a5099b7?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzaWMlMjBhbGJ1bXxlbnwwfHwwfHx8MA%3D%3D")
-        center;
+      background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1524567248408-cbfd37e65e2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww")
+          no-repeat center center/cover;
       background-size: cover;
       padding: 50px;
       display: flex;
@@ -51,7 +56,7 @@
         padding: 10px;
         border: none;
         background-color: white;
-        color: rebeccapurple;
+        color: $main-color;
         font-weight: bold;
         cursor: pointer;
       }
@@ -86,7 +91,7 @@
           width: 50%;
           padding: 10px;
           border: none;
-          background-color: #938eef;
+          background-color: $main-color;
           color: white;
           font-weight: bold;
           cursor: pointer;
