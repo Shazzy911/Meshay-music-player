@@ -26,7 +26,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "i.pinimg.com",
       },
-
+      {
+        protocol: "https",
+        hostname: "zckzxwurwibtoteccdta.supabase.co",
+      },
       // You can add more patterns for additional domains if needed
     ],
   },
