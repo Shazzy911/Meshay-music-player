@@ -2,7 +2,7 @@ import style from "./TopBar.module.scss";
 import Button from "@/components/ui/small/button/Button";
 import Logo from "@/components/ui/small/logo/Logo";
 import Search from "@/components/ui/small/search/Search";
-import { FaBell, FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaMoon } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
 import Menu from "../menu/Menu";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const TopBar = () => {
           <Button text="Explore Premium" navigateTo="/premium" />
         </div>
         <div className={style.icons}>
-          <FaBell />
+          <FaMoon />
         </div>
         <div>
           {4 > 22 ? (

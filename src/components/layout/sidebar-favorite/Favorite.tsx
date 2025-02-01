@@ -7,7 +7,40 @@ import Link from "next/link";
 import { favourite_route_links } from "@/json/route_links";
 import Image from "next/image";
 
-const Favorite = () => {
+interface Artist {
+  id: string;
+  name: string;
+  genre: string;
+  bio: string;
+  img: string;
+  updatedAt: string;
+  createdAt: string;
+}
+// Define a type for the entire API response
+interface ApiResponse {
+  response: Artist[];
+}
+const fetchingData = async (): Promise<Artist[] | undefined> => {
+  try {
+    const response = await fetch("http://localhost:8000/artist", {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const data: ApiResponse = await response.json(); // Ensure we are getting the right structure
+    return data.response;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return undefined; // Return undefined on error
+  }
+};
+
+const Favorite = async () => {
+  let data = await fetchingData();
+
   return (
     <div className={style.container}>
       <div className={style.favorite_intro}>
@@ -23,23 +56,29 @@ const Favorite = () => {
           </div>
         </div>
         <div className={style.dynamic_container}>
-          {favourite_route_links.map(
-            ({ image, id, title, subtitle, route }) => (
-              <Link className={style.link} key={id} href={route}>
+          {Array.isArray(data) && data.length > 0 ? (
+            data.map((item) => (
+              <Link
+                className={style.link}
+                key={item.id}
+                href={`/artist/${item.id}`}
+              >
                 <span className={style.dynamic_wrapper}>
                   <Image
-                    src={image || "/default-image.jpg"}
+                    src={item.img || "/default-image.jpg"}
                     height={55}
                     width={55}
                     alt="Image not found"
                   />
                   <div>
-                    <h4>{title}</h4>
-                    <p>{subtitle}</p>
+                    <h4>{item.name}</h4>
+                    <p>Artist</p>
                   </div>
                 </span>
               </Link>
-            )
+            ))
+          ) : (
+            <p>No data available</p> // Fallback if data is undefined or empty
           )}
         </div>
       </div>
