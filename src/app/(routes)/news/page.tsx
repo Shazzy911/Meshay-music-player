@@ -50,7 +50,7 @@ const page = async () => {
                 </span>
               </div>
               <p className={style.mainDesc}>{value.desc}</p>
-              <Button text="Read More" href={`/news/${value._id}`} />
+              <Button text="Read More"  ={`/news/${value._id}`} />
             </div>
           </div>
         ))

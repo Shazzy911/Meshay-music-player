@@ -24,6 +24,7 @@ const SideBar = () => {
           </Link>
         ))}
       </div>
+
       <Favorite />
     </section>
   );
