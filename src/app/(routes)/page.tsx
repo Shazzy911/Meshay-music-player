@@ -2,6 +2,10 @@ import React, { Suspense } from "react";
 import style from "./page.module.scss";
 import Search from "@/components/ui/small/search/Search";
 import Loader from "@/components/ui/small/loader/Loader";
+
+/// Fetching Data....
+import { fetchArtist } from "@/app/action/FetchArtist";
+
 // Slides
 import Main_Slide from "@/components/layout/swiper-slides/slide_main/Slide_main";
 import Event_Slide from "@/components/layout/swiper-slides/event_slide/Event_Slide";
@@ -34,7 +38,9 @@ const Release_Swiper = React.lazy(
   () => import("@/components/layout/swiper/release-swiper/Release_Swiper")
 );
 
-const page = () => {
+const page = async () => {
+  const data = await fetchArtist();
+
   return (
     <main className={style.container}>
       <section className={style.page_search}>
@@ -51,7 +57,7 @@ const page = () => {
         <SectionInformation heading="Featured Artists" url="/artist" />
         <Suspense fallback={<Loader />}>
           <Common_Swiper delay={3000}>
-            <Artist_Slide />
+            <Artist_Slide data={data} />
           </Common_Swiper>
         </Suspense>
       </section>
