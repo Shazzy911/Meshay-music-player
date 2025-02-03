@@ -21,8 +21,6 @@ const Album_Slide: React.FC<AlbumSlideProps> = ({ props }) => {
                 alt="Image not found"
                 height={210}
                 width={210}
-                layout="responsive" // Automatically adjusts to the image's original dimensions
-                objectFit="cover" // Fills the container without stretching
               />
             </div>
             <div className={style.slideInfo}>

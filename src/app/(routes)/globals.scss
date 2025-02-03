@@ -22,7 +22,7 @@ body {
 body {
   font-size: 1.6rem;
   background-color: $bg-color;
-  // color: white;
+  color: white;
 
   //   background-color: $primary-bg-1;
   //   h1,h2,h3,h4,h5,h6{
@@ -75,6 +75,8 @@ ul {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   .main-container {
+    height: calc(100dvh - 18rem);
+
     width: 100%;
     display: flex;
     flex: 1;

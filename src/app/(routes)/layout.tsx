@@ -49,8 +49,8 @@ export default function RootLayout({
                   <Footer />
                 </div>
               </div>
+              <Player />
             </div>
-            <Player />
           </Suspense>
         </Providers>
       </body>
