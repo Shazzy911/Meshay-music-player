@@ -48,7 +48,7 @@ const About = () => {
       <section className={style.teamSection}>
         <h2>Meet the Team</h2>
         <div className={style.teamGrid}>
-          <div className={style.teamMember}>
+          {/* <div className={style.teamMember}>
             <Image
               src="https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/images/user/86a07e3b164b111c46711111ebf67096.jpg"
               alt="Team Member"
@@ -56,7 +56,7 @@ const About = () => {
               height={100}
             />
             <p>Faraz Khan - CEO</p>
-          </div>
+          </div> */}
           <div className={style.teamMember}>
             <Image
               src="https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/images/user/jpg%20(1)-modified.png"
@@ -64,7 +64,9 @@ const About = () => {
               width={100}
               height={100}
             />
-            <p>Shahzaib Saleem - Lead Developer</p>
+            <p style={{ fontWeight: "bold", margin: "1rem 0" }}>
+              Shahzaib Saleem - Lead Engineer
+            </p>
           </div>
         </div>
       </section>
@@ -76,6 +78,7 @@ const About = () => {
         {/* <button className={style.ctaButton} >Get Started</button> */}
         <Button
           text="Get Started"
+          navigateTo="/register"
           style={{
             padding: "12 30px",
             color: "#fff",

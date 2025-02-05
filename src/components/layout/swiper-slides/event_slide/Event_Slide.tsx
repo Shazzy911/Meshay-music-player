@@ -9,7 +9,7 @@ const Event_Slide = () => {
     <>
       {upcoming_event.map(
         ({ id, title, image, date, time, location, button }) => (
-          <Link href={`/news/${id}`} key={id}>
+          <Link href={`/events/${id}`} key={id}>
             <div
               className={style.container}
               style={{

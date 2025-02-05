@@ -7,8 +7,13 @@
   span {
     @include flex-align-center();
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
 
     gap: 0.8rem;
+
+    &:hover {
+      font-weight: 600;
+      transform: 1s all ease;
+    }
   }
 }

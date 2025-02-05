@@ -21,6 +21,7 @@ const Album_Slide: React.FC<AlbumSlideProps> = ({ props }) => {
                 alt="Image not found"
                 height={210}
                 width={210}
+                className={style.img}
               />
             </div>
             <div className={style.slideInfo}>

@@ -58,7 +58,7 @@ const Podcast_Slide = () => {
   return (
     <>
       {podcast_json.map(({ id, title, image, viewers, button }) => (
-        <Link href={`/news/${id}`} key={id}>
+        <Link href={`/podcast`} key={id}>
           <div
             className={style.container}
             style={{

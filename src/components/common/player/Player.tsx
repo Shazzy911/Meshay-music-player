@@ -81,13 +81,14 @@ const Player = () => {
       }
     }, 1000);
     return () => clearInterval(interval);
-  }, [sound]);
+  }, [sound, isPlaying]);
 
   // useEffect(() => {
   //   if (isPlaying && sound) {
-  //     sound.play();
+  //     sound.stop(); // Stop previous track
+  //     sound.play(); // Play new track
   //   }
-  // }, [currentSongIndex]);
+  // }, [currentSongIndex, sound, isPlaying]); // ✅ Add dependencies
 
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -147,7 +148,6 @@ const Player = () => {
             type="range"
             min="0"
             max={durationInSeconds}
-            defaultValue="0"
             value={seconds || 0}
             className={style.timeline}
             onChange={(e) => {

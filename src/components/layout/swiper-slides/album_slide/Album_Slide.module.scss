@@ -11,12 +11,21 @@
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
   background-color: $sec-color;
   @include background_transition($sec-color);
+
+  &:hover {
+    transform: scale(1.03);
+    background: #333;
+  }
+
   .imgContainer {
     @include flex-align-center();
     justify-content: center;
     max-width: 210px; // Limit the width of the image
     aspect-ratio: 1; // Maintains a 1:1 square aspect ratio
     overflow: hidden; // Ensures the image doesn't overflow the container
+    img {
+      object-fit: cover;
+    }
   }
   .slideInfo {
     padding: 0 1rem;
