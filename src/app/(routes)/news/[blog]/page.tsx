@@ -1,39 +1,30 @@
-import BlogDetails from "@/components/ui/large/blog_details/BlogDetails";
-// import { postProps } from "@/types/postList";
+"use client";
+import React from "react";
 
-const getData = async (id: string | number) => {
-  try {
-    let response = await fetch(`http://localhost:3000/api/blog/${id}`, {
-      cache: "default",
-    });
-    let data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error("Failed to Fetch Data by Id");
-  }
-};
+import style from "./page.module.scss";
+import Image from "next/image";
 
-type Data = {
-  params: {
-    blog: string | number | (string | number)[];
-  };
-};
-
-const Page = async ({ params }: Data) => {
-  const id: string | number | any = params.blog;
-  let post = await getData(id);
+const SingleBlog = () => {
   return (
-    <>
-      <BlogDetails post={post} />
-    </>
+    <div className={style.blogContainer}>
+      <h1>The Evolution of Music Streaming</h1>
+      <p className={style.date}>February 10, 2025</p>
+      <Image
+        src={
+          "https://plus.unsplash.com/premium_photo-1682125848355-4fb0e6da7647?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQxfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D"
+        }
+        width={700}
+        height={500}
+        alt="Not Found"
+        className={style.blogImage}
+      />
+      <p className={style.blogContent}>
+        Every year, music charts are dominated by some of the most talented
+        artists. From pop sensations to indie stars, here are the top 10 artists
+        who made waves in 2025...
+      </p>
+    </div>
   );
 };
 
-export default Page;
-export function generateMetadata() {
-  return {
-    title: "Galaxy Blog - Main Category",
-    description:
-      "This is the galaxy blog, it contains information about the developer and owner of  website",
-  };
-}
+export default SingleBlog;

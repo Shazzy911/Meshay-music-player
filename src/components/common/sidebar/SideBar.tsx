@@ -4,7 +4,7 @@ import { sidebar_route_links } from "@/json/route_links";
 import Link from "next/link";
 import { setMenuOpen } from "@/redux/slices/menuSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import Favorite from "@/components/layout/sidebar-favorite/Favorite";
+// import Favorite from "@/components/layout/sidebar-favorite/Favorite";
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -24,10 +24,11 @@ const SideBar = () => {
           </Link>
         ))}
       </div>
-
-      <Favorite />
     </section>
   );
 };
 
 export default SideBar;
+{
+  /* <Favorite /> */
+}

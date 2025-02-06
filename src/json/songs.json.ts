@@ -31,11 +31,11 @@ export const songs: SongDataType[] = [
   },
   {
     id: 3,
-    title: "Someone Like You",
-    featuring: "Adele",
+    title: "295",
+    featuring: "Sidhu Moose Wala",
     image:
       "https://i.pinimg.com/236x/f9/d0/70/f9d070ab175d5817deed4f688e1e868f.jpg",
-    file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/Fingertips.mp3?t=2024-12-31T18%3A09%3A27.033Z",
+    file: "https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/audio/295-Sidhu-Moose-Wala.mp3",
     time: "4:45",
     album: "21",
   },

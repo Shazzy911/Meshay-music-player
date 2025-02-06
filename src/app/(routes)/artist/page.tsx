@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./page.module.scss";
+import styles from "./page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 // Define a type for the user data
@@ -34,40 +34,40 @@ const fetchingData = async (): Promise<User[] | undefined> => {
   }
 };
 
-const Page = async () => {
-  const data = await fetchingData();
+const page = async () => {
+  const artists = await fetchingData();
 
   return (
-    <main>
-      <section className={style.main_container}>
-        {Array.isArray(data) && data.length > 0 ? (
-          data.map((item) => (
-            <Link href={`/artist/${item.id}`} key={item.id}>
-              <div className={style.container}>
-                <div className={style.imgContainer}>
-                  <Image
-                    src={item.img || "Image"}
-                    alt="Image not found"
-                    height={200}
-                    width={200}
-                  />
-                </div>
-                <div className={style.slideInfo}>
-                  <h3>{item.name}</h3>
-                  <p>Artist</p>
-                </div>
-              </div>
+    <div className={styles.artistsContainer}>
+      <h1>Top Artists</h1>
+      <div className={styles.artistGrid}>
+        {Array.isArray(artists) && artists.length > 0 ? (
+          artists.map((artist) => (
+            <Link
+              key={artist.id}
+              href={`/artist/${artist.id}`}
+              className={styles.artistCard}
+            >
+              <Image
+                src={artist.img}
+                alt={artist.name}
+                height={200}
+                width={200}
+              />
+              <h3>{artist.name}</h3>
             </Link>
           ))
         ) : (
           <p>No data available</p> // Fallback if data is undefined or empty
         )}
-      </section>
-    </main>
+
+        {}
+      </div>
+    </div>
   );
 };
 
-export default Page;
+export default page;
 
 export function generateMetadata() {
   return {

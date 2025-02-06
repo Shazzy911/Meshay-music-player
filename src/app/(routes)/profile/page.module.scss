@@ -1,0 +1,126 @@
+.profileContainer {
+  color: white;
+  background-color: #121212;
+  padding: 3rem 2.5rem;
+  //   min-height: 100vh;
+  max-width: 1000px;
+  margin: 3rem auto;
+  border-radius: 15px;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profileAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1db954;
+}
+
+.profileInfo {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  p {
+    color: gray;
+    font-size: 16px;
+  }
+}
+
+.profileStats {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #b3b3b3;
+}
+
+.profileStatsContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statBox {
+  h3 {
+    font-size: 16px;
+    color: gray;
+  }
+  p {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.profileContent {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.recentlyPlayed {
+  display: flex;
+  gap: 15px;
+
+  .song {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+
+    // .songCover {
+    //   width: 50px;
+    //   height: 50px;
+    //   border-radius: 8px;
+    // }
+
+    .songInfo {
+      h4 {
+        margin: 0;
+      }
+      p {
+        font-size: 12px;
+        color: gray;
+      }
+    }
+  }
+}
+
+.favoriteArtists {
+  display: flex;
+  gap: 15px;
+
+  .artist {
+    text-align: center;
+
+    .artistImg {
+      //   width: 60px;
+      //   height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1db954;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+  }
+}

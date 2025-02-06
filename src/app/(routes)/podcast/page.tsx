@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../../../ui/small/button/Button";
-import style from "./Podcast_Slide.module.scss";
 import Link from "next/link";
+import styles from "./page.module.scss";
+import Image from "next/image";
 
-const podcast_json = [
+const podcasts = [
   {
     id: 1,
     image:
@@ -54,52 +54,42 @@ const podcast_json = [
   },
 ];
 
-const Podcast_Slide = () => {
+const Podcasts = () => {
   return (
-    <>
-      {podcast_json.map(({ id, title, image, viewers, button }) => (
-        <Link href={`/podcast`} key={id}>
-          <div
-            className={style.container}
-            style={{
-              background: `url(${image}) center center  no-repeat`,
-            }}
+    <main className={styles.podcastContainer}>
+      <div className={styles.podcastPage}>
+        <h1>The Future of AI</h1>
+        <iframe
+          width="100%"
+          height="500px"
+          src="https://zckzxwurwibtoteccdta.supabase.co/storage/v1/object/public/music-store/videos/video2.mp4"
+          title="The Future of AI"
+          allowFullScreen
+        ></iframe>
+        <p>Exploring how AI is shaping the world.</p>
+      </div>
+
+      <h1>Latest Video Podcasts</h1>
+      <div className={styles.podcastGrid}>
+        {podcasts.map((podcast) => (
+          <Link
+            key={podcast.id}
+            href={`/podcast/${podcast.id}`}
+            className={styles.podcastCard}
           >
-            <Button
-              text={button}
-              style={{
-                // padding: "7px 16px",
-                // fontSize: "1.2rem",
-
-                padding: "4.5px",
-                fontSize: "1.1rem",
-                minHeight: "3rem",
-                minWidth: "5rem",
-                fontWeight: 400,
-                zIndex: "1",
-              }}
+            <Image
+              height={200}
+              width={200}
+              src={podcast.image}
+              alt={podcast.title}
             />
-
-            <div className={style.info}>
-              <Button
-                text={viewers}
-                style={{
-                  padding: "7px 15px",
-                  fontSize: "1.1rem",
-                  minHeight: "3rem",
-                  minWidth: "6rem",
-                  fontWeight: 400,
-                  zIndex: "1",
-                  backgroundColor: "#0b1215",
-                }}
-              />
-              <h1>{title}</h1>
-            </div>
-          </div>
-        </Link>
-      ))}
-    </>
+            <h3>{podcast.title}</h3>
+            {/* <p>{podcast.description}</p> */}
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 };
 
-export default Podcast_Slide;
+export default Podcasts;

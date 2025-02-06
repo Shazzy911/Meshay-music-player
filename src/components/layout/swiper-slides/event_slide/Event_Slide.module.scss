@@ -49,6 +49,10 @@
   background-position: center; // Centers the image
   background-repeat: no-repeat; // Avoids repeating the image
 
+  &:hover {
+    transform: scale(1.02);
+  }
+
   &::before {
     content: "";
     position: absolute;
