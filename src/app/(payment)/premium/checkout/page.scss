@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+
+$gradient: linear-gradient(
+  135deg,
+  rgba(91, 36, 122, 0.45) 0%,
+  rgba(27, 206, 223, 0.55) 100%
+);
+$shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$primary: #4183d7;
+$secondary: #66cc99;
+
+#main {
+  border-radius: 10px;
+  box-shadow: $shadow;
+
+  background-color: white;
+}

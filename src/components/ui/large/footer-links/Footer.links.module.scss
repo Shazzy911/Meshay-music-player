@@ -1,0 +1,17 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  span {
+    a {
+      &:hover {
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.6s ease-in-out;
+        color: $main-color;
+      }
+    }
+  }
+}

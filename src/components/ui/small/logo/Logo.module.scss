@@ -1,0 +1,17 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.container {
+  height: 8.3rem;
+  @include flex-align-center(2.2rem 0 2rem 1rem);
+  // border-bottom: 1px solid $sec-color;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  // .container {
+  //   h2{
+  //     display: none;
+  //   }
+  // }
+}

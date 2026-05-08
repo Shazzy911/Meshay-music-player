@@ -1,0 +1,62 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+.container {
+  width: 100%;
+  padding: 1rem;
+  background: $sec-color;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* clickable wrapper */
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGE (NO ROUND, CLEAN RECTANGLE STYLE) */
+.imgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+  border-radius: 10px; // small soft corners (NOT circle)
+
+  background: #1a1a1a;
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  .container:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+/* TEXT */
+.slideInfo {
+  text-align: left;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    margin-top: 0.2rem;
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+}
