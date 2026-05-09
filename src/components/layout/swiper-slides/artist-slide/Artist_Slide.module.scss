@@ -1,17 +1,25 @@
 @use "../../../../app/styles/colors.module.scss" as *;
 @use "../../../../app/styles/mixin.module.scss" as *;
+
 .container {
   width: 100%;
   padding: 1rem;
-  background: $sec-color;
-  border-radius: 12px;
+  // background: $sec-color;
+  border-radius: 16px;
 
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  margin: 0 0.5rem; // spacing between slides
 
   &:hover {
+    // background: $sec-color;
+    background: rgba(20, 20, 20, 0.55);
     transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
   }
 }
 
@@ -19,44 +27,69 @@
 .link {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
   text-decoration: none;
   color: inherit;
 }
 
-/* IMAGE (NO ROUND, CLEAN RECTANGLE STYLE) */
+/* IMAGE */
 .imgContainer {
+  margin: 1rem 0;
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
 
   overflow: hidden;
-  border-radius: 10px; // small soft corners (NOT circle)
+
+  // rounded image
+  border-radius: 50%;
 
   background: #1a1a1a;
 
+  border: 3px solid rgba(255, 255, 255, 0.06);
+
   img {
-    transition: transform 0.3s ease;
+    object-fit: cover;
+    transition: transform 0.35s ease;
   }
 
   .container:hover & img {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 }
 
 /* TEXT */
 .slideInfo {
-  text-align: left;
+  // text-align: center;
+  padding: 0.8rem 0;
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     margin: 0;
+    line-height: 1.4;
   }
 
   p {
-    margin-top: 0.2rem;
-    font-size: 0.95rem;
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
     opacity: 0.7;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .slideInfo {
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
   }
 }

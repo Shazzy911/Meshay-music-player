@@ -26,7 +26,7 @@ const Artist_Slide = async () => {
             <div className={style.imgContainer}>
               <Image
                 src={item.img || "/default-artist-image.jpg"}
-                alt={item.name}
+                alt={item.name || "Artist image"}
                 fill
                 sizes="(max-width: 768px) 100px, 150px"
                 style={{ objectFit: "cover" }}
