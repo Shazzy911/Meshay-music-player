@@ -2,40 +2,10 @@ import React from "react";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-// Define a type for the user data
-interface User {
-  id: string;
-  name: string;
-  genre: string;
-  bio: string;
-  img: string;
-  updatedAt: string;
-  createdAt: string;
-}
-// Define a type for the entire API response
-interface ApiResponse {
-  response: User[];
-}
-const fetchingData = async (): Promise<User[] | undefined> => {
-  try {
-    const response = await fetch("http://localhost:8000/artist", {
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const data: ApiResponse = await response.json(); // Ensure we are getting the right structure
-    return data.response;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return undefined; // Return undefined on error
-  }
-};
+import { fetchArtists } from "@/lib/api/fetchArtist";
 
 const page = async () => {
-  const artists = await fetchingData();
+  const artists = await fetchArtists();
 
   return (
     <div className={styles.artistsContainer}>

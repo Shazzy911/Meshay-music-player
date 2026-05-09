@@ -5,14 +5,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { fetchAlbum } from "@/lib/api/fetchAlbum";
 
-type Artist = {
+type Album = {
   id: string;
-  name: string;
+  title: string;
   img: string;
+  artist: {
+    id: string;
+    name: string;
+  };
 };
 
 const Album_Slide = async () => {
-  const albums: Artist[] = await fetchAlbum();
+  const albums: Album[] = await fetchAlbum();
 
   if (!Array.isArray(albums) || albums.length === 0) {
     return <p>No albums found</p>;
@@ -26,7 +30,7 @@ const Album_Slide = async () => {
             <div className={style.imgContainer}>
               <Image
                 src={item.img || "/default-album-image.jpg"}
-                alt={item.name}
+                alt={item.title || "Album cover image"}
                 fill
                 sizes="(max-width: 768px) 100px, 150px"
                 style={{ objectFit: "cover" }}
@@ -36,8 +40,8 @@ const Album_Slide = async () => {
             </div>
 
             <div className={style.slideInfo}>
-              <h3>{item.name}</h3>
-              <p>Album</p>
+              <h3>{item.title}</h3>
+              <p>{item.artist.name}</p>
             </div>
           </Link>
         </div>

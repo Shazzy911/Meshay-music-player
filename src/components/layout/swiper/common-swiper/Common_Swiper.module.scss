@@ -1,6 +1,7 @@
 // @import "swiper/css";
 .swiper {
   width: 52rem;
+  width: 100%;
   height: 34rem;
   color: white;
   // margin: 2rem 0;
@@ -9,7 +10,7 @@
     //   width: 52rem !important;
     //
     .swiper-slide {
-      width: 300rem !important;
+      // width: 300rem !important;
       color: white;
     }
   }
