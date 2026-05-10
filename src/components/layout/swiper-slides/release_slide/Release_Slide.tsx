@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Release_Slide.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import Song from "../../../ui/large/song/Song";
+import Song from "../../../ui/large/song-rows/SongRow";
 import { release } from "@/json/top_singers";
 
 const Release_Slide = () => {

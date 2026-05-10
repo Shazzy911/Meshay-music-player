@@ -1,62 +1,47 @@
-import React from "react";
-import Link from "next/link";
 import styles from "./page.module.scss";
+import Link from "next/link";
 import Image from "next/image";
-const albums = [
-  {
-    id: 1,
-    name: "After Hours",
-    artist: "The Weeknd",
-    image:
-      "https://i.pinimg.com/736x/bc/5f/f7/bc5ff72ea6df03520668ba68f4916533.jpg",
-  },
-  {
-    id: 2,
-    name: "Folklore",
-    artist: "Taylor Swift",
-    image:
-      "https://i.pinimg.com/736x/bc/5f/f7/bc5ff72ea6df03520668ba68f4916533.jpg",
-  },
-  {
-    id: 3,
-    name: "Scorpion",
-    artist: "Drake",
-    image:
-      "https://i.pinimg.com/736x/bc/5f/f7/bc5ff72ea6df03520668ba68f4916533.jpg",
-  },
-  {
-    id: 4,
-    name: "Happier Than Ever",
-    artist: "Billie Eilish",
-    image:
-      "https://i.pinimg.com/736x/bc/5f/f7/bc5ff72ea6df03520668ba68f4916533.jpg",
-  },
-];
+import { fetchAlbum } from "@/lib/api/fetchAlbum";
 
-const Albums = () => {
+const page = async () => {
+  const collection = await fetchAlbum();
+
   return (
-    <div className={styles.albumsContainer}>
-      <h1>Music Albums</h1>
-      <div className={styles.albumGrid}>
-        {albums.map((album) => (
-          <Link
-            key={album.id}
-            href={`/album/${album.id}`}
-            className={styles.albumCard}
-          >
-            <Image
-              height={200}
-              width={200}
-              src={album.image}
-              alt="File not found"
-            />
-            <h3>{album.name}</h3>
-            <p>{album.artist}</p>
-          </Link>
-        ))}
+    <div className={styles.artistsContainer}>
+      <h1>Top Artists</h1>
+      <div className={styles.artistGrid}>
+        {Array.isArray(collection) && collection.length > 0 ? (
+          collection.map((album) => (
+            <Link
+              key={album.id}
+              href={`/collection/${album.id}`}
+              className={styles.artistCard}
+            >
+              <Image
+                src={album.img}
+                alt={album.name}
+                height={200}
+                width={200}
+              />
+              <h3>{album.name}</h3>
+            </Link>
+          ))
+        ) : (
+          <p>No data available</p>
+        )}
+
+        {}
       </div>
     </div>
   );
 };
 
-export default Albums;
+export default page;
+
+export function generateMetadata() {
+  return {
+    title: "Meshay Music Streaming - Collection",
+    description:
+      "This is the galaxy blog, it contains information about the developer and owner of the website",
+  };
+}

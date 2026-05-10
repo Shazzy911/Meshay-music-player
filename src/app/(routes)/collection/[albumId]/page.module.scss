@@ -1,0 +1,17 @@
+@use "../../../../app/styles/colors.module.scss" as *;
+@use "../../../../app/styles/mixin.module.scss" as *;
+
+.imageSection {
+  position: sticky;
+  top: 8rem;
+  z-index: -1;
+}
+.songContainer {
+  display: flex;
+  justify-content: center;
+  background-color: $sec-color;
+}
+
+.songs {
+  width: 90%;
+}

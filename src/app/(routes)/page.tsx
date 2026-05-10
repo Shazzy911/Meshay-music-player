@@ -54,7 +54,7 @@ const page = () => {
         </Suspense>
       </section>
       <section>
-        <SectionInformation heading="Featured Artists" url="/artist" />
+        <SectionInformation heading="Featured Artists" url="/artists" />
         <Suspense fallback={<Loader />}>
           <Common_Swiper delay={3000}>
             <Artist_Slide />

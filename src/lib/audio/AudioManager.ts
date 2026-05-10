@@ -2,16 +2,23 @@ import { Howl } from "howler";
 
 class AudioManager {
   private sound: Howl | null = null;
+  private onEndCallback?: () => void;
 
   load(src: string) {
-    if (this.sound) {
-      this.sound.unload();
-    }
+    if (this.sound) this.sound.unload();
 
     this.sound = new Howl({
       src: [src],
-      html5: true, // important for large audio files
+      html5: true,
+
+      onend: () => {
+        this.onEndCallback?.(); // 🔥 trigger next song
+      },
     });
+  }
+
+  onEnd(callback: () => void) {
+    this.onEndCallback = callback;
   }
 
   play() {
@@ -22,28 +29,18 @@ class AudioManager {
     this.sound?.pause();
   }
 
-  stop() {
-    this.sound?.stop();
-  }
-
   seek(value?: number) {
     if (!this.sound) return 0;
-
-    if (value !== undefined) {
-      this.sound.seek(value);
-    }
-
+    if (value !== undefined) this.sound.seek(value);
     return this.sound.seek() as number;
   }
 
   duration() {
     return this.sound?.duration() || 0;
   }
-
-  isPlaying() {
-    return this.sound?.playing() || false;
-  }
 }
 
+// ✅ FIX: named instance (this removes ESLint warning)
 const audioManager = new AudioManager();
+
 export default audioManager;

@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import { useAppSelector, useAppDispatch } from "@/redux/hooks";
 import audioManager from "@/lib/audio/AudioManager";
+import style from "./Player.module.scss";
 
 import {
   pauseSong,
@@ -18,8 +19,6 @@ import {
   MdPlayCircle,
   MdPauseCircle,
 } from "react-icons/md";
-
-import style from "./Player.module.scss";
 
 const Player = () => {
   const dispatch = useAppDispatch();
@@ -37,9 +36,9 @@ const Player = () => {
 
   // 🎵 LOAD SONG WHEN SONG CHANGES
   useEffect(() => {
-    if (!currentSong?.file) return;
+    if (!currentSong?.songUrl) return;
 
-    audioManager.load(currentSong.file);
+    audioManager.load(currentSong.songUrl);
 
     const timer = setTimeout(() => {
       setDuration(audioManager.duration());
@@ -47,18 +46,18 @@ const Player = () => {
     }, 200);
 
     return () => clearTimeout(timer);
-  }, [currentSong?.file]);
+  }, [currentSong?.songUrl]);
 
   // ▶️ PLAY / PAUSE SYNC
   useEffect(() => {
-    if (!currentSong?.file) return;
+    if (!currentSong?.songUrl) return;
 
     if (isPlaying) {
       audioManager.play();
     } else {
       audioManager.pause();
     }
-  }, [isPlaying, currentSong?.file]);
+  }, [isPlaying, currentSong?.songUrl]);
 
   // ⏱ LIVE TIMER
   useEffect(() => {
@@ -112,7 +111,7 @@ const Player = () => {
       {/* 🎵 SONG INFO */}
       <div className={style.detail}>
         <Image
-          src={currentSong.image || "/default.jpg"}
+          src={currentSong.img || "/default.jpg"}
           width={60}
           height={60}
           alt={currentSong.title || "song"}
@@ -120,7 +119,7 @@ const Player = () => {
 
         <div>
           <h4>{currentSong.title}</h4>
-          <small>{currentSong.featuring || "--"}</small>
+          <small>{currentSong.artistName || "--"}</small>
         </div>
       </div>
 
