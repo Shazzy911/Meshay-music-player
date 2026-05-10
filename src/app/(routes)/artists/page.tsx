@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +14,7 @@ const page = async () => {
           artists.map((artist) => (
             <Link
               key={artist.id}
-              href={`/artist/${artist.id}`}
+              href={`/artists/${artist.id}`}
               className={styles.artistCard}
             >
               <Image
@@ -28,7 +27,7 @@ const page = async () => {
             </Link>
           ))
         ) : (
-          <p>No data available</p> // Fallback if data is undefined or empty
+          <p>No data available</p>
         )}
 
         {}

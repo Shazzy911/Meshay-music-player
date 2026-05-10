@@ -3,12 +3,19 @@ import "./page.module.scss";
 import Loader from "@/components/ui/small/loader/Loader";
 import Artist_Page_Slide from "@/components/layout/swiper-slides/artist_page_slide/Artist_Page_Slide";
 import Artist_Page_Swiper from "@/components/layout/swiper/artist-page-swiper/Artist_Page_Swiper";
-import Song from "@/components/ui/large/song/Song";
-import { release } from "@/json/top_singers";
+import Song from "@/components/ui/large/song-rows/SongRow";
 import style from "./page.module.scss";
+import { fetchAlbumById } from "@/lib/api/fetchAlbumById";
 
-const page = () => {
-  const allSongs = release.flatMap((artist) => artist.songs);
+type Props = {
+  params: Promise<{ albumId: string }>;
+};
+
+const page = async ({ params }: Props) => {
+  const { albumId } = await params;
+  console.log("ALBUM ID:", albumId);
+
+  const albums = await fetchAlbumById(albumId);
 
   return (
     <main>
@@ -21,7 +28,15 @@ const page = () => {
       </section>
       <section className={style.songContainer}>
         <div className={style.songs}>
-          <Song item={allSongs} />
+          {albums?.songs?.length ? (
+            <Song
+              item={albums.songs}
+              artistName={albums.artist?.name || "Unknown Artist"} // ✅
+              albums={[albums]} // ✅
+            />
+          ) : (
+            <p>No songs found.</p>
+          )}
         </div>
       </section>
     </main>

@@ -26,7 +26,7 @@ const Album_Slide = async () => {
     <>
       {albums.map((item) => (
         <div className={style.container} key={item.id}>
-          <Link href={`/artist/${item.id}`} className={style.link}>
+          <Link href={`/collection/${item.id}`} className={style.link}>
             <div className={style.imgContainer}>
               <Image
                 src={item.img || "/default-album-image.jpg"}

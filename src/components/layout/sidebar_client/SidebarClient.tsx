@@ -12,7 +12,7 @@ import { setMenuOpen } from "@/redux/slices/menuSlice";
 const SidebarClient = () => {
   const dispatch = useAppDispatch();
 
-  const isMenuOpen = useAppSelector((state) => state.menuOpen);
+  const isMenuOpen = useAppSelector((state) => state.menu.menuOpen);
 
   const handleCloseMenu = () => {
     dispatch(setMenuOpen(false));

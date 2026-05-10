@@ -1,29 +1,55 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface SongDataType {
-  id: number;
+export interface SongDataType {
+  id: string;
   title: string;
-  featuring: string;
-  image: string;
-  file: string;
-  time?: string;
-  album?: string;
+  img: string;
+  songUrl: string;
+  duration: number;
+
+  album?: {
+    id: string;
+    title: string;
+  };
+
+  artistName?: string;
 }
 
-const initialState = {
+type RepeatMode = "off" | "all" | "one";
+
+interface PlayerState {
+  currentSongIndex: number;
+  isPlaying: boolean;
+  songList: SongDataType[];
+
+  shuffle: boolean;
+  repeat: RepeatMode;
+
+  recentlyPlayed: SongDataType[];
+}
+
+const initialState: PlayerState = {
   currentSongIndex: 0,
   isPlaying: false,
-  songList: [] as SongDataType[], // Use the SongDataType
+  songList: [],
+
+  shuffle: false,
+  repeat: "off",
+
+  recentlyPlayed: [],
 };
 
 const playerSlice = createSlice({
   name: "player",
   initialState,
   reducers: {
-    setSongList: (state, action) => {
+    // 🎵 SET QUEUE
+    setQueue: (state, action: PayloadAction<SongDataType[]>) => {
       state.songList = action.payload;
     },
-    playSong: (state, action) => {
+
+    // ▶️ PLAY BY INDEX
+    playSong: (state, action: PayloadAction<number>) => {
       state.currentSongIndex = action.payload;
       state.isPlaying = true;
     },
@@ -31,28 +57,66 @@ const playerSlice = createSlice({
     pauseSong: (state) => {
       state.isPlaying = false;
     },
+
     resumeSong: (state) => {
       state.isPlaying = true;
     },
+
+    // ⏭ NEXT SONG (shuffle aware)
     nextSong: (state) => {
-      state.currentSongIndex =
-        (state.currentSongIndex + 1) % state.songList.length;
+      if (state.songList.length === 0) return;
+
+      if (state.shuffle) {
+        state.currentSongIndex = Math.floor(
+          Math.random() * state.songList.length,
+        );
+      } else {
+        state.currentSongIndex =
+          (state.currentSongIndex + 1) % state.songList.length;
+      }
     },
+
+    // ⏮ PREVIOUS SONG
     previousSong: (state) => {
+      if (state.songList.length === 0) return;
+
       state.currentSongIndex =
         (state.currentSongIndex - 1 + state.songList.length) %
         state.songList.length;
+    },
+
+    // 🔀 SHUFFLE TOGGLE
+    toggleShuffle: (state) => {
+      state.shuffle = !state.shuffle;
+    },
+
+    // 🔁 REPEAT MODE
+    setRepeat: (state, action: PayloadAction<RepeatMode>) => {
+      state.repeat = action.payload;
+    },
+
+    // 💾 RECENTLY PLAYED
+    addRecentlyPlayed: (state, action: PayloadAction<SongDataType>) => {
+      const song = action.payload;
+
+      state.recentlyPlayed = [
+        song,
+        ...state.recentlyPlayed.filter((s) => s.id !== song.id),
+      ].slice(0, 20);
     },
   },
 });
 
 export const {
-  setSongList,
+  setQueue,
   playSong,
   pauseSong,
   resumeSong,
   nextSong,
   previousSong,
+  toggleShuffle,
+  setRepeat,
+  addRecentlyPlayed,
 } = playerSlice.actions;
 
 export default playerSlice.reducer;

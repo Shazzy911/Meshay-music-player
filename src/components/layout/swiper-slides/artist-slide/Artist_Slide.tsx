@@ -22,7 +22,7 @@ const Artist_Slide = async () => {
     <>
       {artists.map((item) => (
         <div className={style.container} key={item.id}>
-          <Link href={`/artist/${item.id}`} className={style.link}>
+          <Link href={`/artists/${item.id}`} className={style.link}>
             <div className={style.imgContainer}>
               <Image
                 src={item.img || "/default-artist-image.jpg"}
