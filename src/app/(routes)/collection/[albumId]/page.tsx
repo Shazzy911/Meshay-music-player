@@ -32,7 +32,6 @@ const page = async ({ params }: Props) => {
             <Song
               item={albums.songs}
               artistName={albums.artist?.name || "Unknown Artist"} // ✅
-              albums={[albums]} // ✅
             />
           ) : (
             <p>No songs found.</p>
