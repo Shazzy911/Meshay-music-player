@@ -35,7 +35,7 @@ const Common_Swiper = React.lazy(
 );
 
 // const Release_Swiper = React.lazy(
-//   () => import("@/components/layout/swiper/release-swiper/Release_Swiper")
+//   () => import("@/components/layout/swiper/release-swiper/Release_Swiper"),
 // );
 
 const page = () => {
@@ -56,7 +56,7 @@ const page = () => {
       <section>
         <SectionInformation heading="Featured Artists" url="/artists" />
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={3000}>
+          <Common_Swiper delay={4500}>
             <Artist_Slide />
           </Common_Swiper>
         </Suspense>
@@ -68,8 +68,8 @@ const page = () => {
             <Release_Slide />
           </Release_Swiper>
         </Suspense>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <SectionInformation heading="Upcoming Events" url="/events" />
         <Suspense fallback={<Loader />}>
           <Event_Swiper>
@@ -88,7 +88,7 @@ const page = () => {
         <SectionInformation heading="Top Albums" url="/album" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={500000}>
+          <Common_Swiper delay={5500}>
             <Album_Slide />
           </Common_Swiper>
         </Suspense>
@@ -97,7 +97,7 @@ const page = () => {
         <SectionInformation heading="Top Charts" url="/section" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={4000}>
+          <Common_Swiper delay={12000}>
             <Album_Slide />
           </Common_Swiper>
         </Suspense>
@@ -106,7 +106,7 @@ const page = () => {
         <SectionInformation heading="New Release" url="/release" />
 
         <Suspense fallback={<Loader />}>
-          <Common_Swiper delay={7000}>
+          <Common_Swiper delay={9000}>
             <Album_Slide />
           </Common_Swiper>
         </Suspense>

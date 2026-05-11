@@ -40,7 +40,7 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 500000,
+          delay: 5500,
           reverseDirection: true,
           disableOnInteraction: false,
         }}

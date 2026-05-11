@@ -4,20 +4,18 @@ import Link from "next/link";
 import React from "react";
 import "./page.scss";
 const LogInForm = React.lazy(
-  () => import("@/components/layout/login-form/LogInForm")
+  () => import("@/components/layout/login-form/LogInForm"),
 );
 const page = () => {
-  
-
   return (
     <main className="login">
       <div className="card">
         <div className="left">
           <h1>Meshay Music</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Meshay is built for music lovers who want more than just streaming.
+            Explore iconic artists, timeless albums, and playlists that match
+            every mood.
           </p>
           <span>
             Dont you have an account?{" "}

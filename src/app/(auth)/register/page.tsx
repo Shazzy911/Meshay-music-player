@@ -8,9 +8,9 @@ export default function Page() {
         <div className="left">
           <h1>Meshay Music</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Meshay brings your favorite music, artists, and albums together in
+            one seamless experience. Discover new sounds, build playlists, and
+            stream the music you love anytime, anywhere.
           </p>
           <span>Do you have an account?</span>
           <Link href="/login">

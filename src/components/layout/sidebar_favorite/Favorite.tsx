@@ -30,7 +30,7 @@ const Favorite = async () => {
           artists.map((artist) => (
             <Link
               key={artist.id}
-              href={`/artist/${artist.id}`}
+              href={`/artists/${artist.id}`}
               className={styles.link}
             >
               <div className={styles.dynamic_wrapper}>
