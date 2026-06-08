@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <main className="register">
       <div className="card">
-        <div className="left">
+        <div className="right-divider">
           <h1>Meshay Music</h1>
           <p>
             Meshay brings your favorite music, artists, and albums together in
@@ -17,7 +17,7 @@ export default function Page() {
             <button>Login</button>
           </Link>
         </div>
-        <div className="right">
+        <div className="left-divider">
           <h1>Register</h1>
           <RegisterForm />
         </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "../(routes)/globals.scss";
+import "../globals.scss";
 import style from "./payment.layout.module.scss";
 import SecTopBar from "@/components/ui/large/sec_topbar/SecTopBar";
 import Footer from "@/components/common/footer/Footer";

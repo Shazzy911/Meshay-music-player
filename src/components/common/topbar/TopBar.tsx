@@ -2,10 +2,9 @@ import style from "./TopBar.module.scss";
 import Button from "@/components/ui/small/button/Button";
 import Logo from "@/components/ui/small/logo/Logo";
 import Search from "@/components/ui/small/search/Search";
-import { FaUserAlt, FaMoon } from "react-icons/fa";
-import { MdOutlineLogin } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 import Menu from "../menu/Menu";
-import Link from "next/link";
+import RegisterButton from "@/components/ui/small/register-button/RegisterButton";
 
 const TopBar = () => {
   return (
@@ -21,23 +20,7 @@ const TopBar = () => {
         <div className={style.icons}>
           <FaMoon />
         </div>
-        <div>
-          {4 > 22 ? (
-            <Link href={"/user"} className={`${style.icons} ${style.user}`}>
-              <FaUserAlt />
-            </Link>
-          ) : (
-            <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-              <Link
-                href={"/register"}
-                className={`${style.icons} ${style.user}`}
-              >
-                <h4>LogIn</h4>
-                <MdOutlineLogin />
-              </Link>
-            </div>
-          )}
-        </div>
+        <RegisterButton />
         <div className={`${style.icons} ${style.menu}`}>
           <Menu />
         </div>

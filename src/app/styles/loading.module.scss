@@ -1,11 +1,23 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; // or whatever your bg color is
+}
+
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 7rem;
+  height: 7rem;
   color: #fff;
+  position: relative; // ← fixes the ::before/::after positioning
+  display: inline-block; // ← needed for span
 }
+
 .loader:before,
 .loader:after {
   content: "";
@@ -19,28 +31,11 @@
   transform: rotateX(70deg);
   animation: 1s spin linear infinite;
 }
+
 .loader:after {
   color: #ff3d00;
   transform: rotateY(70deg);
   animation-delay: 0.4s;
-}
-
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -50%) rotateZ(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotateZ(360deg);
-  }
-}
-
-@keyframes rotateccw {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
 }
 
 @keyframes spin {

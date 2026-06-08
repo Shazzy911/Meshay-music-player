@@ -1,5 +1,5 @@
-export const postUser = async (formData: FormData) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
+export const registerUser = async (formData: FormData) => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, {
     method: "POST",
     body: formData,
   });

@@ -32,6 +32,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ceqcaduvflorrpdfzfdr.supabase.co",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
       // You can add more patterns for additional domains if needed
     ],
   },
