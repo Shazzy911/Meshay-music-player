@@ -20,22 +20,24 @@
     min-height: 600px;
     overflow: hidden;
 
-    .left {
+    .right-divider {
       flex: 1;
       background: //linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=600")
           center;
       background-size: cover;
-      padding: 50px;
+      padding: 0px 50px;
       display: flex;
+      justify-content: center;
       flex-direction: column;
-      gap: 30px;
+      gap: 26px;
       color: white;
 
       h1 {
-        line-height: 80px;
+        line-height: 8rem;
         font-size: 8rem;
+        margin: 3rem 0;
       }
 
       // p {
@@ -56,43 +58,16 @@
       }
     }
 
-    .right {
+    .left-divider {
       flex: 1;
       padding: 50px;
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      // gap: 50px;
+      color: black;
       justify-content: center;
-
       h1 {
-        color: #555;
-        color: $bg-color;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-
-        input {
-          border: none;
-          border-bottom: 1px solid lightgray;
-          padding: 20px 10px;
-          color: $bg-color;
-        }
-        .error {
-          color: red;
-        }
-
-        button {
-          width: 50%;
-          padding: 10px;
-          border: none;
-          background-color: $main-color;
-          color: white;
-          font-weight: bold;
-          cursor: pointer;
-        }
+        margin: 1rem 0;
       }
     }
   }

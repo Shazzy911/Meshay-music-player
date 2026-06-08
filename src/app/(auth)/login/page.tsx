@@ -10,7 +10,7 @@ const page = () => {
   return (
     <main className="login">
       <div className="card">
-        <div className="left">
+        <div className="left-divider">
           <h1>Meshay Music</h1>
           <p>
             Meshay is built for music lovers who want more than just streaming.
@@ -28,7 +28,7 @@ const page = () => {
             <button>Register </button>
           </Link>
         </div>
-        <div className="right">
+        <div className="right-divider">
           <h1>Log In</h1>
           <LogInForm />
         </div>

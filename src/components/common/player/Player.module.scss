@@ -1,244 +1,280 @@
 @use "../../../app/styles/colors.module.scss" as *;
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 11rem;
   width: 100%;
-  z-index: 1000; /* Ensures it stays above other content */
-  background-color: $sec-color; /* Adjust background to match your design */
-  color: #fff; /* Adjust text color */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow above the player */
-  padding: 2rem 2rem; /* Adjust padding for a comfortable layout */
-  border-top: 1px solid #010409;
-  .subTitle {
-    margin-top: -1em;
-    color: #4f4f4f;
-  }
+  height: 90px;
 
-  .time {
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    color: #828282;
-    font-size: smaller;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+
+  background: rgba(15, 17, 23, 0.95);
+  backdrop-filter: blur(20px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 -10px 30px rgba(0, 0, 0, 0.35),
+    0 -1px 0 rgba(255, 255, 255, 0.05);
+
+  z-index: 1000;
 
   .detail {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    min-width: 250px;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
+
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .title {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .subTitle {
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin: 0;
+    }
   }
+
   .controller {
+    flex: 2;
+
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.7rem;
+
     .icons {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      .playButton {
-        background: none;
-        border: none;
-        align-items: center;
-        justify-content: center;
+      gap: 1.5rem;
+
+      svg {
+        color: #b3b3b3;
+        cursor: pointer;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: white;
+          transform: scale(1.1);
+        }
       }
 
       .small {
+        font-size: 1.6rem;
+      }
+
+      .medium {
         font-size: 2rem;
       }
-      .medium {
-        font-size: 3.5rem;
-      }
+
       .play {
-        font-size: 4rem;
+        font-size: 1.7rem;
+        color: white;
       }
 
-      svg {
-        transition: fill 0.3s ease;
+      .playButton {
+        width: 52px;
+        height: 52px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: linear-gradient(135deg, #8b5cf6, #6366f1);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         cursor: pointer;
+
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.08);
+        }
+
+        &:active {
+          transform: scale(0.96);
+        }
+
+        svg {
+          color: white;
+        }
       }
     }
+
     .time_range {
+      width: 100%;
+      max-width: 700px;
+
       display: flex;
       align-items: center;
-      gap: 3rem;
-      .timeline {
-        width: 60rem;
-        height: 0.3rem;
-        background-color: #ccc; /* Background color for the track */
-        // appearance: none; /* Remove default styling */
-        border-radius: 5px; /* Optional: Smooth edges */
-        // overflow: hidden; /* Ensures no extra content spills out */
-      }
-      .timeline::-webkit-slider-thumb {
-        appearance: none; /* Hide the thumb */
-        width: 0; /* Ensures the thumb isn't visible */
-        height: 0;
-      }
-      .timeline::-moz-range-thumb {
-        appearance: none; /* Hide the thumb */
-        width: 0;
-        height: 0;
-      }
-      input[type="range"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 60rem;
-        background-color: transparent;
-
-        &:focus {
-          outline-color: #f8b195;
-        }
-      }
-      input[type="range"]::-webkit-slider-runnable-track {
-        -webkit-appearance: none;
-        appearance: none;
-        height: 3px;
-        background: rgb(246, 114, 128);
-        background: -webkit-linear-gradient(
-          left,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        background: linear-gradient(
-          to right,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        filter: progid:DXImageTransform.Microsoft.gradient(
-          startColorstr="#f67280",
-          endColorstr="#355c7d",
-          GradientType=1
-        );
-      }
-      input[type="range"]::-moz-range-track {
-        -moz-appearance: none;
-        appearance: none;
-        height: 3px;
-        background: rgb(246, 114, 128);
-        background: -moz-linear-gradient(
-          left,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        background: linear-gradient(
-          to right,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        filter: progid:DXImageTransform.Microsoft.gradient(
-          startColorstr="#f67280",
-          endColorstr="#355c7d",
-          GradientType=1
-        );
-      }
-      input[type="range"]::-ms-track {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 3px;
-        background: rgb(246, 114, 128);
-        background: -moz-linear-gradient(
-          left,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        background: -webkit-linear-gradient(
-          left,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        background: linear-gradient(
-          to right,
-          rgba(246, 114, 128, 1) 0%,
-          rgba(192, 108, 132, 1) 50%,
-          rgba(53, 92, 125, 1) 100%
-        );
-        filter: progid:DXImageTransform.Microsoft.gradient(
-          startColorstr="#f67280",
-          endColorstr="#355c7d",
-          GradientType=1
-        );
-      }
-      input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        border: 2px solid #f8b195;
-        border-radius: 50%;
-        height: 12px;
-        width: 12px;
-        position: relative;
-        bottom: 8px;
-        background: #222
-          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
-          center no-repeat;
-        background-size: 50%;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
-        cursor: grab;
-
-        &:active {
-          cursor: grabbing;
-        }
-      }
-      input[type="range"]::-moz-range-thumb {
-        -moz-appearance: none;
-        appearance: none;
-        border: 2px solid #f8b195;
-        border-radius: 50%;
-        height: 12px;
-        width: 12px;
-        position: relative;
-        bottom: 8px;
-        background: #222
-          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
-          center no-repeat;
-        background-size: 50%;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
-        cursor: grab;
-
-        &:active {
-          cursor: grabbing;
-        }
-      }
-      input[type="range"]::-ms-thumb {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: 2px solid #f8b195;
-        border-radius: 50%;
-        height: 12px;
-        width: 20px;
-        position: relative;
-        bottom: 8px;
-        background: #222
-          url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
-          center no-repeat;
-        background-size: 50%;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
-        cursor: grab;
-
-        &:active {
-          cursor: grabbing;
-        }
-      }
+      gap: 1rem;
 
       p {
-        font-size: 1.3rem;
+        font-size: 0.8rem;
+        color: #9ca3af;
+        min-width: 40px;
+        text-align: center;
       }
+
+      .timeline {
+        flex: 1;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+
+        width: 100%;
+        background: transparent;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 5px;
+        border-radius: 999px;
+
+        background: linear-gradient(90deg, #8b5cf6, #6366f1);
+      }
+
+      input[type="range"]::-moz-range-track {
+        height: 5px;
+        border-radius: 999px;
+
+        background: linear-gradient(90deg, #8b5cf6, #6366f1);
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+
+        width: 16px;
+        height: 16px;
+
+        border-radius: 50%;
+        border: none;
+
+        background: white;
+
+        margin-top: -5px;
+
+        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
+
+        transition: all 0.2s ease;
+      }
+
+      input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+
+        border-radius: 50%;
+        border: none;
+
+        background: white;
+
+        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
+      }
+    }
+  }
+
+  .extraControls {
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 1rem;
+
+    svg {
+      font-size: 1.4rem;
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
+
+    .controller {
+      .time_range {
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 1rem;
+
+    flex-direction: column;
+    gap: 1rem;
+
+    .detail {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .controller {
+      width: 100%;
+
+      .time_range {
+        width: 100%;
+      }
+    }
+
+    .extraControls {
+      display: none;
     }
   }
 }

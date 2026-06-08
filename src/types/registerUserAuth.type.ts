@@ -10,7 +10,7 @@ export const UserFormData = z.object({
     .min(6, "Password must be at least 6 characters")
     .optional(),
 
-  provider: z.enum(["credentials", "google", "facebook"]),
+  provider: z.enum(["credentials", "google", "facebook", "github"]),
 
   providerId: z.string().optional(),
 });

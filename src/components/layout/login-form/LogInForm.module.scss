@@ -1,0 +1,131 @@
+@use "../../../app/styles/colors.module.scss" as *;
+@use "../../../app/styles/mixin.module.scss" as *;
+
+.form {
+  width: 100%;
+  max-width: 420px;
+  // margin: 40px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    color: $bg-color;
+    background-color: #fafafa;
+
+    &:focus {
+      border-color: $main-color;
+      background-color: white;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.04);
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  .error {
+    font-size: 13px;
+    color: #e63946;
+    margin-top: -10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: $main-color;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #ddd;
+    }
+
+    .text {
+      color: #888;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+
+  .socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .googleButton {
+      background-color: white;
+      color: #333;
+      border: 1px solid #ddd;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+
+    .facebookButton {
+      background-color: white;
+      color: #333;
+      border: 1px solid #ddd;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+
+  .bottomText {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+
+    span {
+      color: $main-color;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
