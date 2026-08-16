@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import style from "./page.module.scss";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/authProvider";
 
 const Page = () => {
   const { user, loading } = useAuth();

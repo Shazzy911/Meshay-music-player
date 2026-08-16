@@ -16,23 +16,14 @@ import {
   Navigation,
   EffectCoverflow,
 } from "swiper/modules";
-// import SwiperCore from 'swiper/core'
-import { useEffect, useRef, useState } from "react";
+import type { Swiper as SwiperType } from "swiper";
+import { useRef } from "react";
 import Button_Navigation from "@/components/ui/small/button-navigation/Button_Navigation";
-// SwiperCore.use([Navigation]);
 
 const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
-  const [isInitialized, setInit] = useState(false);
-  // console.log(isInitialized);
-
   const prevRef = useRef<HTMLSpanElement | null>(null);
   const nextRef = useRef<HTMLSpanElement | null>(null);
 
-  useEffect(() => {
-    if (isInitialized) return; // Only initialize once
-
-    setInit(true);
-  }, [isInitialized]);
   return (
     <>
       <Swiper
@@ -47,10 +38,6 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
         pagination={{
           clickable: true,
         }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
         effect="coverflow"
         coverflowEffect={{
           rotate: 30,
@@ -60,25 +47,23 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
           slideShadows: true,
         }}
         breakpoints={{
-          340: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 1,
-          },
-          1400: {
-            slidesPerView: 1,
-          },
+          340: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 1 },
+          1400: { slidesPerView: 1 },
         }}
         modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
         className={style.swiper}
-        onInit={() => setInit(true)}
+        onBeforeInit={(swiper: SwiperType) => {
+          if (
+            swiper.params.navigation &&
+            typeof swiper.params.navigation !== "boolean"
+          ) {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }
+        }}
       >
         {/* Ensure children is an array before mapping */}
         {Array.isArray(children) ? (
@@ -107,24 +92,3 @@ const Swiper_Main: React.FC<ComponentProps> = ({ children }) => {
 };
 
 export default Swiper_Main;
-
-// <!-- Slider main container -->
-// <div class="swiper">
-//   <!-- Additional required wrapper -->
-//   <div class="swiper-wrapper">
-//     <!-- Slides -->
-//     <div class="swiper-slide">Slide 1</div>
-//     <div class="swiper-slide">Slide 2</div>
-//     <div class="swiper-slide">Slide 3</div>
-//     ...
-//   </div>
-//   <!-- If we need pagination -->
-//   <div class="swiper-pagination"></div>
-
-//   <!-- If we need navigation buttons -->
-//   <div class="swiper-button-prev"></div>
-//   <div class="swiper-button-next"></div>
-
-//   <!-- If we need scrollbar -->
-//   <div class="swiper-scrollbar"></div>
-// </div>

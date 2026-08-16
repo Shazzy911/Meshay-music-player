@@ -1,0 +1,21 @@
+// ── CSS custom properties (runtime, theme-aware) ──
+:root,
+[data-theme="dark"] {
+  --bg: #010409;
+  --surface: #0b1215;
+  --text: #ffffff;
+  --text-muted: #8b949e;
+  --accent: #e82561;
+  --accent-hover: #{darken(#e82561, 10%)};
+  --border: #21262d;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f3f4f6;
+  --text: #0d1117;
+  --text-muted: #57606a;
+  --accent: #e82561;
+  --accent-hover: #{darken(#e82561, 10%)};
+  --border: #d0d7de;
+}

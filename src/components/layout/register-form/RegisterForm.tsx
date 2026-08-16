@@ -6,8 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { UserFormData, UserFormType } from "@/types/registerUserAuth.type";
 import { registerUser } from "@/lib/api/postUserAuth";
-import Image from "next/image";
-import { oAuthService } from "@/lib/service/oAuthService";
+import SocialButton from "@/components/ui/small/social-button/SocialButton";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -93,35 +92,7 @@ const RegisterForm = () => {
       </div>
 
       {/* Social Buttons */}
-      <div className={style.socialButtons}>
-        <button
-          type="button"
-          onClick={oAuthService.signInWithGoogle}
-          className={style.googleButton}
-        >
-          <Image
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
-            alt="Google"
-            width={15}
-            height={15}
-          />
-          Continue with Google
-        </button>
-
-        <button
-          type="button"
-          onClick={oAuthService.signInWithGithub}
-          className={style.githubButton}
-        >
-          <Image
-            src="https://www.svgrepo.com/show/439171/github.svg"
-            alt="Github"
-            width={15}
-            height={15}
-          />
-          Continue with Github
-        </button>
-      </div>
+      <SocialButton />
     </form>
   );
 };

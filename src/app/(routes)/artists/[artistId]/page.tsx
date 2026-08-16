@@ -23,7 +23,7 @@ const page = async ({ params }: Props) => {
       <section className={style.imageSection}>
         <Suspense fallback={<Loader />}>
           <Artist_Page_Swiper>
-            <Artist_Page_Slide />
+            <Artist_Page_Slide images={artist.images} />
           </Artist_Page_Swiper>
         </Suspense>
       </section>

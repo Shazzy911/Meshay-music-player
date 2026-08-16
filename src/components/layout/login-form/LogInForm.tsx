@@ -4,13 +4,12 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 
 import { logInUser } from "@/lib/api/logInUserAuth";
 import { LogInSchema, LogInSchemaType } from "@/types/logInAuth.type";
 
 import style from "./LogInForm.module.scss";
-import { oAuthService } from "@/lib/service/oAuthService";
+import SocialButton from "@/components/ui/small/social-button/SocialButton";
 
 const LogInForm = () => {
   const router = useRouter();
@@ -95,35 +94,7 @@ const LogInForm = () => {
       </div>
 
       {/* Social Buttons */}
-      <div className={style.socialButtons}>
-        <button
-          type="button"
-          onClick={oAuthService.signInWithGoogle}
-          className={style.googleButton}
-        >
-          <Image
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
-            alt="Google"
-            width={15}
-            height={15}
-          />
-          Continue with Google
-        </button>
-
-        <button
-          type="button"
-          onClick={oAuthService.signInWithGithub}
-          className={style.githubButton}
-        >
-          <Image
-            src="https://www.svgrepo.com/show/439171/github.svg"
-            alt="GitHub"
-            width={15}
-            height={15}
-          />
-          Continue with GitHub
-        </button>
-      </div>
+      <SocialButton />
     </form>
   );
 };
