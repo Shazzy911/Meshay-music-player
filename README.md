@@ -323,5 +323,29 @@ You can save this code in a file with a .md extension (e.g., STAKEHOLDERS.md) an
 - Spinner
 - Badge
 
+## Breakpoints For Responsive Design
+
+- Mobile Devices
+  Extra Small Mobile (Portrait): 320px –
+  Small Mobile (Landscape): 481px – 600px
+- Tablets
+  Small Tablets (Portrait): 601px – 768px
+  Large Tablets (Landscape): 769px – 1024px
+- Laptops and Small Desktops
+  Small Desktops and Laptops: 1025px – 1280px
+- Large Desktops
+  Large Desktops and High-Resolution Screens: 1281px – 1440px
+- Extra-Large Screens
+  Extra-Large Desktops: 1441px and up
+
+That said, you can always create standard responsive breakpoints for screen sizes that are extensively used among your audiences. Listed below are the screen sizes that were most used in 2025.
+
+1. 1920×1080
+2. 360×800
+3. 390×844
+4. 393×873
+5. 1366×768
+6. 1536×864
+
 Deployement URL["https://meshay-music-player.vercel.app/"] <br>
 TypeScript Cheat-Sheet["https://react-typescript-cheatsheet.netlify.app/docs/basic/setup"]

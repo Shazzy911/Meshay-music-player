@@ -28,7 +28,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "zckzxwurwibtoteccdta.supabase.co",
+        hostname: "ceqcaduvflorrpdfzfdr.supabase.co",
       },
       // You can add more patterns for additional domains if needed
     ],
