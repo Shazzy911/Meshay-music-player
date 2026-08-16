@@ -1,8 +1,8 @@
 import { supabase } from "@/lib/service/supabaseClient";
 
-const signInWithGoogle = async () => {
+const signInWithDiscord = async () => {
   await supabase.auth.signInWithOAuth({
-    provider: "google",
+    provider: "discord",
     options: {
       redirectTo: `${window.location.origin}/callback`,
     },
@@ -18,6 +18,6 @@ const signInWithGithub = async () => {
 };
 
 export const oAuthService = {
-  signInWithGoogle,
+  signInWithDiscord,
   signInWithGithub,
 };

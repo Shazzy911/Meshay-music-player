@@ -1,7 +1,8 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import { AuthProvider } from "@/context/authContext";
+import { AuthProvider } from "@/context/authProvider";
+import { ThemeProvider } from "@/context/ThemeProvider";
 import Providers from "@/redux/Providers";
 import "normalize.css";
 import "./globals.scss";
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <AuthProvider>
-          <Providers>{children}</Providers>
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <Providers>{children}</Providers>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

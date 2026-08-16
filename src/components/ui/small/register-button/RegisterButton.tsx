@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/authProvider";
 import { RiLoginCircleFill } from "react-icons/ri";
 import style from "./RegisterButton.module.scss";
 
